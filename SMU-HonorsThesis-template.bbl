@@ -6,16 +6,15 @@ author1.
 \newblock title1.
 \newblock {\em journal1}, volume1:\penalty0 pages1, year1.
 
-\bibitem[author2(year2)]{test2}
-author2.
-\newblock {\em title2}, volume volume1 of {\em series1}.
-\newblock publisher2, address1, edition1 edition, month1 year2.
-\newblock note1.
-
-\bibitem[Peterson(2001)]{collier2001}
-S.~Collier;~B.M. Peterson.
+\bibitem[Collier and Peterson(2001)]{collier2001}
+S.~Collier and B.~M. Peterson.
 \newblock Characteristic ultraviolet/optical timescales in active galactic
   nuclei.
 \newblock {\em The Astrophysical Journal}, 555:\penalty0 775, 2001.
+
+\bibitem[Seeds and Backman(2013)]{sag}
+Michael~A. Seeds and Dana~E. Backman.
+\newblock {\em Stars and Galaxies}.
+\newblock Brooks/Cole, 8th edition, 2013.
 
 \end{thebibliography}
