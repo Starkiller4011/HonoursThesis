@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.10)  10 MAR 2019 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.10)  10 MAR 2019 14:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -162,18 +162,18 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 (./SMU-HonorsThesis-template.aux)
 \openout1 = `SMU-HonorsThesis-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
 \bibindent=\dimen116
 
 (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -246,23 +246,23 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 61.
+(Font)              <12> on input line 65.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 61.
+(Font)              <8> on input line 65.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 61.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 61.
+(Font)              <6> on input line 65.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 65.
 
 (c:/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 61.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 65.
 
 (c:/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 65.
  [1
 
 
@@ -276,7 +276,13 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 \tf@toc=\write3
 \openout3 = `SMU-HonorsThesis-template.toc'.
 
- [4] (./SMU-HonorsThesis-template.lof)
+ [4] (./SMU-HonorsThesis-template.lof
+Overfull \hbox (30.57944pt too wide) in paragraph at lines 2--2
+ \OT1/cmr/m/n/12 An-to-nio Ci-c-colella / M. De Leo - https://en,wikipedia.org/
+wiki/File::Hubble- 
+ []
+
+)
 \tf@lof=\write4
 \openout4 = `SMU-HonorsThesis-template.lof'.
 
@@ -293,59 +299,76 @@ Chapter 1.
 [1
 
 
-] [2] [3]
-Chapter 2.
-[4
+]
+<./img/GalaxyClassification.png, id=31, 1800.7275pt x 991.3035pt>
+File: ./img/GalaxyClassification.png Graphic file (type png)
+<use ./img/GalaxyClassification.png>
+Package pdftex.def Info: ./img/GalaxyClassification.png  used on input line 111
+.
+(pdftex.def)             Requested size: 433.62pt x 238.70425pt.
 
-] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+[]\OT1/cmr/m/n/12 Hubble - de Vau-couleurs di-a-gram for galaxy mor-phol-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+\OT1/cmr/m/n/12 ogy. Im-age credit: An-to-nio Ci-c-colella / M. De Leo -
+ []
+
+[2] [3 <./img/GalaxyClassification.png>] [4]
+Chapter 2.
+[5
+
+] [6]
 Chapter 3.
 
-Package natbib Warning: Citation `test2' on page 6 undefined on input line 168.
+Package natbib Warning: Citation `test2' on page 7 undefined on input line 181.
 
 
-[6
-
-]
-Chapter 4.
 [7
 
 ]
-Chapter 5.
+Chapter 4.
 [8
 
 ]
-Chapter 6.
+Chapter 5.
 [9
 
 ]
+Chapter 6.
+[10
+
+]
 Appendix A.
-(./SMU-HonorsThesis-template.bbl [10
+(./SMU-HonorsThesis-template.bbl [11
 
 ])
 
 Package natbib Warning: There were undefined citations.
 
-[11
+[12
 
 ] (./SMU-HonorsThesis-template.aux) ) 
 Here is how much of TeX's memory you used:
- 2290 strings out of 492616
- 31759 string characters out of 6132768
- 101052 words of memory out of 5000000
- 6161 multiletter control sequences out of 15000+600000
+ 2297 strings out of 492616
+ 31932 string characters out of 6132768
+ 101062 words of memory out of 5000000
+ 6165 multiletter control sequences out of 15000+600000
  10721 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,30p,1051b,209s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,30p,1051b,226s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2018/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmcsc10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texl
 ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on SMU-HonorsThesis-template.pdf (17 pages, 97804 bytes).
+Output written on SMU-HonorsThesis-template.pdf (18 pages, 3897796 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
