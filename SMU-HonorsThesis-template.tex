@@ -1,0 +1,214 @@
+%% Author:	Frank Berghaus modified by Chris Geroux
+%% File:	draft2.tex
+%% Date:	24.07.2003
+%% Purpose:	Undergrad Thesis.
+
+\documentclass[12pt, oneside]{smuthesis}
+\input{epsf}
+%---> SET UP MARGINS <--------------------------------------------------------------------
+% original margin settings
+%\setlength{\textwidth}{16.5cm}
+%\setlength{\oddsidemargin}{1.0cm}
+%\setlength{\evensidemargin}{1.0cm}
+%\setlength{\topmargin}{-2.0cm}
+%\setlength{\textheight}{23.5cm}
+%
+% Brynle's revised margin settings
+\setlength{\textwidth}      {6.0in}   % sets text width  = 6.0 in
+\setlength{\textheight}     {9.0in}   % sets text height = 9.0 in
+\setlength{\topmargin}      {-0.25in} % sets top  margin = 1.0 in
+\setlength{\evensidemargin} {0.485in} % sets left margin = 1.5 in
+\setlength{\oddsidemargin}  {0.485in} % sets left margin = 1.5 in
+\setlength{\footskip}       {1.0in}   % allows up to 1.0 in for footers
+%
+%---> PACKAGES <--------------------------------------------------------------------------
+\usepackage{psfigure}
+\usepackage{latexsym,multicol,epsfig}
+\usepackage{setspace}
+%\usepackage{supertabular}
+\usepackage{alltt}
+\usepackage{graphicx}
+%\usepackage{amsmath}
+\usepackage[round]{natbib}
+\bibliographystyle{plainnat}
+\newcommand{\code}[1]{\texttt{#1}}%allows \code{stuff} to be \textt{stuff} used for code varibles
+%
+%---> TITLE PAGE <------------------------------------------------------------------------
+\def\figurebox#1#2#3{%
+    \def\arg{#3}%
+    \ifx\arg\empty
+    {\hfill\vbox{\hsize#2\hrule\hbox to #2{\vrule\hfill\vbox to #1{\hsize#2%
+     \vfill}\vrule}\hrule}\hfill}%
+    \else
+    {\hfill\epsfbox{#3}\hfill}%
+    \fi}
+\degreetitle{Bachelor of Science}
+\numberofsignatures{5}
+%
+%---> Define Variables such as title etc <------------------------------------------------
+\newcommand{\myTitle}{Investigating Supermassive Black Holes and their variability by using a Structure Function}
+%
+%---> BEGIN DOCUMENT <--------------------------------------------------------------------
+\begin{document}
+\frontmatter
+%---> TITLE <-----------------------------------------------------------------------------
+\title{\sc \myTitle}
+\author{Derek Blue}
+\date{today}
+\medskip
+
+\maketitle
+\pagestyle{headings}
+
+%---> ABSTRACT <--------------------------------------------------------------------------
+%% Apparently they want the title and name of the author in the abstract ...
+\begin{center}
+\section*{\center \sc Abstract}
+\sc \myTitle
+\paragraph*{\center  \\}
+\end{center}
+Our universe is pockmarked with galaxies as far as we can currently observe from our humble planet. The currently accepted theoretical model is that at the center of these galaxies are super-massive black holes holding them together. This has been proven for a majority of these observable galaxies, including our own, and for some the central black hole is actively accreting matter. We call the galaxies hosting these black holes active galaxies. Active galaxies are of particular interest because they are some of the brightest objects in the night sky and yet their emission spectra are incredibly variable. Unfortunately since the data acquired from these objects is generally unevenly sampled, we cannot use a Fourier analysis as it suffers from windowing and aliasing. For these reasons we turn to the structure function which has a similar effect as the Fourier analysis but with the added benefits of remaining in the time domain and sporting a robustness against windowing and aliasing due to uneven sampling.
+
+\begin{center}
+by {\em Derek Blue}\\
+submitted on \today:\\
+\end{center}
+\newpage
+
+%---> TABLE OF CONTENTS <----------------------------------------------------------------
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+%
+%---> INTRODUCTION <---------------------------------------------------------------------
+\mainmatter
+\chapter{\sc Introduction}
+
+When you look up into the night sky on a clear summer night, in parts of the world you can see our Milky Way with the naked eye. If you were to gaze out into the vast emptiness with a powerful enough telescope then you would be able to see other collections of bright little dots closely packed together. These collections are known as galaxies and they come in all sorts of shapes and sizes. One thing all these galaxies are theorized to have in common is the presence of a central supermassive black hole holding the galaxy together. In some galaxies we observe immense electromagnetic emission from the central region, we call these active galaxies and their centers are active galactic nuclei(AGN).
+
+\section{\sc Overview}
+
+This chapter will give an overview of the theoretical model used by modern astronomers to 
+
+\section{\sc Galaxies, Active Galaxies, and Black Holes}
+
+\subsection{\sc Galaxies}
+
+Astronomical description of galaxies.
+
+\subsection{\sc Active Galaxies}
+
+Astronomical description of active galaxies(AGN).
+
+\subsection{\sc Black Holes}
+
+Astronomical description of black holes and super-massive black holes.
+
+
+\section{\sc How AGN are observed}
+
+\subsection{\sc The Unified Model}
+
+A description of the unified model and how, if the model holds, we can observe the inner workings.
+
+\subsection{\sc Orbital X-Ray telescopes}
+
+A description of the orbital observatories used and the bands of the EM spectrum they can observe
+
+\section{\sc Expected achievements}
+
+What is expected to be achieved from this project
+
+\newpage
+
+\chapter{\sc The General Relativistic Description}
+
+\section{\sc General Relativity}
+
+An introduction to general relativity and its relation to black holes.
+
+\subsection{\sc An introduction to Tensors}
+
+An introduction to tensors and their mathematical properties
+
+\subsection{\sc The Metric Tensor}
+
+Role of the metric tensor
+
+\subsection{\sc The Spacetime Interval}
+
+Role of the spacetime interval
+
+\section{\sc The Kerr Spinning Black Hole}
+
+Description of the concept of the Kerr spinning black hole and its importance.
+
+\subsection{\sc The Kerr Solution}
+
+The mathematics of the Kerr solution.
+
+\subsection{\sc Properties of the Kerr Solution}
+
+Properties of the Kerr solution.
+
+\chapter{\sc Statistical Analysis}
+
+\section{\sc The Structure Function}
+
+\citep{collier2001}
+\citep{test1}
+\citep{test2}
+What the structure function is and how it applies to this data sample. Why it was chosen.
+
+\section{\sc The Data}
+
+An overview of the data. This section will contain many figures.
+
+\chapter{\sc Programming SFA}
+
+\section{\sc SFA usage and description}
+
+A description of what SFA was developed for and its usage.
+
+\section{\sc The SFA algorithm}
+
+\subsection{\sc Process}
+
+The logical process SFA follows to generate the structure function
+
+\subsection{\sc Cost and Complexity}
+
+An overview of the general running cost and Big-Oh order of SFA
+
+\section{\sc Expected Output}
+
+What one should expect for results from running SFA
+
+\chapter{\sc Results and Conclusions}
+
+\section{\sc Results}
+
+A review of the results of running SFA on observational data
+
+\section{\sc Conclusions}
+
+Theoretical conclusions based on the findings of SFA
+
+\chapter{\sc Future Work}
+
+Potential future work and applications of SFA
+
+
+\appendix
+
+\chapter{SFA}
+\label{app:sfa}
+If you wanted an appendix, it would go in like this.  It would be 
+referenced using Appendix~\ref{app:sfa}.
+
+
+\begin{singlespace}
+\bibliography{SMU-HonorsThesis-template}
+\end{singlespace}
+\end{document}

@@ -1,0 +1,36 @@
+\contentsline {chapter}{{Contents}}{iii}% 
+\contentsline {chapter}{{List of Figures}}{v}% 
+\contentsline {chapter}{{List of Tables}}{vi}% 
+\contentsline {chapter}{\numberline {1}{\sc Introduction}}{1}% 
+\contentsline {section}{\numberline {1.1}{\sc Overview}}{1}% 
+\contentsline {section}{\numberline {1.2}{\sc Galaxies, Active Galaxies, and Black Holes}}{1}% 
+\contentsline {subsection}{\numberline {1.2.1}{\sc Galaxies}}{1}% 
+\contentsline {subsection}{\numberline {1.2.2}{\sc Active Galaxies}}{2}% 
+\contentsline {subsection}{\numberline {1.2.3}{\sc Black Holes}}{2}% 
+\contentsline {section}{\numberline {1.3}{\sc How AGN are observed}}{2}% 
+\contentsline {subsection}{\numberline {1.3.1}{\sc The Unified Model}}{2}% 
+\contentsline {subsection}{\numberline {1.3.2}{\sc Orbital X-Ray telescopes}}{2}% 
+\contentsline {section}{\numberline {1.4}{\sc Expected achievements}}{2}% 
+\contentsline {chapter}{\numberline {2}{\sc The General Relativistic Description}}{3}% 
+\contentsline {section}{\numberline {2.1}{\sc General Relativity}}{3}% 
+\contentsline {subsection}{\numberline {2.1.1}{\sc An introduction to Tensors}}{3}% 
+\contentsline {subsection}{\numberline {2.1.2}{\sc The Metric Tensor}}{3}% 
+\contentsline {subsection}{\numberline {2.1.3}{\sc The Spacetime Interval}}{3}% 
+\contentsline {section}{\numberline {2.2}{\sc The Kerr Spinning Black Hole}}{3}% 
+\contentsline {subsection}{\numberline {2.2.1}{\sc The Kerr Solution}}{4}% 
+\contentsline {subsection}{\numberline {2.2.2}{\sc Properties of the Kerr Solution}}{4}% 
+\contentsline {chapter}{\numberline {3}{\sc Statistical Analysis}}{5}% 
+\contentsline {section}{\numberline {3.1}{\sc The Structure Function}}{5}% 
+\contentsline {section}{\numberline {3.2}{\sc The Data}}{5}% 
+\contentsline {chapter}{\numberline {4}{\sc Programming SFA}}{6}% 
+\contentsline {section}{\numberline {4.1}{\sc SFA usage and description}}{6}% 
+\contentsline {section}{\numberline {4.2}{\sc The SFA algorithm}}{6}% 
+\contentsline {subsection}{\numberline {4.2.1}{\sc Process}}{6}% 
+\contentsline {subsection}{\numberline {4.2.2}{\sc Cost and Complexity}}{6}% 
+\contentsline {section}{\numberline {4.3}{\sc Expected Output}}{6}% 
+\contentsline {chapter}{\numberline {5}{\sc Results and Conclusions}}{7}% 
+\contentsline {section}{\numberline {5.1}{\sc Results}}{7}% 
+\contentsline {section}{\numberline {5.2}{\sc Conclusions}}{7}% 
+\contentsline {chapter}{\numberline {6}{\sc Future Work}}{8}% 
+\contentsline {chapter}{\numberline {A}{SFA}}{9}% 
+\contentsline {chapter}{{Bibliography}}{10}% 
