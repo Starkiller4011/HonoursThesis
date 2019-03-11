@@ -175,15 +175,40 @@ With masses ranging from $10^{5}\textup{M}_{\odot}$ and up, supermassive black h
 
 Since AGN are so far away and their central engines so massive that light cannot escape them, how then can we observe them? The answer to that question is that we cannot and still have not \textit{directly} observed one yet. We can however indirectly observe them, by their gravitational effect on their surroundings, and in the case of AGN by observing the emission they produce through their accretion process.
 
-\subsection{\sc Orbital X-Ray telescopes} \label{xrayTelesopes}
+As discussed earlier in section \ref{activeGalaxies}, the supermassive black holes at their centers are undergoing active accretion. This process drags matter in toward the black hole in a spiral at increasing speeds. The matter around the black hole spins as it approaches because it must conserve angular momentum. As such, the gas and dust in the area around the nucleus of an AGN forms a torus, which then thins into a disc as it approaches the event horizon. As matter from the torus gets closer to the event horizon, its velocity increases, heating it up to temperatures such that it eventually becomes ionized at the innermost stable circular orbit(ISCO).
 
-A description of the orbital observatories used and the bands of the EM spectrum they can observe
+On the accretion disc matter becomes hot enough to emit light in the Ultra-Violet(UV) range, and electrons are striped and deposited into clouds above and below the disc. In these electron clouds, UV light rays collide with electrons and sap energy from them in a process know as Reverse Compton Scattering, commonly referred to as Comptonisation. The UV rays that undergo this Comptonising process are re-emitted at high energies, often in the X-Ray band but also up to and including the gamma ray band.
+
+\subsection{\sc Light-Curves} \label{lightcurves}
+Thanks to the processes in and around the accretion disc, AGN emit light almost evenly across the entire electromagnetic spectrum. This allows us to collect the light they emit in our direction using telescopes and computer processes to generate what are known as light-curves. Light-curves are a comparison of $erg/s$ to the wavelength, frequency, or energy level of light particles. In SI units, $erg/s$ is equivalent to $\frac{\textup{W}\cdot kg\cdot m^{2}}{s^{3}}$. When observing AGN it is common to refer to wavelengths of light by their corresponding energy levels in $keV$. Since light behaves in expected ways when interacting in different environments, elemental spectral lines for example, modern astronomers use the light-curves of AGN to gain insight into their inner workings.
+
+Some expected properties of the spectra obtained from AGN are, the presence of an iron line around the $6.5 keV$ mark, a falloff in photon counts as photon energy increases, and obscuring of the lower energy X-ray and higher energy UV range due to absorption in the torus and surrounding gas and dust around the central engine.
 
 \newpage
 
-\section{\sc Expected Results} \label{expectedResults}
+\subsection{\sc Orbital X-Ray telescopes} \label{xrayTelesopes}
 
-What is expected to be achieved from this project
+\begin{figure}
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{xrayTelescopeMultimirror}
+		\caption{X-Ray telescope cutaway diagram.}
+		\label{fig:xrayMultiMirror}
+	\end{minipage}
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{grazingIncidence}
+		\caption{Grazing incidence diagram.}
+		\label{fig:grazingIncidence}
+	\end{minipage}
+\end{figure}
+
+As discussed in the previous section \ref{lightcurves}, AGN produce light almost evenly across the electromagnetic spectrum. The section that astronomers and physicists studying AGN find the most interesting is the UV to X-Ray region. In order to observer AGN without the distortions produced by our atmosphere and other terrestrial effects, orbital satellite telescopes are used. For this project the Neil Gehrels \textit{Swift} Observatory was used. The \textit{Swift} orbital telescope is equipped with a UV/Optical telescope, capable of obtaining spectra in the UV and optical, what we can see, wavebands. \textit{Swift} is also equipped with an X-Ray telescope for obtaining spectra in the X-ray band of the EM spectrum. The X-Ray telescope uses many mirrors at slightly increasing angles positioned throughout to focus the incoming X-rays as shown in (Figure \ref{fig:xrayMultiMirror}\footnote{https://imagine.gsfc.nasa.gov/observatories/technology/xray\_telescopes1.html \label{xrayTelescopeRef}}). The mirrors must be placed at slightly increasing angles because otherwise, the high energy X-Rays would pass right through the mirrors, unlike optical light (Figure \ref{fig:grazingIncidence}\textsuperscript{\ref{xrayTelescopeRef}}).
+
+\section{\sc Expected Achievements} \label{expectedAchievements}
+
+This project focused on analyzing the light-curves of several AGN using a Structure Function. The Structure Function, as will be discussed in section \ref{structureFunction}, is similar to a Fourier Analysis but without the aliasing and windowing issues that arise from unevenly sampled data. Since many astronomical objects cannot produce evenly sampled data due to the methods of observation and the timescales on which astronomical events happen, this project aims to provide a method for observing and analyzing astronomical events and objects such as AGN through the use of a Structure Function to help identify time-scales on which significant events might be occurring.
 
 \newpage
 

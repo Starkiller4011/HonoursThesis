@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.10)  10 MAR 2019 21:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.10)  10 MAR 2019 22:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -402,40 +402,52 @@ Package pdftex.def Info: ./img/UnifiedModel.jpg  used on input line 137.
 (pdftex.def)             Requested size: 260.17464pt x 201.74258pt.
  [4 <./img/UnifiedModel.jpg>]
 [5] [6] [7] [8]
+<./img/xrayTelescopeMultimirror.jpg, id=68, 1505.625pt x 591.20876pt>
+File: ./img/xrayTelescopeMultimirror.jpg Graphic file (type jpg)
+<use ./img/xrayTelescopeMultimirror.jpg>
+Package pdftex.def Info: ./img/xrayTelescopeMultimirror.jpg  used on input line
+ 195.
+(pdftex.def)             Requested size: 195.12767pt x 76.61626pt.
+<./img/grazingIncidence.jpg, id=69, 852.18375pt x 435.6275pt>
+File: ./img/grazingIncidence.jpg Graphic file (type jpg)
+<use ./img/grazingIncidence.jpg>
+Package pdftex.def Info: ./img/grazingIncidence.jpg  used on input line 201.
+(pdftex.def)             Requested size: 195.12767pt x 99.74686pt.
+ [9 <./img/xrayTelescopeMultimirror.jpg> <./img/grazingIncidence.jpg>] [10]
 Chapter 2.
-[9
-
-] [10]
-Chapter 3.
 [11
 
-]
-Chapter 4.
-[12
-
-]
-Chapter 5.
+] [12]
+Chapter 3.
 [13
 
 ]
-Chapter 6.
+Chapter 4.
 [14
 
 ]
-Appendix A.
-(./SMU-HonorsThesis-template.bbl [15
+Chapter 5.
+[15
 
-]) [16
+]
+Chapter 6.
+[16
+
+]
+Appendix A.
+(./SMU-HonorsThesis-template.bbl [17
+
+]) [18
 
 ] (./SMU-HonorsThesis-template.aux) ) 
 Here is how much of TeX's memory you used:
- 4109 strings out of 492616
- 60286 string characters out of 6132768
- 133976 words of memory out of 5000000
- 7947 multiletter control sequences out of 15000+600000
+ 4123 strings out of 492616
+ 60691 string characters out of 6132768
+ 134023 words of memory out of 5000000
+ 7959 multiletter control sequences out of 15000+600000
  12167 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,39p,1051b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,39p,1295b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2018/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmcsc10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -443,15 +455,16 @@ cmex10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pf
 b><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texl
 ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2018/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2018/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsl12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on SMU-HonorsThesis-template.pdf (23 pages, 3990684 bytes).
+fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2018/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sl12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on SMU-HonorsThesis-template.pdf (25 pages, 4096277 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 147 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
