@@ -10,29 +10,32 @@
 \contentsline {section}{\numberline {1.3}{\sc Active Galaxies}}{4}% 
 \contentsline {subsection}{\numberline {1.3.1}{\sc The Unified Model}}{4}% 
 \contentsline {section}{\numberline {1.4}{\sc Black Holes}}{5}% 
-\contentsline {section}{\numberline {1.5}{\sc How AGN are Observed}}{5}% 
-\contentsline {subsection}{\numberline {1.5.1}{\sc Orbital X-Ray telescopes}}{5}% 
-\contentsline {section}{\numberline {1.6}{\sc Expected achievements}}{6}% 
-\contentsline {chapter}{\numberline {2}{\sc The General Relativistic Description}}{7}% 
-\contentsline {section}{\numberline {2.1}{\sc General Relativity}}{7}% 
-\contentsline {subsection}{\numberline {2.1.1}{\sc An introduction to Tensors}}{7}% 
-\contentsline {subsection}{\numberline {2.1.2}{\sc The Metric Tensor}}{7}% 
-\contentsline {subsection}{\numberline {2.1.3}{\sc The Spacetime Interval}}{7}% 
-\contentsline {section}{\numberline {2.2}{\sc The Kerr Spinning Black Hole}}{7}% 
-\contentsline {subsection}{\numberline {2.2.1}{\sc The Kerr Solution}}{8}% 
-\contentsline {subsection}{\numberline {2.2.2}{\sc Properties of the Kerr Solution}}{8}% 
-\contentsline {chapter}{\numberline {3}{\sc Statistical Analysis}}{9}% 
-\contentsline {section}{\numberline {3.1}{\sc The Structure Function}}{9}% 
-\contentsline {section}{\numberline {3.2}{\sc The Data}}{9}% 
-\contentsline {chapter}{\numberline {4}{\sc Programming SFA}}{10}% 
-\contentsline {section}{\numberline {4.1}{\sc SFA usage and description}}{10}% 
-\contentsline {section}{\numberline {4.2}{\sc The SFA algorithm}}{10}% 
-\contentsline {subsection}{\numberline {4.2.1}{\sc Process}}{10}% 
-\contentsline {subsection}{\numberline {4.2.2}{\sc Cost and Complexity}}{10}% 
-\contentsline {section}{\numberline {4.3}{\sc Expected Output}}{10}% 
-\contentsline {chapter}{\numberline {5}{\sc Results and Conclusions}}{11}% 
-\contentsline {section}{\numberline {5.1}{\sc Results}}{11}% 
-\contentsline {section}{\numberline {5.2}{\sc Conclusions}}{11}% 
-\contentsline {chapter}{\numberline {6}{\sc Future Work}}{12}% 
-\contentsline {chapter}{\numberline {A}{SFA}}{13}% 
-\contentsline {chapter}{{Bibliography}}{14}% 
+\contentsline {subsection}{\numberline {1.4.1}{\sc Stellar Mass Black Holes}}{6}% 
+\contentsline {subsection}{\numberline {1.4.2}{\sc Intermediate-Mass Black Holes}}{6}% 
+\contentsline {subsection}{\numberline {1.4.3}{\sc Supermassive Black Holes}}{7}% 
+\contentsline {section}{\numberline {1.5}{\sc How AGN are Observed}}{7}% 
+\contentsline {subsection}{\numberline {1.5.1}{\sc Orbital X-Ray telescopes}}{7}% 
+\contentsline {section}{\numberline {1.6}{\sc Expected Results}}{8}% 
+\contentsline {chapter}{\numberline {2}{\sc The General Relativistic Description}}{9}% 
+\contentsline {section}{\numberline {2.1}{\sc General Relativity}}{9}% 
+\contentsline {subsection}{\numberline {2.1.1}{\sc An introduction to Tensors}}{9}% 
+\contentsline {subsection}{\numberline {2.1.2}{\sc The Metric Tensor}}{9}% 
+\contentsline {subsection}{\numberline {2.1.3}{\sc The Spacetime Interval}}{9}% 
+\contentsline {section}{\numberline {2.2}{\sc The Kerr Spinning Black Hole}}{9}% 
+\contentsline {subsection}{\numberline {2.2.1}{\sc The Kerr Solution}}{10}% 
+\contentsline {subsection}{\numberline {2.2.2}{\sc Properties of the Kerr Solution}}{10}% 
+\contentsline {chapter}{\numberline {3}{\sc Statistical Analysis}}{11}% 
+\contentsline {section}{\numberline {3.1}{\sc The Structure Function}}{11}% 
+\contentsline {section}{\numberline {3.2}{\sc The Data}}{11}% 
+\contentsline {chapter}{\numberline {4}{\sc Programming SFA}}{12}% 
+\contentsline {section}{\numberline {4.1}{\sc SFA usage and description}}{12}% 
+\contentsline {section}{\numberline {4.2}{\sc The SFA algorithm}}{12}% 
+\contentsline {subsection}{\numberline {4.2.1}{\sc Process}}{12}% 
+\contentsline {subsection}{\numberline {4.2.2}{\sc Cost and Complexity}}{12}% 
+\contentsline {section}{\numberline {4.3}{\sc Expected Output}}{12}% 
+\contentsline {chapter}{\numberline {5}{\sc Results and Conclusions}}{13}% 
+\contentsline {section}{\numberline {5.1}{\sc Results}}{13}% 
+\contentsline {section}{\numberline {5.2}{\sc Conclusions}}{13}% 
+\contentsline {chapter}{\numberline {6}{\sc Future Work}}{14}% 
+\contentsline {chapter}{\numberline {A}{Structure Function}}{15}% 
+\contentsline {chapter}{{Bibliography}}{16}% 

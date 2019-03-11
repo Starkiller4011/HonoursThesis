@@ -30,7 +30,7 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
-%\usepackage{amsmath}
+\usepackage{amsmath}
 \usepackage[round]{natbib}
 \usepackage{indentfirst}
 %---> Resource Directories <----------------------------------------------------
@@ -39,6 +39,7 @@
 
 \bibliographystyle{plainnat}
 \newcommand{\code}[1]{\texttt{#1}}%allows \code{stuff} to be \textt{stuff} used for code varibles
+\newcommand{\dd}[1]{\mathrm{d}#1}
 %
 %---> TITLE PAGE <------------------------------------------------------------------------
 \def\figurebox#1#2#3{%
@@ -70,7 +71,7 @@
 %---> ABSTRACT <--------------------------------------------------------------------------
 %% Apparently they want the title and name of the author in the abstract ...
 \begin{center}
-\section*{\center \sc Abstract}
+\section*{\center \sc Abstract} \label{abstract}
 \sc \myTitle
 \paragraph*{\center  \\}
 \end{center}
@@ -90,9 +91,9 @@ submitted on \today:\\
 %
 %---> INTRODUCTION <---------------------------------------------------------------------
 \mainmatter
-\chapter{\sc Introduction}
+\chapter{\sc Introduction} \label{introduction}
 
-\section{\sc Overview}
+\section{\sc Overview} \label{overview}
 
 This chapter will give an overview of the theoretical models used by modern astronomers and physicists to describe black holes. The majority of this thesis is concerned with the analysis of the electromagnetic spectrum emitted by real supermassive black holes at the centers of various galaxies by using a structure function, which will be described in detail.
 
@@ -100,7 +101,7 @@ To begin, this chapter will give a brief overview of galaxies, active galaxies, 
 
 Before we can dive into the work that was conducted for this thesis we must first understand the objects that were observed and how they are classified.
 
-\section{\sc Galaxies}
+\section{\sc Galaxies} \label{galaxies}
 
 Galaxies are relatively faint objects in comparison to close stars when being observed with the naked eye. So it comes as no surprise that they were not discovered until telescope technology had advanced to a sufficient degree as to allow a significant enough amount of light in to view very distant objects. In 1845, William Parsons of Ireland built a telescope that would be the largest of it's time. In using this telescope he was able to observe groupings of stars and gas and dust distant from our own Milky Way. Initially Parsons believed galaxies to be nebulae but soon concluded that they were "great clouds of stars" \cite{sag}.
 
@@ -115,19 +116,19 @@ These great clouds of stars are now theorized by modern astronomers and physicis
 
 Since their discovery, many various types of galaxies have been discovered and categorized into three groups (Figure \ref{fig:classDiagram}\footnote{https://commons.wikimedia.org/wiki/File:Hubble\_-\_de\_Vaucouleurs\_Galaxy\_Morphology\_Diagram.png}).
 
-\subsection{\sc Elliptical Galaxies}
+\subsection{\sc Elliptical Galaxies} \label{ellipticalGalaxies}
 
 \cite{sag} Describes elliptical galaxies as round or elliptical with no visible gas and dust and lacking hot bright stars. These galaxies classified from E0 to E7 based on how elliptical they are.
 
-\subsection{\sc Spiral Galaxies}
+\subsection{\sc Spiral Galaxies} \label{spiralGalaxies}
 
 Spiral galaxies are the most popular of the classifications of galaxies, and also the most pleasing to the eye. They consist of a disk and spiral arms extruding from their center. Spiral galaxies have some extremely unique characteristics, the least of which are their spiral arms from which they derive their name. A sub-class of spiral galaxy known as the \textit{Barred Spiral Galaxy} is called so because of the presence of a uniquely inherited bar at their center from which their spiral arms protrude.
 
-\subsection{\sc Irregular Galaxies}
+\subsection{\sc Irregular Galaxies} \label{irregularGalaxies}
 
 Not quite belonging to either the spiral nor the elliptical classes of galaxies, \textit{Irregular Galaxies} are collections of gas and dust with no real structure or shape. An example of irregular galaxies in our own relative backyard would be the Magellanic Clouds. The Small and Large Magellanic Clouds have virtually no proper geometric structure and are interacting gravitationally with our own Milky Way.
 
-\section{\sc Active Galaxies}
+\section{\sc Active Galaxies} \label{activeGalaxies}
 
 Thanks to advances in technology, such as the radio and X-Ray telescopes, modern astronomers and physicists have identified a new type of galaxy, the \textit{Active Galaxy}. Active galaxies are galaxies who are theorized to have an actively accreting supermassive black hole at their center. This accretion by the central black hole generates immense amounts of energy across the electromagnetic spectrum. This central black hole and its accompanying accretion disc are known as the nucleus of an active galaxy and are referred to as Active Galactic Nuclei(AGN).
 
@@ -138,110 +139,133 @@ Thanks to advances in technology, such as the radio and X-Ray telescopes, modern
 	\label{fig:unifiedModel}
 \end{figure}
 
-\subsection{\sc The Unified Model}
+\subsection{\sc The Unified Model} \label{unifiedModel}
 
 In order to help understand what we observe and to help produce new methods of observing AGN, the unified model was developed (Figure \ref{fig:unifiedModel}\footnote{https://fermi.gsfc.nasa.gov/science/eteu/agn/figure1.jpg}). 
 
 In the unified model the nucleus of the active galaxy consists of a supermassive black hole surrounded by a torus of dust and gas from which it is accreting through an accretion disc formed by the gravitational pull of the supermassive black hole. Since there are a number of different types of active galaxies that have been observed, in the unified model this is described by and viewing angle to the galaxy that the observer has. For instance if an observer is viewing an active galaxy from close to edge-on, then they will see either a radio galaxy or a Seyfert 2 AGN. If however they are observing from a higher angle, then the observer will see a quasar or a Seyfert 1 depending on whether the object is radio loud or not. And finally observing from an angle equivalent to directly above will result in the observer viewing a blazar.
 
-\section{\sc Black Holes}
+\section{\sc Black Holes} \label{blackHole}
 
-Astronomical description of black holes and super-massive black holes.
+To understand black holes, one must first understand escape velocity and how it relates to astronomical objects. For any given object, the escape velocity is the velocity required by any object or particle in order for that object or particle to escape the gravitational well created by the initial object. For example, in order for a probe to leave our Earth and visit the other planets of our solar system, that probe must first reach the escape velocity for the Earth. Mathematically speaking the escape velocity is defined as:
+\begin{equation}
+v_{e} = \sqrt{\frac{2GM}{r}}
+\end{equation}
+where $v_{e}$ is the escape velocity, $G$ is the universal gravitational constant, $M$ is the mass of the object to escape from, and $r$ is the distance from the center of said object. When $v_{e} \geq c$ at a given $r$, where $c$ is the speed of light, then nothing, not even light can escape the gravitational well created by the object in question.
 
+In this case the object in question would be referred to as a black hole and the radius from the center of the object $r$ is defined as the event horizon. There exists a more in depth definition for the black hole that will be discussed in section \ref{generalRelativity}. Black holes are commonly classified according to their mass due to the relationship between their mass and the radius of their event horizon, given by:
+\begin{equation}
+r_{s} = \frac{2GM}{c^{2}}
+\end{equation}
+where $r_{s}$ is the Schwarzchild radius as defined in section \ref{generalRelativity}.
 
-\section{\sc How AGN are Observed}
+\subsection{\sc Stellar Mass Black Holes} \label{stellarBH}
 
-\subsection{\sc Orbital X-Ray telescopes}
+Stellar mass black holes are those black holes that are most commonly depicted in fiction and film. With masses ranging from $10\textup{M}_{\odot}$ to $10^{2}\textup{M}_{\odot}$ where $\textup{M}_{\odot}$ is the mass of our Sun, know as a solar mass.
+
+\subsection{\sc Intermediate-Mass Black Holes} \label{intermediateBH}
+
+Intermediate-mass black holes(IMBH) are theorized to to be those black holes with significantly more mass than a stellar mass black hole but less than a supermassive black hole. There have been a couple of IMBH candidates in our own galaxy and others nearby. Intermediate-mass black holes have masses between $10^{2}\textup{M}_{\odot}$ and $10^{5}\textup{M}_{\odot}$ Since this thesis is concerned with AGN and thus supermassive black holes, we will not discuss IMBHs in more detail.
+
+\subsection{\sc Supermassive Black Holes}
+
+With masses ranging from $10^{5}\textup{M}_{\odot}$ and up, supermassive black holes are believed to be at the centers of most large galaxies holding them together. There is observational evidence that our own Milky Way is host to one such monster, Sagittarius A*. When one of these supermassive black holes is actively accreting from its surrounding galaxy, we can it the nuclei of an active galaxy as discussed in section \ref{activeGalaxies}.
+
+\section{\sc How AGN are Observed} \label{howObserved}
+
+Since AGN are so far away and their central engines so massive that light cannot escape them, how then can we observe them? The answer to that question is that we cannot and still have not \textit{directly} observed one yet. We can however indirectly observe them, by their gravitational effect on their surroundings, and in the case of AGN by observing the emission they produce through their accretion process.
+
+\subsection{\sc Orbital X-Ray telescopes} \label{xrayTelesopes}
 
 A description of the orbital observatories used and the bands of the EM spectrum they can observe
 
 \newpage
 
-\section{\sc Expected achievements}
+\section{\sc Expected Results} \label{expectedResults}
 
 What is expected to be achieved from this project
 
 \newpage
 
-\chapter{\sc The General Relativistic Description}
+\chapter{\sc The General Relativistic Description} \label{GRDescription}
 
-\section{\sc General Relativity}
+\section{\sc General Relativity} \label{generalRelativity}
 
 An introduction to general relativity and its relation to black holes.
 
-\subsection{\sc An introduction to Tensors}
+\subsection{\sc An introduction to Tensors} \label{tensorIntro}
 
 An introduction to tensors and their mathematical properties
 
-\subsection{\sc The Metric Tensor}
+\subsection{\sc The Metric Tensor} \label{metricTensor}
 
 Role of the metric tensor
 
-\subsection{\sc The Spacetime Interval}
+\subsection{\sc The Spacetime Interval} \label{spacetimeInterval}
 
 Role of the spacetime interval
 
-\section{\sc The Kerr Spinning Black Hole}
+\section{\sc The Kerr Spinning Black Hole} \label{kerrSpinningBH}
 
 Description of the concept of the Kerr spinning black hole and its importance.
 
-\subsection{\sc The Kerr Solution}
+\subsection{\sc The Kerr Solution} \label{kerrSolution}
 
 The mathematics of the Kerr solution.
 
-\subsection{\sc Properties of the Kerr Solution}
+\subsection{\sc Properties of the Kerr Solution} \label{kerrSolutionProperties}
 
 Properties of the Kerr solution.
 
-\chapter{\sc Statistical Analysis}
+\chapter{\sc Statistical Analysis} \label{statisticalAnalysis}
 
-\section{\sc The Structure Function}
+\section{\sc The Structure Function} \label{structureFunction}
 
 \citep{collier2001}
 What the structure function is and how it applies to this data sample. Why it was chosen.
 
-\section{\sc The Data}
+\section{\sc The Data} \label{theData}
 
 An overview of the data. This section will contain many figures.
 
-\chapter{\sc Programming SFA}
+\chapter{\sc Programming SFA} \label{programmingSFA}
 
-\section{\sc SFA usage and description}
+\section{\sc SFA usage and description} \label{usageDescription}
 
 A description of what SFA was developed for and its usage.
 
-\section{\sc The SFA algorithm}
+\section{\sc The SFA algorithm} \label{algorithm}
 
 \subsection{\sc Process}
 
 The logical process SFA follows to generate the structure function
 
-\subsection{\sc Cost and Complexity}
+\subsection{\sc Cost and Complexity} \label{costComplexity}
 
 An overview of the general running cost and Big-Oh order of SFA
 
-\section{\sc Expected Output}
+\section{\sc Expected Output} \label{expectedOutput}
 
 What one should expect for results from running SFA
 
-\chapter{\sc Results and Conclusions}
+\chapter{\sc Results and Conclusions} \label{resultsConclusions}
 
-\section{\sc Results}
+\section{\sc Results} \label{results}
 
 A review of the results of running SFA on observational data
 
-\section{\sc Conclusions}
+\section{\sc Conclusions} \label{conclusions}
 
 Theoretical conclusions based on the findings of SFA
 
-\chapter{\sc Future Work}
+\chapter{\sc Future Work} \label{futureWork}
 
 Potential future work and applications of SFA
 
 
 \appendix
 
-\chapter{SFA}
+\chapter{Structure Function} \label{appendixSFA}
 \label{app:sfa}
 If you wanted an appendix, it would go in like this.  It would be 
 referenced using Appendix~\ref{app:sfa}.

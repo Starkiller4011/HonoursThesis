@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.10)  10 MAR 2019 18:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.10)  10 MAR 2019 21:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -182,12 +182,70 @@ tionbodyfont #2\par }\else #1: #2\par \fi \else \global \@minipagefalse \hb@xt@
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
 \c@subfigure=\count102
 \c@subtable=\count103
+)
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip74
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen123
+))
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen124
+)
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count104
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count105
+\leftroot@=\count106
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count107
+\DOTSCASE@=\count108
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+\big@size=\dimen125
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count109
+\c@MaxMatrixCols=\count110
+\dotsspace@=\muskip10
+\c@parentequation=\count111
+\dspbrk@lvl=\count112
+\tag@help=\toks16
+\row@=\count113
+\column@=\count114
+\maxfields@=\count115
+\andhelp@=\toks17
+\eqnshift@=\dimen126
+\alignsep@=\dimen127
+\tagshift@=\dimen128
+\tagwidth@=\dimen129
+\totwidth@=\dimen130
+\lineht@=\dimen131
+\@envbody=\toks18
+\multlinegap=\skip75
+\multlinetaggap=\skip76
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
 ) (./natbib.sty
 Package: natbib 1999/02/25 6.9 (PWD)
-\bibhang=\skip74
-\bibsep=\skip75
+\bibhang=\skip77
+\bibsep=\skip78
 LaTeX Info: Redefining \cite on input line 486.
-\c@NAT@ctr=\count104
+\c@NAT@ctr=\count116
 )
 (c:/texlive/2018/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
@@ -195,33 +253,33 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 (./SMU-HonorsThesis-template.aux)
 \openout1 = `SMU-HonorsThesis-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-\bibindent=\dimen123
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+\bibindent=\dimen132
 
 (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count105
-\scratchdimen=\dimen124
-\scratchbox=\box53
-\nofMPsegments=\count106
-\nofMParguments=\count107
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count108
-\MPscratchDim=\dimen125
-\MPnumerator=\count109
-\makeMPintoPDFobject=\count110
-\everyMPtoPDFconversion=\toks16
+\scratchcounter=\count117
+\scratchdimen=\dimen133
+\scratchbox=\box55
+\nofMPsegments=\count118
+\nofMParguments=\count119
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count120
+\MPscratchDim=\dimen134
+\MPnumerator=\count121
+\makeMPintoPDFobject=\count122
+\everyMPtoPDFconversion=\toks21
 ) (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -280,24 +338,18 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 67.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 67.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 67.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 67.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 68.
 
 (c:/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 67.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 68.
 
 (c:/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 67.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 68.
  [1
 
 
@@ -334,14 +386,10 @@ Chapter 1.
 File: ./img/GalaxyClassificationChart.png Graphic file (type png)
 <use ./img/GalaxyClassificationChart.png>
 Package pdftex.def Info: ./img/GalaxyClassificationChart.png  used on input lin
-e 111.
+e 112.
 (pdftex.def)             Requested size: 433.62pt x 238.70425pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 116.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 116.
 
-Overfull \hbox (30.49503pt too wide) in paragraph at lines 116--116
+Overfull \hbox (30.49503pt too wide) in paragraph at lines 117--117
 [][]\OT1/cmr/m/n/10 https://commons.wikimedia.org/wiki/File:Hubble[]-[]de[]Vauc
 ouleurs[]Galaxy[]Morphology[]Diagram.png| 
  []
@@ -350,57 +398,60 @@ ouleurs[]Galaxy[]Morphology[]Diagram.png|
 <./img/UnifiedModel.jpg, id=46, 652.4375pt x 505.89pt>
 File: ./img/UnifiedModel.jpg Graphic file (type jpg)
 <use ./img/UnifiedModel.jpg>
-Package pdftex.def Info: ./img/UnifiedModel.jpg  used on input line 136.
+Package pdftex.def Info: ./img/UnifiedModel.jpg  used on input line 137.
 (pdftex.def)             Requested size: 260.17464pt x 201.74258pt.
  [4 <./img/UnifiedModel.jpg>]
-[5] [6]
+[5] [6] [7] [8]
 Chapter 2.
-[7
-
-] [8]
-Chapter 3.
 [9
 
-]
-Chapter 4.
-[10
-
-]
-Chapter 5.
+] [10]
+Chapter 3.
 [11
 
 ]
-Chapter 6.
+Chapter 4.
 [12
 
 ]
-Appendix A.
-(./SMU-HonorsThesis-template.bbl [13
+Chapter 5.
+[13
 
-]) [14
+]
+Chapter 6.
+[14
+
+]
+Appendix A.
+(./SMU-HonorsThesis-template.bbl [15
+
+]) [16
 
 ] (./SMU-HonorsThesis-template.aux) ) 
 Here is how much of TeX's memory you used:
- 3467 strings out of 492616
- 52900 string characters out of 6132768
- 122952 words of memory out of 5000000
- 7323 multiletter control sequences out of 15000+600000
- 11039 words of font info for 42 fonts, out of 8000000 for 9000
+ 4109 strings out of 492616
+ 60286 string characters out of 6132768
+ 133976 words of memory out of 5000000
+ 7947 multiletter control sequences out of 15000+600000
+ 12167 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,39p,1051b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,9n,39p,1051b,270s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2018/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmcsc10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-<c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive
-/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2018/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb><c:/texlive/2018/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti12.pfb>
-Output written on SMU-HonorsThesis-template.pdf (21 pages, 3955646 bytes).
+cmex10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pf
+b><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2018/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2018/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2018/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsl12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on SMU-HonorsThesis-template.pdf (23 pages, 3990684 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 134 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
