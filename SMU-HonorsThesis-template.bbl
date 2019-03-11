@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{4}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[Collier and Peterson(2001)]{collier2001}
@@ -7,9 +7,20 @@ S.~Collier and B.~M. Peterson.
   nuclei.
 \newblock {\em The Astrophysical Journal}, 555:\penalty0 775, 2001.
 
+\bibitem[Rutman(1978)]{rutman}
+J.~Rutman.
+\newblock Characterization of phase and frequency instabilities in precision
+  frequency sources: Fifteen years of progress.
+\newblock {\em Proceedings of the IEEE}, 66:\penalty0 1048--1075, 1978.
+
 \bibitem[Seeds and Backman(2013)]{sag}
 Michael~A. Seeds and Dana~E. Backman.
 \newblock {\em Stars and Galaxies}.
 \newblock Brooks/Cole, 8th edition, 2013.
+
+\bibitem[Simonetti et~al.(1985)Simonetti, Cordes, and Heeschen]{cordes1985}
+J.~H. Simonetti, J.~M. Cordes, and D.~S. Heeschen.
+\newblock Flicker of extragalactic radio sources at two frequencies.
+\newblock {\em The Astrophysical Journal}, 296:\penalty0 46--59, 1985.
 
 \end{thebibliography}

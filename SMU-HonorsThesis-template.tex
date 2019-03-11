@@ -210,9 +210,9 @@ As discussed in the previous section \ref{lightcurves}, AGN produce light almost
 
 This project focused on analyzing the light-curves of several AGN using a Structure Function. The Structure Function, as will be discussed in section \ref{structureFunction}, is similar to a Fourier Analysis but without the aliasing and windowing issues that arise from unevenly sampled data. Since many astronomical objects cannot produce evenly sampled data due to the methods of observation and the timescales on which astronomical events happen, this project aims to provide a method for observing and analyzing astronomical events and objects such as AGN through the use of a Structure Function to help identify time-scales on which significant events might be occurring.
 
-\newpage
-
 \chapter{\sc The General Relativistic Description} \label{GRDescription}
+
+A brief description of general relativity, its origins, and why it relates to this project.
 
 \section{\sc General Relativity} \label{generalRelativity}
 
@@ -244,10 +244,17 @@ Properties of the Kerr solution.
 
 \chapter{\sc Statistical Analysis} \label{statisticalAnalysis}
 
+Data collected on AGN is often broken into a series of sections broken up by sections of no data. Because the timescales on which events occur in AGN can vary greatly, some happening in mere hours, others days, and still others on month or longer timescales, the sampling rate for observations on then is often uneven and broken. This poses many challenges to astronomers and physicists analyzing these objects as many conventional statistical methods will not work.
+
 \section{\sc The Structure Function} \label{structureFunction}
 
+The structure function is discussed by \citep{cordes1985} in their appendix and defined by \citep{rutman}. The structure function of order $M$ has the unique ability to remove polynomials of order $M-1$ from the time series on which they are applied. A structure function of order $M$ for a function $\phi\left(t\right)$ is defined by \cite{rutman} as:
+\begin{equation}
+D^{\left(M\right)}_{\phi}\left(t, \tau\right) = \langle\left[\Delta^{\left(M\right)}_{\phi}\left(t, \tau\right)\right]^{2}\rangle
+\end{equation}
+where the angular brackets $\langle\rangle\ $ denote an ensemble average.
+
 \citep{collier2001}
-What the structure function is and how it applies to this data sample. Why it was chosen.
 
 \section{\sc The Data} \label{theData}
 

@@ -22,21 +22,21 @@
 \contentsline {subsection}{\numberline {2.1.1}{\sc An introduction to Tensors}}{11}% 
 \contentsline {subsection}{\numberline {2.1.2}{\sc The Metric Tensor}}{11}% 
 \contentsline {subsection}{\numberline {2.1.3}{\sc The Spacetime Interval}}{11}% 
-\contentsline {section}{\numberline {2.2}{\sc The Kerr Spinning Black Hole}}{11}% 
+\contentsline {section}{\numberline {2.2}{\sc The Kerr Spinning Black Hole}}{12}% 
 \contentsline {subsection}{\numberline {2.2.1}{\sc The Kerr Solution}}{12}% 
 \contentsline {subsection}{\numberline {2.2.2}{\sc Properties of the Kerr Solution}}{12}% 
 \contentsline {chapter}{\numberline {3}{\sc Statistical Analysis}}{13}% 
 \contentsline {section}{\numberline {3.1}{\sc The Structure Function}}{13}% 
-\contentsline {section}{\numberline {3.2}{\sc The Data}}{13}% 
-\contentsline {chapter}{\numberline {4}{\sc Programming SFA}}{14}% 
-\contentsline {section}{\numberline {4.1}{\sc SFA usage and description}}{14}% 
-\contentsline {section}{\numberline {4.2}{\sc The SFA algorithm}}{14}% 
-\contentsline {subsection}{\numberline {4.2.1}{\sc Process}}{14}% 
-\contentsline {subsection}{\numberline {4.2.2}{\sc Cost and Complexity}}{14}% 
-\contentsline {section}{\numberline {4.3}{\sc Expected Output}}{14}% 
-\contentsline {chapter}{\numberline {5}{\sc Results and Conclusions}}{15}% 
-\contentsline {section}{\numberline {5.1}{\sc Results}}{15}% 
-\contentsline {section}{\numberline {5.2}{\sc Conclusions}}{15}% 
-\contentsline {chapter}{\numberline {6}{\sc Future Work}}{16}% 
-\contentsline {chapter}{\numberline {A}{Structure Function}}{17}% 
-\contentsline {chapter}{{Bibliography}}{18}% 
+\contentsline {section}{\numberline {3.2}{\sc The Data}}{14}% 
+\contentsline {chapter}{\numberline {4}{\sc Programming SFA}}{15}% 
+\contentsline {section}{\numberline {4.1}{\sc SFA usage and description}}{15}% 
+\contentsline {section}{\numberline {4.2}{\sc The SFA algorithm}}{15}% 
+\contentsline {subsection}{\numberline {4.2.1}{\sc Process}}{15}% 
+\contentsline {subsection}{\numberline {4.2.2}{\sc Cost and Complexity}}{15}% 
+\contentsline {section}{\numberline {4.3}{\sc Expected Output}}{15}% 
+\contentsline {chapter}{\numberline {5}{\sc Results and Conclusions}}{16}% 
+\contentsline {section}{\numberline {5.1}{\sc Results}}{16}% 
+\contentsline {section}{\numberline {5.2}{\sc Conclusions}}{16}% 
+\contentsline {chapter}{\numberline {6}{\sc Future Work}}{17}% 
+\contentsline {chapter}{\numberline {A}{Structure Function}}{18}% 
+\contentsline {chapter}{{Bibliography}}{19}% 

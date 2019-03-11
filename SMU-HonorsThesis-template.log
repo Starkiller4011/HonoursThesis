@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.10)  10 MAR 2019 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.3.10)  11 MAR 2019 16:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -421,30 +421,30 @@ Chapter 2.
 Chapter 3.
 [13
 
-]
+] [14]
 Chapter 4.
-[14
-
-]
-Chapter 5.
 [15
 
 ]
-Chapter 6.
+Chapter 5.
 [16
 
 ]
-Appendix A.
-(./SMU-HonorsThesis-template.bbl [17
+Chapter 6.
+[17
 
-]) [18
+]
+Appendix A.
+(./SMU-HonorsThesis-template.bbl [18
+
+]) [19
 
 ] (./SMU-HonorsThesis-template.aux) ) 
 Here is how much of TeX's memory you used:
- 4123 strings out of 492616
- 60691 string characters out of 6132768
- 134023 words of memory out of 5000000
- 7959 multiletter control sequences out of 15000+600000
+ 4125 strings out of 492616
+ 60711 string characters out of 6132768
+ 134114 words of memory out of 5000000
+ 7961 multiletter control sequences out of 15000+600000
  12167 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,9n,39p,1295b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -461,10 +461,10 @@ fonts/cm/cmr8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sl12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 <c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texliv
 e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on SMU-HonorsThesis-template.pdf (25 pages, 4096277 bytes).
+Output written on SMU-HonorsThesis-template.pdf (26 pages, 4101638 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
+ 151 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
