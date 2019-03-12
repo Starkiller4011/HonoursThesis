@@ -1,2 +1,8 @@
+# RAW data files not to be included with the thesis
 data
 data/*
+
+# LaTeX intermediates
+*.log
+*.pdf
+*.synctex.gz
