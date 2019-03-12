@@ -3,6 +3,19 @@ data
 data/*
 
 # LaTeX intermediates
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.pdf
+*.ps
+*.synctex.gz
+*.toc
 ./*.aux
 ./*.bbl
 ./*.blg
