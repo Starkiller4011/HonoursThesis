@@ -31,6 +31,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage[round]{natbib}
 \usepackage{indentfirst}
 %---> Resource Directories <----------------------------------------------------
@@ -256,16 +257,16 @@ D^{\left(M\right)}_{\phi}\left(t, \tau\right) = \langle\left[\Delta^{\left(M\rig
 \end{equation}
 where the angled brackets are an average over time $t$. \cite{rutman} also defines the $M^{th}$ increment of $\phi\left(t\right)$ as:
 \begin{equation} \label{eqn3.2}
-\Delta^{\left(M\right)}_{\phi}\left(t, \tau\right) = \sum_{n=0}^{\infty}\left(-1\right)^{n}\left(\frac{M}{n}\right)\phi\left(t + \left[M - n\right]\tau\right)
+\Delta^{\left(M\right)}_{\phi}\left(t, \tau\right) = \sum_{n=0}^{\infty}\left(-1\right)^{n}{M \choose n}\phi\left(t + \left[M - n\right]\tau\right)
 \end{equation}
 
-For a time series of measurements $f\left(t_{i}\right), i = 1,2,3,...$ the first order structure is defined by \citep{collier2001} as:
+For a time series of measurements $f\left(t_{i}\right), i = 1,2,3,...$ the		 first order structure is defined by \citep{collier2001} as:
 \begin{equation}
 S\left(\tau\right) = \frac{1}{N\left(\tau\right)}\sum_{i<j}\left[f\left(t_{i}\right)-f\left(t_{j}\right)\right]^{2}
 \end{equation}
-where the sum is over all pairs for which $t_{j}-t_{i}=\tau$, and $N\left(\tau\right)$ is the number of such pairs.
+where the sum is over all pairs $\left(f\left(t_{i}\right),f\left(t_{j}\right)\right)$ for which $t_{j}-t_{i}=\tau$, and $N\left(\tau\right)$ is the number of such pairs.
 
-Structure functions have a very distinct shape, resembling a sigmoid but dominated by twice the signal variance, $2\sigma^{2}$, on short timescales and twice the noise variance, $2\sigma_{noise}^{2}$, on long timescales. This results in two flat plateaus dominated by noise connected by a power-law section. The power-law region of the structure function exists where $\tau_{min}\leq\tau\leq\tau_{max}$.
+Structure functions have a very distinct shape, resembling a sigmoid but dominated by twice the signal variance, $2\sigma^{2}$, on short timescales and twice the noise variance, $2\sigma_{noise}^{2}$, on long timescales. This results in two noise dominated plateaus connected by a power-law section. The power-law region of the structure function exists where $\tau_{min}\lesssim\tau\lesssim\tau_{max}$. When $\tau_{max}\ll T$, where $T$ is the total duration of the time-series, we can approximate $\tau_{max}$ to a characteristic timescale, $\tau_{char}$, determined by fundamental source characteristics such as mass, size, matter propagation and others depending on the source of the time-series.
 
 \section{\sc The Data} \label{theData}
 
