@@ -76,7 +76,7 @@
 \sc \myTitle
 \paragraph*{\center  \\}
 \end{center}
-Our universe is pockmarked with galaxies as far as we can currently observe from our humble planet. The currently accepted theoretical model is that at the center of these galaxies are super-massive black holes holding them together. This has been proven for a majority of these observable galaxies, including our own, and for some the central black hole is actively accreting matter. We call the galaxies hosting these black holes active galaxies. Active galaxies are of particular interest because they are some of the brightest objects in the night sky and yet their emission spectra are incredibly variable. Unfortunately since the data acquired from these objects is generally unevenly sampled, we cannot use a Fourier analysis as it suffers from windowing and aliasing. For these reasons we turn to the structure function which has a similar effect as the Fourier analysis but with the added benefits of remaining in the time domain and sporting a robustness against windowing and aliasing due to uneven sampling.
+Viewed from Earth, regardless of the direction one looks, our universe is populated with galaxies as far as we can currently observer. The currently accepted theoretical model is that supermassive black holes reside at the center of galaxies. This has been proven for a majority of observable galaxies, including our own. For some the central black hole is actively accreting matter and these galaxies are called active galaxies. Active galaxies are of particular interest because when viewed over the entire electromagnetic spectrum they are some of the brightest objects in the night sky. In addition, their emission spectra are incredibly variable. Unfortunately since the data acquired from these objects is generally unevenly sampled, a Fourier analysis cannot be used to investigate them as it suffers from windowing and aliasing. For these reasons a structure function was used, which provides similar information as the Fourier analysis, but with the added benefits of remaining in the time domain and sporting a robustness against windowing and aliasing due to uneven sampling.
 
 \begin{center}
 by {\em Derek Blue}\\
@@ -158,7 +158,7 @@ In this case the object in question would be referred to as a black hole and the
 \begin{equation} \label{eqn1.2}
 r_{s} = \frac{2GM}{c^{2}}
 \end{equation}
-where $r_{s}$ is the Schwarzchild radius as defined in section \ref{generalRelativity}.
+where $r_{s}$ is the Schwarzchild radius as defined in chapter \ref{generalRelativity}.
 
 \subsection{\sc Stellar Mass Black Holes} \label{stellarBH}
 
@@ -207,33 +207,33 @@ Some expected properties of the spectra obtained from AGN are, the presence of a
 
 As discussed in the previous section \ref{lightcurves}, AGN produce light almost evenly across the electromagnetic spectrum. The section that astronomers and physicists studying AGN find the most interesting is the UV to X-Ray region. In order to observer AGN without the distortions produced by our atmosphere and other terrestrial effects, orbital satellite telescopes are used. For this project the Neil Gehrels \textit{Swift} Observatory was used. The \textit{Swift} orbital telescope is equipped with a UV/Optical telescope, capable of obtaining spectra in the UV and optical, what we can see, wavebands. \textit{Swift} is also equipped with an X-Ray telescope for obtaining spectra in the X-ray band of the EM spectrum. The X-Ray telescope uses many mirrors at slightly increasing angles positioned throughout to focus the incoming X-rays as shown in (Figure \ref{fig:xrayMultiMirror}\footnote{https://imagine.gsfc.nasa.gov/observatories/technology/xray\_telescopes1.html \label{xrayTelescopeRef}}). The mirrors must be placed at slightly increasing angles because otherwise, the high energy X-Rays would pass right through the mirrors, unlike optical light (Figure \ref{fig:grazingIncidence}\textsuperscript{\ref{xrayTelescopeRef}}).
 
-\section{\sc Expected Achievements} \label{expectedAchievements}
+\section{\sc Project Goals} \label{expectedAchievements}
 
 This project focused on analyzing the light-curves of several AGN using a Structure Function. The Structure Function, as will be discussed in section \ref{structureFunction}, is similar to a Fourier Analysis but without the aliasing and windowing issues that arise from unevenly sampled data. Since many astronomical objects cannot produce evenly sampled data due to the methods of observation and the timescales on which astronomical events happen, this project aims to provide a method for observing and analyzing astronomical events and objects such as AGN through the use of a Structure Function to help identify time-scales on which significant events might be occurring.
 
-\chapter{\sc The General Relativistic Description} \label{GRDescription}
+\chapter{\sc General Relativistic Description of Black Holes} \label{generalRelativity}
 
 A brief description of general relativity, its origins, and why it relates to this project.
 
-\section{\sc General Relativity} \label{generalRelativity}
-
-An introduction to general relativity and its relation to black holes.
-
-\subsection{\sc An introduction to Tensors} \label{tensorIntro}
+\section{\sc An introduction to Tensors} \label{tensorIntro}
 
 An introduction to tensors and their mathematical properties
 
-\subsection{\sc The Metric Tensor} \label{metricTensor}
+\section{\sc The Metric Tensor} \label{metricTensor}
 
 Role of the metric tensor
 
-\subsection{\sc The Spacetime Interval} \label{spacetimeInterval}
+\section{\sc The Spacetime Interval} \label{spacetimeInterval}
 
 Role of the spacetime interval
 
-\section{\sc The Kerr Spinning Black Hole} \label{kerrSpinningBH}
+\section{\sc Black Hole Solutions} \label{blackHoleSolutions}
 
-Description of the concept of the Kerr spinning black hole and its importance.
+Overview of black hole solutions
+
+\subsection{\sc The Schwarzchild Solution} \label{schwarzchildSolution}
+
+The mathematics of the Schwarzchild solution.
 
 \subsection{\sc The Kerr Solution} \label{kerrSolution}
 
@@ -251,7 +251,9 @@ Data collected on AGN is often difficult to work with, as mentioned in section \
 
 The structure function is discussed by \citep{cordes1985} in their appendix and was originally defined by \citep{rutman}. It can be closely compared to the auto-correlation and cross-correlation functions. Structure functions of order $M$ remove polynomials of order $M-1$ from the time series leaving a result that is dependent only on on any stationary random process inherent in the time series and any higher order polynomial trends.
 
-The $M^{th}$ order structure function is defined by \cite{rutman} as:
+\subsection{\sc Definition of the Structure Function} \label{structureFunctionDefinition}
+
+For any given random process the $M^{th}$ order structure function is defined by \cite{rutman} as:
 \begin{equation} \label{eqn3.1}
 D^{\left(M\right)}_{\phi}\left(t, \tau\right) = \langle\left[\Delta^{\left(M\right)}_{\phi}\left(t, \tau\right)\right]^{2}\rangle
 \end{equation}
@@ -260,15 +262,55 @@ where the angled brackets are an average over time $t$. \cite{rutman} also defin
 \Delta^{\left(M\right)}_{\phi}\left(t, \tau\right) = \sum_{n=0}^{\infty}\left(-1\right)^{n}{M \choose n}\phi\left(t + \left[M - n\right]\tau\right)
 \end{equation}
 
-For a time series of measurements $f\left(t_{i}\right), i = 1,2,3,...$ the		 first order structure is defined by \citep{collier2001} as:
+For a time series of measurements $f\left(t_{i}\right), i = 1,2,3,...$ the first order structure is defined by \citep{collier2001} as:
 \begin{equation}
 S\left(\tau\right) = \frac{1}{N\left(\tau\right)}\sum_{i<j}\left[f\left(t_{i}\right)-f\left(t_{j}\right)\right]^{2}
 \end{equation}
 where the sum is over all pairs $\left(f\left(t_{i}\right),f\left(t_{j}\right)\right)$ for which $t_{j}-t_{i}=\tau$, and $N\left(\tau\right)$ is the number of such pairs.
 
-Structure functions have a very distinct shape, resembling a sigmoid but dominated by twice the signal variance, $2\sigma^{2}$, on short timescales and twice the noise variance, $2\sigma_{noise}^{2}$, on long timescales. This results in two noise dominated plateaus connected by a power-law section. The power-law region of the structure function exists where $\tau_{min}\lesssim\tau\lesssim\tau_{max}$. When $\tau_{max}\ll T$, where $T$ is the total duration of the time-series, we can approximate $\tau_{max}$ to a characteristic timescale, $\tau_{char}$, determined by fundamental source characteristics such as mass, size, matter propagation and others depending on the source of the time-series.
+\subsection{\sc Shape and Characteristics} \label{shapeAndCharacteristics}
+
+\begin{figure}
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{structureFunctionShape}
+		\caption{An example of a structure function with normal scaled axes.(To be replaced)}
+		\label{fig:structureFunctionShape}
+	\end{minipage}
+	\begin{minipage}{0.1\textwidth}
+	\end{minipage}
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{structureFunctionLogShape}
+		\caption{An example of a structure function with log scaled axes. (To be replaced)}
+		\label{fig:structureFunctionLogShape}
+	\end{minipage}
+\end{figure}
+
+Structure functions have a very distinct shape, resembling a sigmoid but dominated by twice the signal variance, $2\sigma^{2}$, on short timescales and twice the noise variance, $2\sigma_{noise}^{2}$, on long timescales. This results in two noise dominated plateaus connected by a power-law section as shown in figure \ref{fig:structureFunctionLogShape} where the plateaus are shown with a red line and the power-law section is shown with a green line overlaid on top of real data for a structure function. As is evident in figure \ref{fig:structureFunctionLogShape}, the upper plateau, corresponding to longer timescales, is completely noise dominated.
+
+The power-law region of the structure function exists where $\tau_{min}\lesssim\tau\lesssim\tau_{max}$. When $\tau_{max}\ll T$, where $T$ is the total duration of the time-series, we can approximate $\tau_{max}$ to a characteristic timescale, $\tau_{char}$, determined by fundamental source characteristics such as mass, size, matter propagation and others depending on the source of the time-series.
+
+\subsection{\sc Problems and Pitfalls} \label{problemsAndPitfalls}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\linewidth]{mkn335UVW2SF}
+	\caption{Structure function for UVW2 data collected from Mkn335}
+	\label{fig:mkn335UVW2SF}
+\end{figure}
+
+The structure functions is an extremely valuable tool for analyzing data that has odd or uneven sampling rates, but it is not without fault. Some things to be aware of when using a structure function on data are as follows. Linear trends that span the entire time-series will artificially steepen the structure function. This can be avoided by removing a best-fit linear model applied to the entire time-series. Some object may have more than one characteristic timescale and this may manifest itself as a third plateau breaking the power-law region in two, as can be seen in figure \ref{fig:mkn335UVW2SF}. 
 
 \section{\sc The Data} \label{theData}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{mkn335Lightcurves}
+	\caption{The \textit{Swift} XRT and UVOT light curves for \textbf{Mrk} 335 from 17 May 2007 to 31 Dec 2017. The XRT light curve is in counts s$^{-1}$. UVOT light curves are in units of $10^{-14}$erg s$^{-1}$cm$^{-2}$\AA$^{-1}$}
+	\label{fig:mkn335LC}
+\end{figure}
 
 An overview of the data. This section will contain many figures.
 
