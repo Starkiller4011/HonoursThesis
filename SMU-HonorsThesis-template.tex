@@ -96,15 +96,13 @@ submitted on \today:\\
 
 \section{\sc Overview} \label{overview}
 
-This chapter will give an overview of the theoretical models used by modern astronomers and physicists to describe black holes. The majority of this thesis is concerned with the analysis of the electromagnetic spectrum emitted by real supermassive black holes at the centers of various galaxies by using a structure function, which will be described in detail.
-
-To begin, this chapter will give a brief overview of galaxies, active galaxies, black holes and their similarities and differences. This chapter will then go into detail on how we can observe these astronomical objects and the model used to explain what we observe from active galaxies. Finally, this chapter will go over what is expected from the work that was conducted and the motivation behind it.
-
-Before we can dive into the work that was conducted for this thesis we must first understand the objects that were observed and how they are classified.
+This chapter will give an overview of the objects, theoretical models, and observation methods user in the rest of this work. The majority of this thesis is concerned with the analysis of the electromagnetic spectrum emitted by supermassive black holes at the centers of various galaxies. by using a structure function, which will be described in detail. This analysis was done in order to improve understanding of the theoretical model used to describe active galactic nuclei.
 
 \section{\sc Galaxies} \label{galaxies}
 
-Galaxies are relatively faint objects in comparison to close stars when being observed with the naked eye. So it comes as no surprise that they were not discovered until telescope technology had advanced to a sufficient degree as to allow a significant enough amount of light in to view very distant objects. In 1845, William Parsons of Ireland built a telescope that would be the largest of it's time. In using this telescope he was able to observe groupings of stars and gas and dust distant from our own Milky Way. Initially Parsons believed galaxies to be nebulae but soon concluded that they were "great clouds of stars" \cite{sag}.
+We all learn from a young age that our planet Earth resides in a galaxy known as The Milky Way. But what is a galaxy?
+
+Galaxies are relatively faint objects in comparison to stars when being observed with the naked eye. So it comes as no surprise that they were not discovered until telescope technology had advanced to a sufficient degree as to allow a significant enough amount of light in to view very distant objects. In 1845, William Parsons of Ireland, known better as Lord Ross, built a telescope that would be the largest of it's time, which has since been named the Ross Telescope. In using this telescope he was able to observe groupings of stars and gas and dust distant from our own Milky Way that demonstrated a sort of spiral structure. Initially Parsons believed these to be nebulae but soon concluded that they were "great clouds of stars"\footnote{\cite{sag}} beyond our galaxy.
 
 These great clouds of stars are now theorized by modern astronomers and physicists to contain supermassive black holes at their centers holding them together. Supermassive black holes, as their name suggests and as this chapter will explain later are extremely massive.
 
@@ -115,7 +113,7 @@ These great clouds of stars are now theorized by modern astronomers and physicis
 	\label{fig:classDiagram}
 \end{figure}
 
-Since their discovery, many various types of galaxies have been discovered and categorized into three groups (Figure \ref{fig:classDiagram}\footnote{https://commons.wikimedia.org/wiki/File:Hubble\_-\_de\_Vaucouleurs\_Galaxy\_Morphology\_Diagram.png}).
+Since their discovery, many various types of galaxies have been discovered and categorized into three groups (Figure \ref{fig:classDiagram})\footnote{https://commons.wikimedia.org/wiki/File:Hubble\_-\_de\_Vaucouleurs\_Galaxy\_Morphology\_Diagram.png}.
 
 \subsection{\sc Elliptical Galaxies} \label{ellipticalGalaxies}
 
@@ -136,7 +134,7 @@ Thanks to advances in technology, such as the radio and X-Ray telescopes, modern
 \begin{figure}
 	\centering
 	\includegraphics[width=0.6\linewidth]{UnifiedModel}
-	\caption{Unified model of Active Galactic Nuclei(AGN).}
+	\caption{Unified model of Active Galactic Nuclei (AGN).}
 	\label{fig:unifiedModel}
 \end{figure}
 
@@ -305,6 +303,28 @@ The structure functions is an extremely valuable tool for analyzing data that ha
 
 \section{\sc The Data} \label{theData}
 
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
+
+\begin{table}[b!]
+	\centering
+	\begin{tabular}{ c c c }
+		\hline\hline
+		Instrument & Duration & Average Sample Rate \\
+		& (Days) & (Days) \\
+		\hline
+		XRT & 3526.232 & 8.855  \\
+		UVW2 & 3526.232 & 8.855 \\
+		IVM2 & 3526.232 & 8.855 \\
+		IVW1 & 3526.232 & 8.855 \\
+		U & 3526.232 & 8.855 \\
+		B & 3526.232 & 8.855 \\
+		V & 3526.232 & 8.855 \\
+		\hline
+	\end{tabular}
+	\caption{Table of values for the light curves collected by \textit{Swift}.}
+\end{table}
+
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\linewidth]{mkn335Lightcurves}
@@ -312,7 +332,8 @@ The structure functions is an extremely valuable tool for analyzing data that ha
 	\label{fig:mkn335LC}
 \end{figure}
 
-An overview of the data. This section will contain many figures.
+Data used for this project include a 10 year long monitoring campaign on the Seyfert I Mrk 335, and [New Data Here]. The light curves for the 10 year long monitoring campaign on Mrk 335 can be seen in figure \ref{fig:mkn335LC}. Visible are the gaps in the light curves for the various instruments on board the \textit{Swift} orbital observatory. For 3 months of the year \textit{Swift} is unable to observe Mrk 335 as it is obscured by the Earth, this is visible in the gaps consistent in all light curves, and most visible int the X-ray and UVW2 light curves as they are the two with the best sample rates.
+
 
 \chapter{\sc Programming SFA} \label{programmingSFA}
 
