@@ -306,7 +306,7 @@ The X-ray telescope uses many mirrors at slightly increasing angles positioned t
 
 This project focused on analyzing the light-curves of several AGN using a Structure Function. The Structure Function, as will be discussed in section \ref{structureFunction}, is similar to a Fourier Analysis but without the aliasing and windowing issues that arise from unevenly sampled data. We cannot obtain evenly sampled data from many astronomical sources due to the methods of observation and the timescales on which astronomical events happen. This project aims to provide a method for observing and analyzing astronomical events and objects such as AGN through the use of a Structure Function to help identify time-scales on which significant events might be occurring.
 
-\chapter{\sc General Relativistic Description of Black Holes} \label{generalRelativity}
+\chapter{\sc Relativistic Description of Black Holes} \label{generalRelativity}
 
 A brief description of general relativity, its origins, and why it relates to this project.
 
@@ -338,15 +338,18 @@ The mathematics of the Kerr solution.
 
 Properties of the Kerr solution.
 
-\chapter{\sc Statistical Analysis} \label{statisticalAnalysis}
+%\chapter{\sc Statistical Analysis} \label{statisticalAnalysis}
+
+
+\chapter{\sc The Structure Function} \label{structureFunction}
+
+\section{\sc Mathematical Description} \label{mathematicalDesc}
 
 Data collected on AGN is often difficult to work with, as mentioned in section \ref{activeGalaxies}, it is often unevenly sampled posing challenges to astronomers and physicists. Unevenly sampled data often causes aliasing and windowing when analyzed using conventional methods such as a Fourier-based power spectrum analysis. For this reason the method of structure function analysis was chosen, as it partially minimizes both aliasing and windowing. The structure function also has the added advantage of remaining in the time domain as opposed to the frequency domain as does the Fourier-based analysis. For these reasons the structure function was the method of choice for the analysis conducted in this project.
 
-\section{\sc The Structure Function} \label{structureFunction}
+\subsection{\sc Definition of the Structure Function} \label{structureFunctionDefinition}
 
 The structure function is discussed by \citep{cordes1985} in their appendix and was originally defined by \citep{rutman}. It can be closely compared to the auto-correlation and cross-correlation functions. Structure functions of order $M$ remove polynomials of order $M-1$ from the time series leaving a result that is dependent only on on any stationary random process inherent in the time series and any higher order polynomial trends.
-
-\subsection{\sc Definition of the Structure Function} \label{structureFunctionDefinition}
 
 For any given random process the $M^{th}$ order structure function is defined by \cite{rutman} as:
 \begin{equation} \label{eqn3.1}
@@ -396,7 +399,25 @@ The power-law region of the structure function exists where $\tau_{min}\lesssim\
 	\label{fig:mkn335UVW2SF}
 \end{figure}
 
-The structure functions is an extremely valuable tool for analyzing data that has odd or uneven sampling rates, but it is not without fault. Some things to be aware of when using a structure function on data are as follows. Linear trends that span the entire time-series will artificially steepen the structure function. This can be avoided by removing a best-fit linear model applied to the entire time-series. Some object may have more than one characteristic timescale and this may manifest itself as a third plateau breaking the power-law region in two, as can be seen in figure \ref{fig:mkn335UVW2SF}. 
+The structure functions is an extremely valuable tool for analyzing data that has odd or uneven sampling rates, but it is not without fault. Some things to be aware of when using a structure function on data are as follows. Linear trends that span the entire time-series will artificially steepen the structure function. This can be avoided by removing a best-fit linear model applied to the entire time-series. Some object may have more than one characteristic timescale and this may manifest itself as a third plateau breaking the power-law region in two, as can be seen in figure \ref{fig:mkn335UVW2SF}.
+
+\section{\sc SFA usage and description} \label{usageDescription}
+
+\subsection{\sc Expected Output} \label{expectedOutput}
+
+What one should expect for results from running SFA
+
+\section{\sc Programming SFA} \label{programmingSFA}
+
+\subsection{\sc The SFA algorithm} \label{algorithm}
+
+A description of what SFA was developed for and its usage.
+
+\subsection{\sc Cost and Complexity} \label{costComplexity}
+
+An overview of the general running cost and Big-Oh order of SFA
+
+\chapter{\sc Results and Conclusions} \label{resultsConclusions}
 
 \section{\sc The Data} \label{theData}
 
@@ -410,7 +431,7 @@ The structure functions is an extremely valuable tool for analyzing data that ha
 		Instrument & Duration & Average Sample Rate \\
 		& (Days) & (Days) \\
 		\hline
-		XRT & 3526.232 & 8.855  \\
+		XRT & 3526.232 & 8.855 \\
 		UVW2 & 3526.232 & 8.855 \\
 		IVM2 & 3526.232 & 8.855 \\
 		IVW1 & 3526.232 & 8.855 \\
@@ -430,29 +451,6 @@ The structure functions is an extremely valuable tool for analyzing data that ha
 \end{figure}
 
 Data used for this project include a 10 year long monitoring campaign on the Seyfert I Mrk 335, and [New Data Here]. The light curves for the 10 year long monitoring campaign on Mrk 335 can be seen in figure \ref{fig:mkn335LC}. Visible are the gaps in the light curves for the various instruments on board the \textit{Swift} orbital observatory. For 3 months of the year \textit{Swift} is unable to observe Mrk 335 as it is obscured by the Earth, this is visible in the gaps consistent in all light curves, and most visible int the X-ray and UVW2 light curves as they are the two with the best sample rates.
-
-
-\chapter{\sc Programming SFA} \label{programmingSFA}
-
-\section{\sc SFA usage and description} \label{usageDescription}
-
-A description of what SFA was developed for and its usage.
-
-\section{\sc The SFA algorithm} \label{algorithm}
-
-\subsection{\sc Process}
-
-The logical process SFA follows to generate the structure function
-
-\subsection{\sc Cost and Complexity} \label{costComplexity}
-
-An overview of the general running cost and Big-Oh order of SFA
-
-\section{\sc Expected Output} \label{expectedOutput}
-
-What one should expect for results from running SFA
-
-\chapter{\sc Results and Conclusions} \label{resultsConclusions}
 
 \section{\sc Results} \label{results}
 
