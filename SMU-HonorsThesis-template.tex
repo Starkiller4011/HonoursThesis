@@ -35,6 +35,21 @@
 \usepackage[round]{natbib}
 \usepackage{indentfirst}
 \usepackage{float}
+\usepackage{harpoon}
+
+\usepackage{stackengine}
+\usepackage{calc}
+\newlength\shlength
+\newcommand\xshlonghvecr[2][1]{\setlength\shlength{#1pt}%
+	\stackengine{-1.0pt}{$#2$}{\smash{$\kern\shlength%
+			\stackengine{2.75pt}{$\mathchar"012A$}%
+			{\rule{\widthof{$#2$}}{.50pt}\kern1pt}{O}{r}{F}{F}{L}\kern-\shlength$}}%
+	{O}{c}{F}{T}{S}}
+\newcommand\xshlonghvecl[2][1]{\setlength\shlength{#1pt}%
+	\stackengine{-1.0pt}{$#2$}{\smash{$\kern\shlength%
+			\stackengine{2.75pt}{\kern-1pt$\mathchar"0128$}%
+			{\rule{\widthof{$#2$}}{.50pt}\kern1pt}{O}{l}{F}{F}{L}\kern-\shlength$}}%
+	{O}{c}{F}{T}{S}}
 %---> Resource Directories <----------------------------------------------------
 % Images
 \graphicspath{{./img/}}
@@ -105,7 +120,7 @@ We all learn from a young age that our planet Earth resides in a galaxy known as
 
 Galaxies are relatively faint objects in comparison to stars when being observed with the naked eye. So it comes as no surprise that they were not discovered until telescope technology had advanced to a sufficient degree as to allow a significant enough amount of light in to view very distant objects. In 1845 William Parsons of Ireland, known better as Lord Ross, built a telescope that would be the largest of it's time, known as the Ross Telescope. In using this telescope he was able to observe groupings of stars and gas and dust distant from our own Milky Way that demonstrated a sort of spiral structure. Initially Parsons believed these to be nebulae but soon concluded that they were "great clouds of stars"\footnote{\cite{sag}} beyond our galaxy.
 
-These great clouds of stars are now theorized by modern astronomers and physicists to contain supermassive black holes at their centers holding them together. Supermassive black holes, as their name suggests and as this chapter will explain later are extremely massive.
+These great clouds of stars are now theorized by modern astronomers to contain supermassive black holes at their centers holding them together. Supermassive black holes, as their name suggests and as this chapter will explain later are extremely massive.
 
 \begin{figure}
 	\centering
@@ -206,7 +221,7 @@ Not quite belonging to either the spiral nor the elliptical classes of galaxies,
 
 \section{\sc Active Galaxies} \label{activeGalaxies}
 
-Thanks to advances in technology, such as the radio and X-ray telescopes, modern astronomers and physicists have identified a new type of galaxy. Active galaxies (Figure \ref{fig:M82})\footnote{ESA/Hubble \& NASA - https://www.spacetelescope.org/images/heic0604a/} are galaxies that are theorized to have an actively accreting supermassive black hole at their center. This accretion by the central black hole generates immense amounts of energy across the electromagnetic spectrum, particularly in the infrared and X-ray ranges of the EM spectrum (Figure \ref{fig:M82-xray})\footnote{ESA/Hubble \& NASA - https://www.spacetelescope.org/images/heic0604d/}. This central black hole and its accompanying accretion disc are known as the nucleus of an active galaxy and are referred to as Active Galactic Nuclei(AGN). There are a number of different types of AGN that have been identified based on their power spectra. Radio galaxies and their relatives the quasar and blazar are galaxies that are very luminous at radio wavelengths. The difference between radio galaxies, quasars, and blazars is that quasars and blazars are more luminous than radio galaxies with blazars being much more luminous than quasars. Radio galaxies, quasars, and blazars all emit jets from their centers and it is the angle of this jet with relation to us that causes the increase in radio emission in the quasars and blazars, see section \ref{unifiedModel}. Seyfert galaxies are like quasars in that they are very luminous in the radio wavelengths and are split into type I and type II based on their emission spectrum. What distinguishes Seyferts from quasars is that their host galaxies are clearly detectable.
+Thanks to advances in technology, such as the radio and X-ray telescopes, modern astronomers have identified a new type of galaxy. Active galaxies (Figure \ref{fig:M82})\footnote{ESA/Hubble \& NASA - https://www.spacetelescope.org/images/heic0604a/} are galaxies that are theorized to have an actively accreting supermassive black hole at their center. This accretion by the central black hole generates immense amounts of energy across the electromagnetic spectrum, particularly in the infrared and X-ray ranges of the EM spectrum (Figure \ref{fig:M82-xray})\footnote{ESA/Hubble \& NASA - https://www.spacetelescope.org/images/heic0604d/}. This central black hole and its accompanying accretion disc are known as the nucleus of an active galaxy and are referred to as Active Galactic Nuclei(AGN). There are a number of different types of AGN that have been identified based on their power spectra. Radio galaxies and their relatives the quasar and blazar are galaxies that are very luminous at radio wavelengths. The difference between radio galaxies, quasars, and blazars is that quasars and blazars are more luminous than radio galaxies with blazars being much more luminous than quasars. Radio galaxies, quasars, and blazars all emit jets from their centers and it is the angle of this jet with relation to us that causes the increase in radio emission in the quasars and blazars, see section \ref{unifiedModel}. Seyfert galaxies are like quasars in that they are very luminous in the radio wavelengths and are split into type I and type II based on their emission spectrum. What distinguishes Seyferts from quasars is that their host galaxies are clearly detectable.
 
 \begin{figure}[H]
 	\centering
@@ -282,7 +297,7 @@ Some expected properties of the spectra obtained from AGN are, the presence of a
 
 \subsection{\sc Orbital X-ray telescopes} \label{xrayTelesopes}
 
-As discussed in the previous section \ref{lightcurves}, AGN produce light almost evenly across the electromagnetic spectrum. The section that astronomers and physicists studying AGN find the most interesting is the UV to X-ray region. Most EM radiation in the UV to gamma-ray region is completely absorbed in out atmosphere, therefore orbital satellite telescopes must be used to collect emissions from AGN. For this project the Neil Gehrels \textit{Swift} Observatory was used. The \textit{Swift} orbital telescope is equipped with a UV/Optical telescope, capable of obtaining spectra in the UV and optical ranges. \textit{Swift} is also equipped with an X-ray telescope for obtaining spectra in the X-ray band of the EM spectrum. 
+As discussed in the previous section \ref{lightcurves}, AGN produce light almost evenly across the electromagnetic spectrum. The section that astronomers studying AGN find the most interesting is the UV to X-ray region. Most EM radiation in the UV to gamma-ray region is completely absorbed in out atmosphere, therefore orbital satellite telescopes must be used to collect emissions from AGN. For this project the Neil Gehrels \textit{Swift} Observatory was used. The \textit{Swift} orbital telescope is equipped with a UV/Optical telescope, capable of obtaining spectra in the UV and optical ranges. \textit{Swift} is also equipped with an X-ray telescope for obtaining spectra in the X-ray band of the EM spectrum. 
 
 \begin{figure}[H]
 	\centering
@@ -308,11 +323,26 @@ This project focused on analyzing the light-curves of several AGN using a Struct
 
 \chapter{\sc Relativistic Description of Black Holes} \label{generalRelativity}
 
-A brief description of general relativity, its origins, and why it relates to this project.
+Towards the end of the 17th century Newtonian gravity was still the accepted theory, however there still unexplained flaws in the theory that astronomers of the time struggled to explain. One of these such flaws was the behavior that Mercury exhibited in its orbit around the Sun. Mercury is a relatively small planet and as such it has lower mass than many of the other planets in the solar system. The combined mass of the planets further from the Sun than Mercury exhibit a gravitational pull on Mercury slowly altering its orbit (Figure \ref{fig:mercuryorbit})\footnote{https://www.ck12.org/physics/Orbital-Motion/rwa/Mercurys-Orbit/}. This precession could not be explained by the accepted model derived from Newtonian gravity. When Albert Einstein published his theory of General Relativity in 1915, it explained the precession of Mercury's orbit to the arcsecond \cite{spruin}.
+
+General relativity, when observed from a stationary frame of reference, recovers Newtonian gravity. This is an extreme advantage because it means that in simple systems, Newtonian gravity can be used to perform predictions and calculations. When the gravitational force becomes great enough or the speed approaches the speed of light, Newtonian gravity starts to break down. It is in these instances that general relativity is required. The vicinity immediately surrounding black holes exerts gravitational forces so great that light is bent as a result, a phenomenon that cannot be explained within the constraints of Newtonian gravity.
+
+Due to the masses of AGN and the requirement of General relativity to explain some of the processes inherent to them, this chapter will serve as a very brief overview of the mathematics of general relativity. AS it is a brief overview this chapter assumes that the reader has a sound mathematical background and is comfortable with concepts such as matrices, vectors, and partial differential equations.
+
+\begin{figure}
+	\centering
+	\begin{minipage}{0.8\linewidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{mercury-orbit}
+		\caption{Diagram depicting the precession of Mercury's orbit over time.}
+		\label{fig:mercuryorbit}
+	\end{minipage}
+\end{figure}
 
 \section{\sc An introduction to Tensors} \label{tensorIntro}
 
-An introduction to tensors and their mathematical properties
+A fundamental and core building block of general relativity is the tensor. Tensors are mathematical objects that behave much like matrices but obey a strict set of transformation laws. Tensors exists in $m$-dimensional space and every tensor has a rank. The rank, $n$, od a tensor is dependent on the number of indices it has. For example, a tensor of rank $n$ in $m$-dimensional space has $m^{n}$ components distributed across $n$ indices. It is conventional to use 1, 2, 3, ... as the iterators across each of the indices, representing the different spatial dimensions. When working with space-time it is convention to reserve the $0^{th}$ iteration on each index as the time dimension. For example, the origin of a 3 dimensional space would normally be represented by a vector as $\xshlonghvecr{O}=0\hat{i}+0\hat{j}+0\hat{k}$ or $\langle 0, 0, 0\rangle$. This very same origin can be represented in tensor form as $\textup{O}^{\alpha}$ where $\alpha=1, 2, 3$ and $\textup{O}^{1}=0, \textup{O}^{2}=0, \textup{O}^{3}=0$. When the entire tensor needs to be seen it is represented enclosed in brackets. For a tensor of rank $n$, the tensor then has $n$ rows, for example a rank 3 tensor $\textup{A}^{\alpha \beta \gamma}$ would be.
+
 
 \section{\sc The Metric Tensor} \label{metricTensor}
 
@@ -345,7 +375,7 @@ Properties of the Kerr solution.
 
 \section{\sc Mathematical Description} \label{mathematicalDesc}
 
-Data collected on AGN is often difficult to work with, as mentioned in section \ref{activeGalaxies}, it is often unevenly sampled posing challenges to astronomers and physicists. Unevenly sampled data often causes aliasing and windowing when analyzed using conventional methods such as a Fourier-based power spectrum analysis. For this reason the method of structure function analysis was chosen, as it partially minimizes both aliasing and windowing. The structure function also has the added advantage of remaining in the time domain as opposed to the frequency domain as does the Fourier-based analysis. For these reasons the structure function was the method of choice for the analysis conducted in this project.
+Data collected on AGN is often difficult to work with, as mentioned in section \ref{activeGalaxies}, it is often unevenly sampled posing challenges to astronomers. Unevenly sampled data often causes aliasing and windowing when analyzed using conventional methods such as a Fourier-based power spectrum analysis. For this reason the method of structure function analysis was chosen, as it partially minimizes both aliasing and windowing. The structure function also has the added advantage of remaining in the time domain as opposed to the frequency domain as does the Fourier-based analysis. For these reasons the structure function was the method of choice for the analysis conducted in this project.
 
 \subsection{\sc Definition of the Structure Function} \label{structureFunctionDefinition}
 
