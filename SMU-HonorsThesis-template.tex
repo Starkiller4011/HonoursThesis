@@ -50,6 +50,9 @@
 			\stackengine{2.75pt}{\kern-1pt$\mathchar"0128$}%
 			{\rule{\widthof{$#2$}}{.50pt}\kern1pt}{O}{l}{F}{F}{L}\kern-\shlength$}}%
 	{O}{c}{F}{T}{S}}
+\newcommand{\mixtensor}[3]{{#1}^{#2}{}_{#3}}
+\newcommand{\contensor}[2]{{#1}^{#2}}
+\newcommand{\covtensor}[2]{{#1}_{#2}}
 %---> Resource Directories <----------------------------------------------------
 % Images
 \graphicspath{{./img/}}
@@ -323,7 +326,7 @@ This project focused on analyzing the light-curves of several AGN using a Struct
 
 \chapter{\sc Relativistic Description of Black Holes} \label{generalRelativity}
 
-Towards the end of the 17th century Newtonian gravity was still the accepted theory, however there still unexplained flaws in the theory that astronomers of the time struggled to explain. One of these such flaws was the behavior that Mercury exhibited in its orbit around the Sun. Mercury is a relatively small planet and as such it has lower mass than many of the other planets in the solar system. The combined mass of the planets further from the Sun than Mercury exhibit a gravitational pull on Mercury slowly altering its orbit (Figure \ref{fig:mercuryorbit})\footnote{https://www.ck12.org/physics/Orbital-Motion/rwa/Mercurys-Orbit/}. This precession could not be explained by the accepted model derived from Newtonian gravity. When Albert Einstein published his theory of General Relativity in 1915, it explained the precession of Mercury's orbit to the arcsecond \cite{spruin}.
+Towards the end of the 17th century Newtonian gravity was still the accepted theory, however there still unexplained flaws in the theory that astronomers of the time struggled to explain. One of these such flaws was the behavior that Mercury exhibited in its orbit around the Sun. Mercury is a relatively small planet and as such it has lower mass than many of the other planets in the solar system. The combined mass of the planets further from the Sun than Mercury exhibit a gravitational pull on Mercury slowly altering its orbit (Figure \ref{fig:mercuryorbit})\footnote{https://www.ck12.org/physics/Orbital-Motion/rwa/Mercurys-Orbit/}. This precession could not be explained by the accepted model derived from Newtonian gravity. When Albert Einstein published his theory of General Relativity in 1915, it explained the precession of Mercury's orbit to the arcsecond.
 
 General relativity, when observed from a stationary frame of reference, recovers Newtonian gravity. This is an extreme advantage because it means that in simple systems, Newtonian gravity can be used to perform predictions and calculations. When the gravitational force becomes great enough or the speed approaches the speed of light, Newtonian gravity starts to break down. It is in these instances that general relativity is required. The vicinity immediately surrounding black holes exerts gravitational forces so great that light is bent as a result, a phenomenon that cannot be explained within the constraints of Newtonian gravity.
 
@@ -341,16 +344,80 @@ Due to the masses of AGN and the requirement of General relativity to explain so
 
 \section{\sc An introduction to Tensors} \label{tensorIntro}
 
-A fundamental and core building block of general relativity is the tensor. Tensors are mathematical objects that behave much like matrices but obey a strict set of transformation laws. Tensors exists in $m$-dimensional space and every tensor has a rank. The rank, $n$, od a tensor is dependent on the number of indices it has. For example, a tensor of rank $n$ in $m$-dimensional space has $m^{n}$ components distributed across $n$ indices. It is conventional to use 1, 2, 3, ... as the iterators across each of the indices, representing the different spatial dimensions. When working with space-time it is convention to reserve the $0^{th}$ iteration on each index as the time dimension. For example, the origin of a 3 dimensional space would normally be represented by a vector as $\xshlonghvecr{O}=0\hat{i}+0\hat{j}+0\hat{k}$ or $\langle 0, 0, 0\rangle$. This very same origin can be represented in tensor form as $\textup{O}^{\alpha}$ where $\alpha=1, 2, 3$ and $\textup{O}^{1}=0, \textup{O}^{2}=0, \textup{O}^{3}=0$. When the entire tensor needs to be seen it is represented enclosed in brackets. For a tensor of rank $n$, the tensor then has $n$ rows, for example a rank 3 tensor $\textup{A}^{\alpha \beta \gamma}$ would be.
+A fundamental and core building block of general relativity is the tensor. Tensors are mathematical objects that resemble matrices but obey a strict set of transformation laws. Tensors exist to help illustrate $m$-dimensional space. The rank, $n$, of a tensor is determined by the number of indices it has. For example the 3 dimensional vector $\xshlonghvecr{A}=0\hat{i} + 0 \hat{j} + 0 \hat{k}$ would be represented by a rank 1 tensor as $\contensor{A}{\alpha}$ where $\alpha = 1, 2, 3$. It is standard to reserve the $0^{th}$ dimension for the time dimension, and as such spacetime is represented by 4 dimensional tensors. A simple vector in spacetime would then be represented by $\contensor{A}{\alpha}$ where $\alpha=0,1,2,3$ and $\contensor{A}{0}$ would represent time. An important type of tensor is the one-form, which is equivalent to a scalar and has rank 0. 
 
+As mentioned before, tensors can resemble matrices and as such matrices can be easily represented by a tensor. For example the matrix
+\begin{equation}
+\nonumber
+A=
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+\end{bmatrix}
+\end{equation}
+would be represented by the tensor
+\begin{equation}
+\nonumber
+\contensor{A}{ij}=
+\begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+\end{pmatrix}
+\end{equation}
+while at first glance there doesn't seem to be any difference between the two, the tensor form has the advantage of being represented simply by $\contensor{A}{ij}$ where $i,j=1,2,3$.
+
+In addition to tensors with upper indices, which are known as contravariant tensors, there are also tensors with lower indices defining covariant tensors. Mixed tensors are those tensors with both upper and lower indices. Any index that appears only once in a tensor equation is known is known as a free index whereas any index that is repeated can only be repeated once, and only as an upper and lower pair. This ties the repeated indices together as what is known as a dummy index and results in a sum over the paired dummy index. For example, given the two tensors $\contensor{a}{i}=\left(1, 2, 3\right)$ and $\covtensor{b}{i}=\left(4, 5, 6\right)$, their product $\contensor{a}{i}\covtensor{b}{i}$ is
+\begin{eqnarray}
+\nonumber
+\contensor{a}{i}\covtensor{b}{i} &  = & \contensor{a}{1}\covtensor{b}{1} + \contensor{a}{2}\covtensor{b}{2} + \contensor{a}{3}\covtensor{b}{3}\\\nonumber
+& = & (1)(4) + (2)(5) + (3)(6)\\\nonumber
+& = & 4 + 10 + 18\\\nonumber
+& = & 32
+\end{eqnarray}
+
+The final property of tensors that will be discussed is the general tensor transformation law. When transforming a tensor from one coordinate system, $\mixtensor{A}{ij}{kl}$, to another, $\mixtensor{A}{i'j'}{k'l'}$, tensors follow the general tensor transformation law
+\begin{equation}
+\mixtensor{A}{i'j'}{k'l'}=\frac{\partial x^{i'}}{\partial x^{i}}\frac{\partial x^{j'}}{\partial x^{j}}\cdot\cdot\cdot\frac{\partial x^{k}}{\partial x^{k'}}\frac{\partial x^{l}}{\partial x^{l'}}\cdot\cdot\cdot\mixtensor{A}{ij}{kl}
+\end{equation} \label{eqn:tentran}
+where the partial derivatives are the usual partial derivatives.
 
 \section{\sc The Metric Tensor} \label{metricTensor}
 
-Role of the metric tensor
+There are some tensors in general relativity that are so important that they deserve naming. Of these named tensors, the metric Tensor is arguably the most important. The metric tensor, $\covtensor{g}{ij}$ or $\contensor{g}{ij}$, is used to express the unique distance between points in spacetime. The curvature of the spacetime has an effect on the metric tensor, for example in 3 dimensional flat spacetime is
+\begin{equation}
+\covtensor{g}{ij}=
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+\end{pmatrix}
+\end{equation}\label{genten}
+and when working with singularities such as black holes, the 4 dimensional metric tensor takes the form
+\begin{equation}
+\covtensor{g}{ij}=
+\begin{pmatrix}
+-1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{pmatrix}
+\end{equation}\label{minkten}
+and is named the Minkowski metric tensor after the mathematician Herman Minkowski \cite{spruin}. This particular form of the metric tensor takes its form as a result of the spacetime interval in 4 dimensional curved spacetime.
 
 \section{\sc The Spacetime Interval} \label{spacetimeInterval}
 
-Role of the spacetime interval
+In general relativity, we are often concerned with the infinitesimal distance between two points. This distance is conventionally denoted as $ds$ and it is trivial to see that in standard 3 dimensional space
+\begin{equation}
+\nonumber
+ds^{2}=dx^{2}+dy^{2}+dz^{2}
+\end{equation}
+just as in two dimensional space $ds^{2}$ would be equivalent to Pythagorean. In 4 dimensional spacetime, the time dimension is subtracted, due to time only passing in one direction. This results in the spacetime interval
+\begin{equation}
+ds^{2}=-dt^{2}+dx^{2}+dy^{2}+dz^{2}
+\end{equation}
+and from here we can see why the Minkowski metric tensor(eqn \ref{minkten}) has that -1 at $\covtensor{g}{00}$.
 
 \section{\sc Black Hole Solutions} \label{blackHoleSolutions}
 
