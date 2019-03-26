@@ -517,40 +517,42 @@ Where \verb|[options]| is replaced with the options the user wishes to enable an
 In its current state, version 0.9.4, SFA has only one fully implemented and available option, though others are works in progress. The following is a list of available options for SFA and their functionality, with their current status stated in their descriptions.
 \begin{center}
 	\begin{BVerbatim}
-	-o, --output <path>
+	[-o, --output <path>]
 	\end{BVerbatim}
 \end{center}
 Sets the desired output file for SFA to deposit the computed structure function. In this argument pairing \verb|<path>| is the path to the desired output file and both \verb|-o| or \verb|--output| can be used to tell SFA that the next argument is the \verb|<path>| to the output file. This output file does not need to exist as SFA will create the file if necessary.
 \begin{center}
 	\begin{BVerbatim}
-	-d, --delimiter <string>
+	[-d, --delimiter <string>]
 	\end{BVerbatim}
 \end{center}
 Sets the delimiter string used to parse the input data file. In this argument paring \verb|<string>| is the string the user wishes to use as a delimiter when parsing the input file. This can be a single character such as \verb|","| or a string such as \verb|"..."|. This allows SFA to parse various types of delimited files. It is important to note that SFA uses white-space delimiting to parse input files and as of the current version this option is not enabled and is on the list of works in progress.
 \begin{center}
 	\begin{BVerbatim}
-	-v, --verbose
+	[-v, --verbose]
 	\end{BVerbatim}
 \end{center}
 This option is used to tell SFA to provide maximal textual output when running. This is useful mostly for debugging purposes but can also be used if calling SFA from within a script and piping its output to file. In this way one can run SFA on multiple files through automation and later check the file SFA output was piped to for success or failure.
 
 \subsection{\sc Installation and Uninstallation}
 
-There are two methods of installation for SFA, \verb|System-Wide| or \verb|User-Specific|. For installation as a binary available to all users on a system it is recommended to use the \verb|System-Wide| installation method, though this method requires the installing user to have administrative privileges, ie \verb|sudo| on unix-based systems. If the user does not have administrative rights on a system but still needs the SFA program, the \verb|User-Specific| method can be used. In this case the installation will create the \verb|~/.SFA| directory and will place the \verb|sfa| binary file inside. Both installation methods are detailed on the SFA GitHub repository main page and in the \verb|Readme.md| file included with the project. Included in the projects \verb|makefile| are uninstallation methods for each of the install methods, also detailed in the \verb|Readme.md| file and on the GitHub repository main page.
+There are two methods of installation for SFA, \verb|System-Wide| or \verb|User-Specific|. For installation as a binary available to all users on a system it is recommended to use the \verb|System-Wide| installation method, though this method requires the installing user to have administrative privileges, ie \verb|sudo| on Unix-based systems. If the user does not have administrative rights on a system but still needs the SFA program, the \verb|User-Specific| method can be used. In this case the installation will create the \verb|~/.SFA| directory and will place the \verb|sfa| binary file inside. Both installation methods are detailed on the SFA GitHub repository main page and in the \verb|Readme.md| file included with the project. Included in the projects \verb|makefile| are uninstallation methods for each of the install methods, also detailed in the \verb|Readme.md| file and on the GitHub repository main page.
 
 \subsection{\sc Expected Output} \label{expectedOutput}
 
-When using the SFA program, there is generally very little textual output to the terminal it is run within unless the verbose option \verb|-v, --verbose| is used. Instead of screen output 
+When using the SFA program, there is generally very little textual output to the terminal it is run within unless the verbose option \verb|[-v, --verbose]| is used. Instead of screen output SFA computes the first order structure function for the data input and outputs it to a file using tab delimiting. SFA outputs the binned structure function values to the following columns without headers, column 1 is the $\tau$ value, column 2 is the $SF(\tau)$ value, and column 3 is the error in $SF(\tau)$. If no output file is given using the \verb|[-o, --output <path>]| option, then SFA will output the structure function to the file \verb|"[input-file]-[date].out"| where \verb|[input-file]| is the name of the input file given without the file extension and \verb|[date]| is the date when SFA was run on the input file.
 
 \section{\sc Programming SFA} \label{programmingSFA}
 
+ SFA was originally prototyped using the python interpreted scripting language however it was then re-written in \verb|C++| to improve performance and reduce run time. in order to avoid writing libraries for simple operations, SFA relies on \verb|C++17| and makes use of the \verb|<filesystem>| library for path and file operations, which requires the \verb|-lstdc++fs| compile flag and gcc 8+, as well as many of the standard libraries.
+
 \subsection{\sc The SFA algorithm} \label{algorithm}
 
-A description of what SFA was developed for and its usage.
+To calculate the structure function on a set of time-series-like data the decision was made to organize the structure function into bins.
 
 \subsection{\sc Cost and Complexity} \label{costComplexity}
 
-An overview of the general running cost and Big-Oh order of SFA
+Calculating the cost and complexity of SFA is dependent upon a couple of input parameters. Since the number of command line arguments for SFA is at a maximum 6, the domination factor for the complexity of SFA is the number of rows of data, $n$, of the input file. For an input data file of size $n$, the dominating functions for the complexity of SFA are the loading function within the \verb|Lightcurve| class, which has order $O(n)$, and the actual structure function algorithm contained in the \verb|StructureFunction| class. The \verb|StructureFunction| class has a cost of order $O(n)$ in its construction that comes from the calculation of the resolution of the data. In the algorithm for calculating the structure function itself, SFA has a worst-case complexity of $O(n^{3})$ and a best case complexity of $O(n^{2})$.
 
 \chapter{\sc Results and Conclusions} \label{resultsConclusions}
 
