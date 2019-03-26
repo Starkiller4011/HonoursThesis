@@ -36,7 +36,7 @@
 \usepackage{indentfirst}
 \usepackage{float}
 \usepackage{harpoon}
-
+\usepackage{fancyvrb}
 \usepackage{stackengine}
 \usepackage{calc}
 \newlength\shlength
@@ -489,7 +489,7 @@ The power-law region of the structure function exists where $\tau_{min}\lesssim\
 
 \subsection{\sc Problems and Pitfalls} \label{problemsAndPitfalls}
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\linewidth]{mkn335UVW2SF}
 	\caption{Structure function for UVW2 data collected from Mkn335}
@@ -500,9 +500,47 @@ The structure functions is an extremely valuable tool for analyzing data that ha
 
 \section{\sc SFA usage and description} \label{usageDescription}
 
+SFA is a program written in \verb|C++| to compute the first order structure function of a given set of astronomical time-series data, though it could be used with any set of time-series-like data. As SFA was developed in a Linux environment with Linux as the intended target, MacOS and Windows are not officially supported though one could easily build and compile the program from source for either.
+
+\subsection{\sc Usage}
+
+SFA is intended to be used within a shell environment. Once compiled and installed, proper usage of SFA is:
+\begin{center}
+	\begin{BVerbatim}
+	sfa [options] <path>
+	\end{BVerbatim}
+\end{center}
+Where \verb|[options]| is replaced with the options the user wishes to enable and \verb|<path>| is replaced with the path to the input file.
+
+\subsection{\sc Options}
+
+In its current state, version 0.9.4, SFA has only one fully implemented and available option, though others are works in progress. The following is a list of available options for SFA and their functionality, with their current status stated in their descriptions.
+\begin{center}
+	\begin{BVerbatim}
+	-o, --output <path>
+	\end{BVerbatim}
+\end{center}
+Sets the desired output file for SFA to deposit the computed structure function. In this argument pairing \verb|<path>| is the path to the desired output file and both \verb|-o| or \verb|--output| can be used to tell SFA that the next argument is the \verb|<path>| to the output file. This output file does not need to exist as SFA will create the file if necessary.
+\begin{center}
+	\begin{BVerbatim}
+	-d, --delimiter <string>
+	\end{BVerbatim}
+\end{center}
+Sets the delimiter string used to parse the input data file. In this argument paring \verb|<string>| is the string the user wishes to use as a delimiter when parsing the input file. This can be a single character such as \verb|","| or a string such as \verb|"..."|. This allows SFA to parse various types of delimited files. It is important to note that SFA uses white-space delimiting to parse input files and as of the current version this option is not enabled and is on the list of works in progress.
+\begin{center}
+	\begin{BVerbatim}
+	-v, --verbose
+	\end{BVerbatim}
+\end{center}
+This option is used to tell SFA to provide maximal textual output when running. This is useful mostly for debugging purposes but can also be used if calling SFA from within a script and piping its output to file. In this way one can run SFA on multiple files through automation and later check the file SFA output was piped to for success or failure.
+
+\subsection{\sc Installation and Uninstallation}
+
+There are two methods of installation for SFA, \verb|System-Wide| or \verb|User-Specific|. For installation as a binary available to all users on a system it is recommended to use the \verb|System-Wide| installation method, though this method requires the installing user to have administrative privileges, ie \verb|sudo| on unix-based systems. If the user does not have administrative rights on a system but still needs the SFA program, the \verb|User-Specific| method can be used. In this case the installation will create the \verb|~/.SFA| directory and will place the \verb|sfa| binary file inside. Both installation methods are detailed on the SFA GitHub repository main page and in the \verb|Readme.md| file included with the project. Included in the projects \verb|makefile| are uninstallation methods for each of the install methods, also detailed in the \verb|Readme.md| file and on the GitHub repository main page.
+
 \subsection{\sc Expected Output} \label{expectedOutput}
 
-What one should expect for results from running SFA
+When using the SFA program, there is generally very little textual output to the terminal it is run within unless the verbose option \verb|-v, --verbose| is used. Instead of screen output 
 
 \section{\sc Programming SFA} \label{programmingSFA}
 
