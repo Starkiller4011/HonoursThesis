@@ -492,7 +492,7 @@ The power-law region of the structure function exists where $\tau_{min}\lesssim\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\linewidth]{mkn335UVW2SF}
-	\caption{Structure function for UVW2 data collected from Mkn335}
+	\caption{Structure function for UVW2 data collected from Mkn335, \cite{galloblue}}
 	\label{fig:mkn335UVW2SF}
 \end{figure}
 
@@ -548,7 +548,7 @@ When using the SFA program, there is generally very little textual output to the
 
 \subsection{\sc The SFA algorithm} \label{algorithm}
 
-To calculate the structure function on a set of time-series-like data the decision was made to organize the structure function into bins.
+To calculate the structure function on a set of time-series-like data the decision was made to organize the structure function into bins with widths equal to to the calculated resolution. The resolution of the structure function is the averaged temporal sampling, corresponding approximately to the shortest timescales on which any information can be obtained from the data. Once this resolution has been calculated, it determines the bin widths for the structure function, with bins being centered on $\tau_{i}=(i - \frac{1}{2})\delta$ where $\delta$ is the resolution of the structure function. Once the bins have been determined, a map is created using $\tau=t_{j}-t_{i}$ as the key and a \verb|vector<double>| as the value. This allows us to add the square difference of all value pairs sharing a time difference to the same vector. Once the map has been filled from the input data file, it is then iterated over its keys, first checking which bin the key belongs to and then adding the average of its vector to a temporary vector. Once all keys with $\tau$ belonging to the bin have added the average of their respective vectors to the temporary vector, the average of the temporary vector is then added to a final map representing the structure function with $\tau_{i}$ as its key and $SF(\tau_{i})$ as the value. This final map representing the structure function is then written to a tab delimited file without headers.
 
 \subsection{\sc Cost and Complexity} \label{costComplexity}
 
