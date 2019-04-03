@@ -1,35 +1,35 @@
 # RAW data files not to be included with the thesis
-data/tmp
-data/tmp/*
+Thesis/data/tmp
+Thesis/data/tmp/*
 
 # Veusz intermediates
-data/plots/fontconfig
-data/plots/fontconfig/*
+Thesis/data/plots/fontconfig
+Thesis/data/plots/fontconfig/*
 
 # LaTeX intermediates
-*.aux
-*.bbl
-*.blg
-*.dvi
-*.fdb_latexmk
-*.fls
-*.lof
-*.log
-*.lot
-*.pdf
-*.ps
-*.synctex*
-*.toc
-./*.aux
-./*.bbl
-./*.blg
-./*.dvi
-./*.fdb_latexmk
-./*.fls
-./*.lof
-./*.log
-./*.lot
-./*.pdf
-./*.ps
-./*.synctex.gz
-./*.toc
+Thesis/*.aux
+Thesis/*.bbl
+Thesis/*.blg
+Thesis/*.dvi
+Thesis/*.fdb_latexmk
+Thesis/*.fls
+Thesis/*.lof
+Thesis/*.log
+Thesis/*.lot
+Thesis/*.pdf
+Thesis/*.ps
+Thesis/*.synctex*
+Thesis/*.toc
+Thesis/*.aux
+Thesis/*.bbl
+Thesis/*.blg
+Thesis/*.dvi
+Thesis/*.fdb_latexmk
+Thesis/*.fls
+Thesis/*.lof
+Thesis/*.log
+Thesis/*.lot
+Thesis/*.pdf
+Thesis/*.ps
+Thesis/*.synctex.gz
+Thesis/*.toc

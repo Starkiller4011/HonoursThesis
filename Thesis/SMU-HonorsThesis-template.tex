@@ -26,6 +26,8 @@
 \usepackage{latexsym,multicol,epsfig}
 \usepackage{setspace}
 %\usepackage{supertabular}
+\usepackage{multirow}
+\usepackage{booktabs}
 \usepackage{alltt}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -558,36 +560,35 @@ Calculating the cost and complexity of SFA is dependent upon a couple of input p
 
 \section{\sc The Data} \label{theData}
 
-\setlength{\tabcolsep}{18pt}
-\renewcommand{\arraystretch}{1.5}
+Data used for this project was obtained from the \textit{RXTE AGN Timing \& Spectral Database}, \cite{rxtepaper}. The sources were chosen based on the number of data points in the overall light curve as well as the variability in the light curve as determine "by-eye". The sources chosen were 3C 273, 3C 279, Fairall 9, Mkn 79, Mkn 110, and NGC 4051. Observation properties such as the number of data points, start and end dates, etc, can be seem in Table \ref{tab:sourcelist}. 
 
-\begin{table}[b!]
+\begin{minipage}{\linewidth}
 	\centering
-	\begin{tabular}{ c c c }
-		\hline\hline
-		Instrument & Duration & Average Sample Rate \\
-		& (Days) & (Days) \\
-		\hline
-		XRT & 3526.232 & 8.855 \\
-		UVW2 & 3526.232 & 8.855 \\
-		IVM2 & 3526.232 & 8.855 \\
-		IVW1 & 3526.232 & 8.855 \\
-		U & 3526.232 & 8.855 \\
-		B & 3526.232 & 8.855 \\
-		V & 3526.232 & 8.855 \\
-		\hline
-	\end{tabular}
-	\caption{Table of values for the light curves collected by \textit{Swift}.}
-\end{table}
+	\captionof{table}{Source List}\label{tab:sourcelist}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{@{}ccccccccc@{}}
+			\toprule
+			Source & Type & R.A. & Decl. & Redshift & Variance & Start (MDJ) & End (MJD) & Good ObsIDs \\
+			\midrule\midrule
+			3C 273 & FSRQ & 12 29 06.70 & +02 03 08.6 & 0.1583 & 0.5 & 50115.06 & 55926.56 & 1960 \\
+			3C 279 & FSRQ & 12 56 11.1 & -05 47 22 & 0.5326 & 0.5 & 50104.63 & 55925.99 & 1987 \\
+			Fairall 9 & Sy1 & 01 23 45.78 & -58 48 20.8 & 0.0470 & 0.5 & 50390.61 & 52699.51 & 707 \\
+			Mkn 79 & Sy1.2 & 07 21 53.45 & +49 48 34.7 & 0.0222 & 0.5 & 51610.57 & 55925.58 & 1646 \\
+			Mkn 110 & NLSy1.5 & 09 25 12.87 & +52 17 10.5 & 0.0353 & 0.5 & 51610.56 & 55925.59 & 1432 \\
+			NGC 4051 & NLSy1.5 & 12 03 09.61 & +44 31 52.8 & 0.0023 & 0.5 & 501996.49 & 55925.45 & 2125 \\
+			\bottomrule
+		\end{tabular}
+	}\par
+	\bigskip
+	Data taken from \textit{RXTE AGN Timing \& Spectral Database}
+\end{minipage}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{mkn335Lightcurves}
-	\caption{The \textit{Swift} XRT and UVOT light curves for \textbf{Mrk} 335 from 17 May 2007 to 31 Dec 2017. The XRT light curve is in counts s$^{-1}$. UVOT light curves are in units of $10^{-14}$erg s$^{-1}$cm$^{-2}$\AA$^{-1}$}
-	\label{fig:mkn335LC}
+	\includegraphics[width=\linewidth]{combinedlightcurves}
+	\caption{Light curves for the 6 sources stacked on top of each other.}
+	\label{fig:combinedlc}
 \end{figure}
-
-Data used for this project include a 10 year long monitoring campaign on the Seyfert I Mrk 335, and [New Data Here]. The light curves for the 10 year long monitoring campaign on Mrk 335 can be seen in figure \ref{fig:mkn335LC}. Visible are the gaps in the light curves for the various instruments on board the \textit{Swift} orbital observatory. For 3 months of the year \textit{Swift} is unable to observe Mrk 335 as it is obscured by the Earth, this is visible in the gaps consistent in all light curves, and most visible int the X-ray and UVW2 light curves as they are the two with the best sample rates.
 
 \section{\sc Results} \label{results}
 
