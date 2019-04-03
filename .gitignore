@@ -18,7 +18,7 @@ data/plots/fontconfig/*
 *.lot
 *.pdf
 *.ps
-*.synctex.gz
+*.synctex*
 *.toc
 ./*.aux
 ./*.bbl
