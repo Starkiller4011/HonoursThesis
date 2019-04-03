@@ -485,7 +485,7 @@ where the sum is over all pairs $\left(f\left(t_{i}\right),f\left(t_{j}\right)\r
 	\end{minipage}
 \end{figure}
 
-Structure functions have a very distinct shape, resembling a sigmoid but dominated by twice the signal variance, $2\sigma^{2}$, on short timescales and twice the noise variance, $2\sigma_{noise}^{2}$, on long timescales. This results in two noise dominated plateaus connected by a power-law section as shown in figure \ref{fig:structureFunctionLogShape} where the plateaus are shown with a red line and the power-law section is shown with a green line overlaid on top of real data for a structure function. As is evident in figure \ref{fig:structureFunctionLogShape}, the upper plateau, corresponding to longer timescales, is completely noise dominated.
+Structure functions have a very distinct shape, resembling a sigmoid but dominated by twice the signal variance, $2\sigma^{2}$, on short timescales and twice the noise variance, $2\sigma_{noise}^{2}$, on long timescales. This results in two noise dominated plateaus connected by a power-law section as shown in figure \ref{fig:structureFunctionLogShape}\footnote{\cite{galloblue}} where the plateaus are shown with a red line and the power-law section is shown with a green line overlaid on top of real data for a structure function. As is evident in figure \ref{fig:structureFunctionLogShape}, the upper plateau, corresponding to longer timescales, is completely noise dominated. It is important to note that the axes are log scaled when looking at structure functions as otherwise the resemble Figure \ref{fig:structureFunctionShape}\footnote{\cite{galloblue}}. This brings out the power law section and allows us to fit the structure functions to determine characteristic timescales.
 
 The power-law region of the structure function exists where $\tau_{min}\lesssim\tau\lesssim\tau_{max}$. When $\tau_{max}\ll T$, where $T$ is the total duration of the time-series, we can approximate $\tau_{max}$ to a characteristic timescale, $\tau_{char}$, determined by fundamental source characteristics such as mass, size, matter propagation and others depending on the source of the time-series.
 
@@ -493,12 +493,12 @@ The power-law region of the structure function exists where $\tau_{min}\lesssim\
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\linewidth]{mkn335UVW2SF}
-	\caption{Structure function for UVW2 data collected from Mkn335, \cite{galloblue}}
-	\label{fig:mkn335UVW2SF}
+	\includegraphics[width=0.6\linewidth]{3C279structurefunction}
+	\caption{Structure function for 3C 279 obtained from \cite{rxtepaper}}
+	\label{fig:3c279sf}
 \end{figure}
 
-The structure functions is an extremely valuable tool for analyzing data that has odd or uneven sampling rates, but it is not without fault. Some things to be aware of when using a structure function on data are as follows. Linear trends that span the entire time-series will artificially steepen the structure function. This can be avoided by removing a best-fit linear model applied to the entire time-series. Some object may have more than one characteristic timescale and this may manifest itself as a third plateau breaking the power-law region in two, as can be seen in figure \ref{fig:mkn335UVW2SF}.
+The structure functions is an extremely valuable tool for analyzing data that has odd or uneven sampling rates, but it is not without fault. Some things to be aware of when using a structure function on data are as follows. Linear trends that span the entire time-series will artificially steepen the structure function. This can be avoided by removing a best-fit linear model applied to the entire time-series. Some object may have more than one characteristic timescale and this may manifest itself as a third plateau breaking the power-law region in two, as can be seen in Figure \ref{fig:3c279sf}.
 
 \section{\sc SFA usage and description} \label{usageDescription}
 
@@ -560,7 +560,7 @@ Calculating the cost and complexity of SFA is dependent upon a couple of input p
 
 \section{\sc The Data} \label{theData}
 
-Data used for this project was obtained from the \textit{RXTE AGN Timing \& Spectral Database}, \cite{rxtepaper}. The sources were chosen based on the number of data points in the overall light curve as well as the variability in the light curve as determine "by-eye". The sources chosen were 3C 273, 3C 279, Fairall 9, Mkn 79, Mkn 110, and NGC 4051. Observation properties such as the number of data points, start and end dates, etc, can be seem in Table \ref{tab:sourcelist}. 
+Data used for this project was obtained from the \textit{RXTE AGN Timing \& Spectral Database}, \cite{rxtepaper}. The sources were chosen based on the number of data points in the overall light curve as well as the variability in the light curve as determine "by-eye". The sources chosen were 3C 273, 3C 279, Fairall 9, Mkn 79, Mkn 110, and NGC 4051. Observation properties such as the number of data points, start and end dates, etc, can be seen in Table \ref{tab:sourcelist}. 
 
 \begin{minipage}{\linewidth}
 	\centering
@@ -583,16 +583,58 @@ Data used for this project was obtained from the \textit{RXTE AGN Timing \& Spec
 	Data taken from \textit{RXTE AGN Timing \& Spectral Database}
 \end{minipage}
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{combinedlightcurves}
-	\caption{Light curves for the 6 sources stacked on top of each other.}
-	\label{fig:combinedlc}
+	\includegraphics[width=\linewidth]{3C273lightcurve}
+	\caption{Light curve for 3C 273}
+	\label{fig:3c273lc}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{3C279lightcurve}
+\caption{Light curve for 3C 279}
+\label{fig:3c279lc}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Fairall9lightcurve}
+\caption{Light curve for Fairall 9}
+\label{fig:fairall9lc}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Mkn79lightcurve}
+\caption{Light curve for Mkn 79}
+\label{fig:mkn79lc}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{Mkn110lightcurve}
+\caption{Light curve for Mkn 110}
+\label{fig:mkn110lc}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{NGC4051lightcurve}
+\caption{Light curve for NGC 4051}
+\label{fig:ngc4051lc}
 \end{figure}
 
 \section{\sc Results} \label{results}
 
 A review of the results of running SFA on observational data
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{combinedstructurefunctions}
+	\caption{Structure functions for 3C 273, 3C 279, Fairall 9, Mkn 79, Mkn 110, and NGC 4051}
+	\label{fig:combosf}
+\end{figure}
 
 \section{\sc Conclusions} \label{conclusions}
 
