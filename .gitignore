@@ -1,6 +1,10 @@
 # RAW data files not to be included with the thesis
-data
-data/*
+data/tmp
+data/tmp/*
+
+# Veusz intermediates
+data/plots/fontconfig
+data/plots/fontconfig/*
 
 # LaTeX intermediates
 *.aux
