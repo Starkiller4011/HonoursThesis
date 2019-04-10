@@ -494,11 +494,11 @@ The power-law region of the structure function exists where $\tau_{min}\lesssim\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\linewidth]{3C279structurefunction}
-	\caption{Structure function for 3C 279 obtained from \cite{rxtepaper}}
+	\caption{Structure function for 3C 279 computed from data obtained from \cite{rxtepaper}.}
 	\label{fig:3c279sf}
 \end{figure}
 
-The structure functions is an extremely valuable tool for analyzing data that has odd or uneven sampling rates, but it is not without fault. Some things to be aware of when using a structure function on data are as follows. Linear trends that span the entire time-series will artificially steepen the structure function. This can be avoided by removing a best-fit linear model applied to the entire time-series. Some object may have more than one characteristic timescale and this may manifest itself as a third plateau breaking the power-law region in two, as can be seen in Figure \ref{fig:3c279sf}.
+The structure functions is an extremely valuable tool for analyzing data that has odd or uneven sampling rates, but it is not without fault. Some things to be aware of when using a structure function on data are as follows. Linear, polynomial trends of order $N\geq M$ that span the entire time-series will artificially steepen the structure function, as can be seen in Figure \ref{fig:3c279sf}. This can be avoided by removing a best-fit polynomial model applied to the entire time-series. Some object may have more than one characteristic timescale and this may manifest itself as a third plateau breaking the power-law region in two.
 
 \section{\sc SFA usage and description} \label{usageDescription}
 
@@ -558,18 +558,17 @@ Calculating the cost and complexity of SFA is dependent upon a couple of input p
 
 \chapter{\sc Results and Conclusions} \label{resultsConclusions}
 
-\section{\sc The Data} \label{theData}
+There are two sets of results that will be discussed in this chapter. The first data set that will be discussed is from the Narrow Line Seyfert 1, (NLSy1), Markarian 335, collected by the \textit{Swift} orbital observatory. This data set was analyzed in \cite{galloblue} with both a structure function and a discrete correlation function, though only the structure function results will be discussed. The second set of data is considered current and future work and consists of 6 sources with data from the Rossi X-ray Timing Explorer (RXTE), with plans on comparing the X-ray results from RXTE with radio data from the Owens Valley Radio Observatory.
 
-Data used for this project was obtained from the \textit{RXTE AGN Timing \& Spectral Database}, \cite{rxtepaper}. The sources were chosen based on the number of data points in the overall light curve as well as the variability in the light curve as determine "by-eye". The sources chosen were 3C 273, 3C 279, Fairall 9, Mkn 79, Mkn 110, and NGC 4051. Observation properties such as the number of data points, start and end dates, etc, can be seen in Table \ref{tab:sourcelist}. 
-
-\begin{minipage}{\linewidth}
+\begin{table}
 	\centering
 	\captionof{table}{Source List}\label{tab:sourcelist}
-	\resizebox{\textwidth}{!}{
+	\resizebox{\linewidth}{!}{
 		\begin{tabular}{@{}ccccccccc@{}}
 			\toprule
 			Source & Type & R.A. & Decl. & Redshift & Start (MDJ) & End (MJD) & Good ObsIDs \\
 			\midrule\midrule
+			Mkn 335 & NLSy1 & 00 06 19.52 & +20 12 10.5 & 0.0258 & 54237.128 & 58112.128 & - \\
 			3C 273 & FSRQ & 12 29 06.70 & +02 03 08.6 & 0.1583 & 50115.06 & 55926.56 & 1960 \\
 			3C 279 & FSRQ & 12 56 11.1 & -05 47 22 & 0.5326 & 50104.63 & 55925.99 & 1987 \\
 			Fairall 9 & Sy1 & 01 23 45.78 & -58 48 20.8 & 0.0470 & 50390.61 & 52699.51 & 707 \\
@@ -580,54 +579,76 @@ Data used for this project was obtained from the \textit{RXTE AGN Timing \& Spec
 		\end{tabular}
 	}\par
 	\bigskip
-	Data taken from \textit{RXTE AGN Timing \& Spectral Database}
-\end{minipage}
+	Source parameters and data obtained from \textit{RXTE AGN Timing \& Spectral Database}. Data for Mkn 335 obtained from \textit{Swift} orbital observatory.
+\end{table}
+
+\section{\sc The Data} \label{theData}
+
+\subsection{\sc Mkn 335} \label{mkn335data}
+
+The data collected on Mkn 335 spanned 11 years of observations using the \textit{Swift} orbital observatory. \textit{Swift} is equipped with instruments capable of collecting data in the optical, UV, and X-ray bands of the electromagnetic spectrum. The light curve data for Mkn 335 is presented in Figure \ref{fig:mkn335lc}, with source parameters listed in Table \ref{tab:sourcelist} Row 1. The data collected on Mkn 335 is described in \cite{galloblue} and in \cite{grupe2012}. From the light curve data it is clear that the observation is broken into smaller observations, each spanning approximately 250 days. This is due to Mkn 335 being sun constraint for a period.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{3C273lightcurve}
-	\caption{Light curve for 3C 273}
-	\label{fig:3c273lc}
+	\includegraphics[width=\linewidth]{mkn335Lightcurves}
+	\caption{\textit{Swift} light curves for Mkn 335, XRT is in counts $s^{-1}$ whereas the remaining light curves are in units of $10^{-14}erg s^{-1} cm^{-2} \textup{\AA{}}^{-1}$.}
+	\label{fig:mkn335lc}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{3C279lightcurve}
-\caption{Light curve for 3C 279}
-\label{fig:3c279lc}
-\end{figure}
+\subsection{\sc RXTE Sources} \label{rxtedata}
+
+X-ray data for the sources currently being analyzed was obtained from the \textit{RXTE AGN Timing \& Spectral Database}, \cite{rxtepaper}. The sources were chosen based on the number of data points in the overall light curve as well as the variability in the light curve as determine "by-eye". The sources chosen were 3C 273, 3C 279, Fairall 9, Mkn 79, Mkn 110, and NGC 4051. Observation properties such as the number of data points, start and end dates, etc, can be seen in Table \ref{tab:sourcelist}, with the light curves shown in Figure \ref{fig:rxtelc}.
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{Fairall9lightcurve}
-\caption{Light curve for Fairall 9}
-\label{fig:fairall9lc}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{Mkn79lightcurve}
-\caption{Light curve for Mkn 79}
-\label{fig:mkn79lc}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{Mkn110lightcurve}
-\caption{Light curve for Mkn 110}
-\label{fig:mkn110lc}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{NGC4051lightcurve}
-\caption{Light curve for NGC 4051}
-\label{fig:ngc4051lc}
+	\centering
+	\includegraphics[width=\linewidth]{combinedlightcurves}
+	\caption{Light curves for 3C 273, 3C 279, Fairall 9, Mkn 79, Mkn 110, and NGC 4051.}
+	\label{fig:rxtelc}
 \end{figure}
 
 \section{\sc Results} \label{results}
 
-A review of the results of running SFA on observational data
+Structure function results for Mkn 335 can be seen in greater detail in \cite{galloblue}, with correlations between the different wavebands investigated using a discrete correlation function. The structure functions for the 6 RXTE sources remain unfit as some of the sources have linear trends and result in their structure functions suffering from artificial steepening. For the RXTE sources that do not suffer from artificial steepening or noise domination, "by-eye" approximations for the characteristic timescales are given.
+
+\subsection{\sc Mkn 335} \label{mkn335results}
+
+The structure functions for Mkn 335 presented here were fit using the X-ray Spectral Fitting Package (Xspec) developed by NASA's HEASARC team. In order to load the structure function data into Xspec, conversion of the data format was required. The fits for Mkn 335 are detailed further in \cite{galloblue}, with a summary of the fits available in Table \ref{tab:mknsfresults}. Plots of the structure functions for Mkn 335 were normalized by their light curve variance in order to allow for comparisons to be drawn between them. This ensures that all structure functions asymptote to the same value for their upper plateau on long timescales. Characteristic timescales fit to the Mkn 335 data are potentially consistent with thermal or dynamical timescales on the accretion disc as discussed in section \ref{mkn335conclusions}.
+
+\begin{table}
+	\centering
+	\captionof{table}{Structure Function Results for Mkn 335}\label{tab:mknsfresults}
+	\renewcommand{\arraystretch}{0.8}
+	\resizebox{0.8\linewidth}{!}{
+	\begin{tabular}{cccccccc}
+		\toprule
+		(1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+		Waveband & $T$ & $\delta$ & $\tau_{min}$ & $\tau_{min}$ & $\beta$ & $\tau_{char}$ & $\alpha$ \\
+		& (days) & (days) & (days) & (days) & (days) &  & (PSD) \\
+		\midrule\midrule
+		X-ray & 3524.232 & 5.3 & 10 & 100 & $0.14\pm0.05$ & - - & 1.14 \\
+		UVW2$^{a}$ & 3524.232 & 5.3 & 10 & 50 & $0.86^{+0.14}_{-0.13}$ & $34^{+11}_{-5}$ & 1.86 \\
+		UVW2$^{b}$ & 3524.232 & 5.3 & 50 & 160 & $1.25^{+0.20}_{-0.18}$ & $112^{+9}_{-7}$ & 2.25 \\
+		UVM2 & 3157.063 & 7.0 & 10 & 130 & $0.80^{+0.29}_{-0.50}$ & $63^{+32}_{-21}$ & 1.80 \\
+		UVW1 & 3157.063 & 6.9 & 10 & 130 & $0.86^{+0.27}_{-0.21}$ & $66^{+21}_{-14}$ & 1.87 \\
+		U & 3157.063 & 6.9 & 10 & 130 & $0.71^{+0.28}_{-0.21}$ & $71^{+27}_{-18}$ & 1.71 \\
+		B & 3157.063 & 6.9 & 10 & 130 & $0.71^{+0.30}_{-0.51}$ & $59^{+33}_{-19}$ & 1.71 \\
+		V$^{*}$ & 3157.063 & 6.9 & 10 & 130 & $0.71$ & $59$ & 1.71 \\
+		\bottomrule
+	\end{tabular}}\par
+	\bigskip
+	Waveband given in column (1), followed by total observation length in (2), structure function resolution in (3), minimum time difference in (4), maximum time difference in (5), power law fit in (6), characteristic timescale in (7), and PSD power law following $\alpha=\beta+1$ in (8). (a) and (b) correspond to the two separate fitting regions on the UVW2 structure function. $^{*}$A fit to the V-band data could not be constrained, \cite{galloblue}.
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{Mkn335sf}
+	\caption{Mkn 335 structure functions for the XRT and UVOT light curves from \cite{galloblue}.}
+	\label{fig:mkn335sf}
+\end{figure}
+
+\subsection{\sc RXTE Sources} \label{rxteresults}
+
+Structure functions for the sources from the RXTE database have not yet been normalized by variance as some of the light curves have linear polynomial trends. For this reason standard comparison between the structure functions cannot be conducted with the exception of the characteristic timescales as it is not affected by the light curve variance. Initial estimates for the characteristic timescales are in the region of ~100 days, agreeing with the measured characteristic timescales in Mkn 335.
 
 \begin{figure}[H]
 	\centering
@@ -638,11 +659,32 @@ A review of the results of running SFA on observational data
 
 \section{\sc Conclusions} \label{conclusions}
 
-Theoretical conclusions based on the findings of SFA
+The structure function interpretation for Mkn 335 has already been discussed in detail in \cite{galloblue}, and similar interpretations for the RXTE sources are goals for future work with structure functions and AGN emissions.
+
+\subsection{\sc Mkn 335} \label{mkn335conclusions}
+
+Using the fits for the structure functions computed for the various wavebands and comparing them to accretion timescales computed for Mkn 335, it was found in \cite{galloblue} that the structure functions were able to identify timescales that agreed with either dynamical timescales or thermal timescales in different regions of the disc, shown in Figure \ref{fig:accretiontimescales}.
+
+Given the error on the fit characteristic timescales it is not possible to distinguish whether the characteristic timescales agree with dynamical timescales on the accretion disc at 300 gravitational radii or with thermal timescales at 100. The exception to this is the double fit UVW2 structure function which had two distinct power laws and characteristic timescales. The first has a lower timescale that better agrees with dynamical timescales whereas the longer agrees with thermal timescales. This brings to light the possibility that both are equally dominant in the light curves but the other light curves lacked sampling and resolution sufficient enough to warrant distinction between the two, resulting in a combined characteristic timescale contributed by both. From this we can conclude that in inner regions of the accretion disc thermal processes are the driving force behind the emission variability where as in the outer region dynamical timescales are the driving force. This is interesting as it is well known that matter in the accretion disc increases in temperature as it reaches the inner regions and as such the thermal processes could be reverberating dynamical processes happening on the outer regions of the disc.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{mkn335timescales}
+	\caption{Computed accretion disc timescales for Mkn 335 with fit structure function characteristic timescales plotted, \cite{galloblue}.}
+	\label{fig:accretiontimescales}
+\end{figure}
+
+\subsection{\sc RXTE Sources} \label{rxteconclusions}
+
+The lack of computed accretion timescales for the sources from the RXTE database makes theoretical conclusions based on their structure function characteristic timescales difficult, and the presence of artificial steepening makes it impossible in others. It is interesting however that the two quasars 3C 273 and 3C 279 have structure functions that a so well defined in the X-ray. In Mkn 335 it was found that the X-ray structure function was incredibly noise dominated and quite shallow with no discernible characteristic timescale in the structure function fit due to inability to constrain the fit.
+
+Preliminary analysis of the raw structure functions for the RXTE sources warrants continued investigation as it would appear that the sampling is high enough for constrained fits to be obtained once linear trends are removed. Pairing the X-ray structure functions with radio structure functions for these sources is considered in chapter \ref{futureWork}.
 
 \chapter{\sc Future Work} \label{futureWork}
 
-Potential future work and applications of SFA
+Potential future work and applications include improvements to the SFA program. In its current state, SFA is not capable of removing linear trends from time-series data and also does not normalize the structure functions by variance. These will prove useful features as with them SFA will be capable of analyzing any time-series type data. The RXTE sources that were discussed in chapter \ref{resultsConclusions} are a current work in progress and as such will have continued future work as well. Plans for the RXTE sources are to remove linear trends from the current X-ray data and to also compute the structure functions for corresponding radio data on these sources from the Owens Valley Radio Observatory.
+
+As the SFA program obtains new features and is improved, a full survey of the available AGN sources in all available wavebands is a potential goal. This would require data from a variety of telescopes but would also need to be constrained to data for which the observation periods contain overlap, this way direct comparisons can be made. As mentioned in section \ref{mkn335results}, the discrete correlation function(DCF) was useful in analyzing relationships between the wavebands for Mkn 335, and as such similar analysis would be considered for a full survey. 
 
 
 \appendix
