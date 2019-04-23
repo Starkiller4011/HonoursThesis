@@ -76,7 +76,7 @@
 \numberofsignatures{5}
 %
 %---> Define Variables such as title etc <------------------------------------------------
-\newcommand{\myTitle}{Investigating Supermassive Black Holes and their variability by using a Structure Function}
+\newcommand{\myTitle}{Investigating Supermassive Black Holes and their variability using a Structure Function}
 %
 %---> BEGIN DOCUMENT <--------------------------------------------------------------------
 \begin{document}
@@ -97,7 +97,7 @@
 \sc \myTitle
 \paragraph*{\center  \\}
 \end{center}
-Viewed from Earth, regardless of the direction one looks, our universe is populated with galaxies as far as we can currently observer. The currently accepted theoretical model is that supermassive black holes reside at the center of galaxies. This has been proven for a majority of observable galaxies, including our own. For some the central black hole is actively accreting matter and these galaxies are called active galaxies. Active galaxies are of particular interest because when viewed over the entire electromagnetic spectrum they are some of the brightest objects in the night sky. In addition, their emission spectra are incredibly variable. Unfortunately since the data acquired from these objects is generally unevenly sampled, a Fourier analysis cannot be used to investigate them as it suffers from windowing and aliasing. For these reasons a structure function was used, which provides similar information as the Fourier analysis, but with the added benefits of remaining in the time domain and sporting a robustness against windowing and aliasing due to uneven sampling.
+Viewed from Earth, regardless of the direction one looks, our universe is populated with galaxies as far as we can currently observe. The currently accepted theoretical model is that supermassive black holes reside at the center of galaxies. This has been proven for a majority of observable galaxies, including our own. For some the central black hole is actively accreting matter and these galaxies are called active galaxies. Active galaxies are of particular interest because when viewed over the entire electromagnetic spectrum they are some of the brightest objects in the night sky. In addition, their emission spectra are incredibly variable. Unfortunately since the data acquired from these objects is generally unevenly sampled, a Fourier analysis cannot be used to investigate them as it suffers from windowing and aliasing. For these reasons a structure function was used, which provides similar information as the Fourier analysis, but with the added benefits of remaining in the time domain and sporting a robustness against windowing and aliasing due to uneven sampling.
 
 \begin{center}
 by {\em Derek Blue}\\
@@ -117,54 +117,52 @@ submitted on \today:\\
 
 \section{\sc Overview} \label{overview}
 
-This chapter will give an overview of the objects, theoretical models, and observation methods user in the rest of this work. The majority of this thesis is concerned with the analysis of the electromagnetic spectrum emitted by supermassive black holes at the centers of various galaxies. by using a structure function, which will be described in detail. This analysis was done in order to improve understanding of the theoretical model used to describe active galactic nuclei.
+This chapter will give an overview of the objects, theoretical models, and observation methods used in the rest of this work. The majority of this thesis is concerned with the analysis of the electromagnetic (EM) spectrum emitted by supermassive black holes at the centers of various galaxies by using a structure function, which will be described in detail. This analysis was done in order to improve understanding of the theoretical model used to describe active galactic nuclei (AGN).
 
 \section{\sc Galaxies} \label{galaxies}
 
-We all learn from a young age that our planet Earth resides in a galaxy known as The Milky Way. But what is a galaxy?
+We all learn from a young age that our planet Earth resides in a galaxy known as the Milky Way. But what is a galaxy?
 
-Galaxies are relatively faint objects in comparison to stars when being observed with the naked eye. So it comes as no surprise that they were not discovered until telescope technology had advanced to a sufficient degree as to allow a significant enough amount of light in to view very distant objects. In 1845 William Parsons of Ireland, known better as Lord Ross, built a telescope that would be the largest of it's time, known as the Ross Telescope. In using this telescope he was able to observe groupings of stars and gas and dust distant from our own Milky Way that demonstrated a sort of spiral structure. Initially Parsons believed these to be nebulae but soon concluded that they were "great clouds of stars"\footnote{\cite{sag}} beyond our galaxy.
+Galaxies are relatively faint objects in comparison to stars when being observed with the naked eye. So it comes as no surprise that they were not discovered until telescope technology had advanced to a sufficient degree as to allow a significant enough amount of light in to view very distant objects. In 1845, William Parsons of Ireland, known better as Lord Ross, built a telescope that would be the largest of its time, known as the Ross Telescope. Using this telescope he was able to observe groupings of stars and gas and dust distant from our own Milky Way that demonstrated a sort of spiral structure. Initially Parsons believed these to be nebulae but soon concluded that they were "great clouds of stars" beyond our galaxy \citep{sag}. These great clouds of stars are now theorized by modern astronomers to contain supermassive black holes at their centers holding them together. Supermassive black holes, as their name suggests and as this chapter will explain later are extremely massive; millions to billions of times the mass of the sun.
 
-These great clouds of stars are now theorized by modern astronomers to contain supermassive black holes at their centers holding them together. Supermassive black holes, as their name suggests and as this chapter will explain later are extremely massive.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{GalaxyClassificationChart}
-	\caption{The Hubble-de Vaucouleurs diagram for galaxy morphology. It was originally proposed as a diagram for the evolution of galaxies over time but is now only used to show the different sub-classes of galaxy in the three main groups.}
-	\label{fig:classDiagram}
-\end{figure}
-
-Since their discovery, many various types of galaxies have been identified and categorized into three main groups (Figure \ref{fig:classDiagram}):\footnote{https://commons.wikimedia.org/wiki/File:Hubble\_-\_de\_Vaucouleurs\_Galaxy\_Morphology\_Diagram.png} elliptical, spiral, and irregular.
+Since their discovery, many types of galaxies have been identified. Originally three categories were identified: elliptical, spiral, and irregular. Figure \ref{fig:classDiagram} show the Hubble-de Vaucouleurs diagram for galaxy morphology. It was originally proposed as a diagram for the evolution of galaxies over time but is now only used to show the different sub-classes of galaxy in the three main groups.
 
 \begin{figure}[H]
 	\centering
-	\begin{minipage}{0.48\textwidth}
+	\includegraphics[width=\linewidth]{GalaxyClassificationChart}
+	\caption{Hubble-De Vaucouleurs Diagram \citep{devaucouleurs}}
+	\label{fig:classDiagram}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[width=0.9\linewidth]{M32}
-		\caption{The elliptical galaxy M32 is gravitationally locked by the much larger galaxy Andromeda and is called a satellite galaxy as a result.}
+		\caption{Dwarf satellite galaxy M82 \citep{m32}}
 		\label{fig:M32}
 	\end{minipage}
-	\begin{minipage}{0.04\textwidth}
+	\begin{minipage}{0.1\textwidth}
 		\centering
 	\end{minipage}
-	\begin{minipage}{0.48\textwidth}
+	\begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[width=0.9\linewidth]{NGC1316}
-		\caption{The elliptical galaxy NGC 1316 has gas and dust lanes that make it look like a marble and are also evidence of a past merger.}
+		\caption{Elliptical galaxy NGC 1316 \citep{ngc1316}}
 		\label{fig:NGC1316}
 	\end{minipage}
 \end{figure}
 
 \subsection{\sc Elliptical Galaxies} \label{ellipticalGalaxies}
 
-\cite{sag} describes elliptical galaxies as spherical or elliptical with no visible gas and dust and lacking young hot bright blue stars. These galaxies are classified from E0 to E7 based on how elliptical they appear from Earth and are the most abundant type of galaxy found in the observable universe. The dwarf satellite galaxy M32 is a nearby example of an elliptical galaxy (Figure \ref{fig:M32})\footnote{https://www.universetoday.com/wp-content/uploads/2009/07/Messier-32-e1484594524605.jpg}. The galaxy NGC 1316 (Figure \ref{fig:NGC1316})\footnote{ESA/Hubble \& NASA - https://www.spacetelescope.org/images/opo0511a/} is an unusual example of an elliptical galaxy in that it has lanes of gas and dust which is rare for ellipticals. The lanes of gas and dust that make it look like a marble are theorized to be the result of a merger of two galaxies at some time it its past.
+\cite{sag} describe elliptical galaxies as spherical or elliptical in shape with no visible gas and dust and lacking young hot bright blue stars. These galaxies are classified from E0 to E7 based on how elliptical they appear from Earth. They are the most abundant type of galaxy found in the observable universe. The dwarf satellite galaxy M32 is a nearby example of an elliptical galaxy which has been gravitationally locked by the much larger galaxy Andromeda (Figure \ref{fig:M32}). The galaxy NGC 1316 (Figure \ref{fig:NGC1316}) is an unusual example of an elliptical galaxy in that it has lanes of gas and dust which is rare for ellipticals. The lanes of gas and dust that make it look like a marble are theorized to be the result of a merger of two galaxies at some time it its past.
 
 \begin{figure}[H]
 	\centering
 	\begin{minipage}{0.48\textwidth}
 		\centering
 		\includegraphics[width=0.9\linewidth]{Arp273}
-		\caption{A pair of interacting galaxies known as Arp 273 hosts the spiral galaxy UGC 1810. It is thought that the smaller galaxy has passed through the larger one.}
+		\caption{Interacting spiral galaxies in Arp 273 \citep{arp273}}
 		\label{fig:Arp273}
 	\end{minipage}
 	\begin{minipage}{0.04\textwidth}
@@ -173,21 +171,21 @@ Since their discovery, many various types of galaxies have been identified and c
 	\begin{minipage}{0.48\textwidth}
 		\centering
 		\includegraphics[width=0.9\linewidth]{NGC1365}
-		\caption{The spiral galaxy NGC 1365 has an extremely prominent bar at its center that is thought to draw gas and dust into a star-forming maelstrom.}
+		\caption{Barred spiral galaxy NGC 1365 \citep{ngc1365}}
 		\label{fig:NGC1365}
 	\end{minipage}
 \end{figure}
 
 \subsection{\sc Spiral Galaxies} \label{spiralGalaxies}
 
-Spiral galaxies are photographically the most spectacular of the types (Figure \ref{fig:Arp273})\footnote{ESA/Hubble \& NASA - https://www.spacetelescope.org/images/heic1107a/} due to the spiraling arms that give them their name. They consist of a flattened disk, spiral arms extruding from their nucleus, typically contain lots of gas and dust, and are host to star-formation regions containing many young hot bright blue stars. The gas and dust in spiral galaxies tend to form clouds which become birthing grounds for these young hot stars. A sub-class of spiral galaxies known as barred spirals(Figure \ref{fig:NGC1365})\footnote{R.Gilbert,D.Goldman,J.Harvey,D.Verschatse - https://apod.nasa.gov/apod/ap070328.html} are so called because of the presence of a bar at their center from which their spiral arms protrude. Our own galaxy, The Milky Way, is one of these barred spirals.
+Spiral galaxies are photographically the most spectacular of the types due to the spiraling arms that give them their name. Figure \ref{fig:Arp273} is an example of a pair of interacting galaxies known as Arp 273. The larger galaxy in Arp 273 is known as UGC 1810, and the smaller one is known as UGC 1813. It is thought that the UGC 1813 has passed through UGC 1810 at some point in their history. Spiral galaxies consist of a flattened disk, spiral arms extruding from their nucleus, typically contain gas and dust, and are host to star-formation regions containing many young hot bright blue stars. A sub-class of spiral galaxies known as barred spirals are so called because of the presence of a bar at their center from which their spiral arms protrude. Figure \ref{fig:NGC1365} shows the barred spiral galaxy NGC 1365. NGC 1365 has an extremely prominent bar at its center that is thought to draw gas and dust into a star-forming maelstrom. Our own galaxy, The Milky Way, is one of these barred spirals.
 
 \begin{figure}[H]
 	\centering
 	\begin{minipage}{0.48\textwidth}
 		\centering
 		\includegraphics[width=0.9\linewidth]{SMC}
-		\caption{The Small Magellanic Cloud has a spectacular looking dynamic and intricate star forming region.}
+		\caption{Small Magellanic Cloud \citep{smallmag}}
 		\label{fig:SMC}
 	\end{minipage}
 	\begin{minipage}{0.04\textwidth}
@@ -196,21 +194,21 @@ Spiral galaxies are photographically the most spectacular of the types (Figure \
 	\begin{minipage}{0.48\textwidth}
 		\centering
 		\includegraphics[width=0.9\linewidth]{LMC}
-		\caption{The Large Magellanic Cloud is host to one of the most active star formation regions in the nearby universe.}
+		\caption{Large Magellanic Cloud \citep{largemag}}
 		\label{fig:LMC}
 	\end{minipage}
 \end{figure}
 
 \subsection{\sc Irregular Galaxies} \label{irregularGalaxies}
 
-Not quite belonging to either the spiral nor the elliptical classes of galaxies, Irregular Galaxies are collections of gas and dust with no real structure or shape. Two examples of irregular galaxies close to our galaxy are the Magellanic Clouds. The Small Magellanic Cloud(Figure \ref{fig:SMC})\footnote{ESA/Hubble \& NASA - https://www.spacetelescope.org/images/heic0514a/} and Large Magellanic Cloud(Figure \ref{fig:LMC})\footnote{ESA/Hubble \& NASA - https://www.spacetelescope.org/images/heic1011a/} have virtually no proper geometric structure and are interacting gravitationally with the Milky Way galaxy.
+Not quite belonging to either the spiral nor the elliptical classes of galaxies, Irregular galaxies are collections of gas and dust with no real structure or shape. Two examples of irregular galaxies close to our galaxy are the Magellanic Clouds. The Small Magellanic Cloud (Figure \ref{fig:SMC}) and Large Magellanic Cloud (Figure \ref{fig:LMC}) have virtually no discernible structure and are interacting gravitationally with the Milky Way galaxy. The Small Magellanic Cloud has a spectacular looking dynamic and intricate star forming region. The Large Magellanic Cloud is host to one of the most active star formation regions in the nearby universe.
 
 \begin{figure}[H]
 	\centering
 	\begin{minipage}{0.48\textwidth}
 		\centering
 		\includegraphics[width=0.9\linewidth]{M82}
-		\caption{The active galaxy M82 shown here in the visual range with hydrogen clouds shown in red.}
+		\caption{Active galaxy M82 in optical and radio \citep{m82a}}
 		\label{fig:M82}
 	\end{minipage}
 	\begin{minipage}{0.04\textwidth}
@@ -219,55 +217,55 @@ Not quite belonging to either the spiral nor the elliptical classes of galaxies,
 	\begin{minipage}{0.48\textwidth}
 		\centering
 		\includegraphics[width=0.87\linewidth]{M82-xray}
-		\caption{The active galaxy M82 shown here with the radio loud hydrogen clouds in bright red and X-ray emission in blue.}
+		\caption{Active galaxy M82 in optical, radio, and X-ray \citep{m82b}}
 		\label{fig:M82-xray}
 	\end{minipage}
 \end{figure}
 
 \section{\sc Active Galaxies} \label{activeGalaxies}
 
-Thanks to advances in technology, such as the radio and X-ray telescopes, modern astronomers have identified a new type of galaxy. Active galaxies (Figure \ref{fig:M82})\footnote{ESA/Hubble \& NASA - https://www.spacetelescope.org/images/heic0604a/} are galaxies that are theorized to have an actively accreting supermassive black hole at their center. This accretion by the central black hole generates immense amounts of energy across the electromagnetic spectrum, particularly in the infrared and X-ray ranges of the EM spectrum (Figure \ref{fig:M82-xray})\footnote{ESA/Hubble \& NASA - https://www.spacetelescope.org/images/heic0604d/}. This central black hole and its accompanying accretion disc are known as the nucleus of an active galaxy and are referred to as Active Galactic Nuclei(AGN). There are a number of different types of AGN that have been identified based on their power spectra. Radio galaxies and their relatives the quasar and blazar are galaxies that are very luminous at radio wavelengths. The difference between radio galaxies, quasars, and blazars is that quasars and blazars are more luminous than radio galaxies with blazars being much more luminous than quasars. Radio galaxies, quasars, and blazars all emit jets from their centers and it is the angle of this jet with relation to us that causes the increase in radio emission in the quasars and blazars, see section \ref{unifiedModel}. Seyfert galaxies are like quasars in that they are very luminous in the radio wavelengths and are split into type I and type II based on their emission spectrum. What distinguishes Seyferts from quasars is that their host galaxies are clearly detectable.
+Thanks to advances in technology, such as radio and X-ray telescopes, modern astronomers have identified a new type of galaxy. Active galaxies are galaxies that are theorized to have an actively accreting supermassive black hole at their center. This accretion by the central black hole generates immense amounts of energy across the EM spectrum, particularly in the infrared and X-ray ranges of the EM spectrum as can be seen in Figure \ref{fig:M82-xray} where the X-ray emissions have been overlaid in blue atop the radio and optical emission seen in Figure \ref{fig:M82}. This central black hole and its accompanying accretion disc are known as the nucleus of an active galaxy and are referred to as Active Galactic Nuclei (AGN). There are a number of different types of AGN that have been identified based on their energy spectra. Radio galaxies and their relatives, quasars, and blazars, are galaxies that are very luminous at radio wavelengths. The difference between radio galaxies, quasars, and blazars is that quasars and blazars are more luminous than radio galaxies with blazars being much more luminous than quasars. Radio galaxies, quasars, and blazars all emit jets from their centers and it is the angle of this jet with relation to us that causes the increase in radio emission in the quasars and blazars (See Section \ref{unifiedModel}). Seyfert galaxies are galaxies with unusually bright nuclei and are like quasars in that they are very luminous in the radio wavelengths. They are divided into type I and type II based on their emission spectrum. What distinguishes Seyferts from quasars is that their host galaxies are clearly detectable.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\linewidth]{UnifiedModel}
-	\caption{Unified model of Active Galactic Nuclei (AGN).}
+	\caption{Unified model for AGN \citep{unifiedmodel}}
 	\label{fig:unifiedModel}
 \end{figure}
 
 \subsection{\sc The Unified Model} \label{unifiedModel}
 
-In order to help understand what we observe and to help produce new methods of observing AGN, the unified model was developed (Figure \ref{fig:unifiedModel}\footnote{https://fermi.gsfc.nasa.gov/science/eteu/agn/figure1.jpg}). 
+To help understand what we observe and to help produce new methods of observing AGN, the unified model was developed (Figure \ref{fig:unifiedModel}).
 
-In the unified model the nucleus of the active galaxy consists of a supermassive black hole surrounded by a torus of dust and gas from which it is accreting material from an accretion disc formed by the gravitational pull of the supermassive black hole. There are a number of different types of active galaxies that have been observed as discussed in section \ref{activeGalaxies}. The unified model attributes these different types to the viewing angle to the galaxy that the observer has. For instance if an observer is viewing an active galaxy from close to edge-on, then they will see either a radio galaxy or a Seyfert 2 AGN. If however they are observing from a higher angle, then the observer will see a quasar or a Seyfert 1 depending on whether the object is radio loud or not. Finally observing from an angle equivalent to directly above will result in the observer viewing a blazar.
+In the unified model the nucleus of the active galaxy consists of a supermassive black hole surrounded by a torus of dust and gas from which it is accreting material from an accretion disc formed by the gravitational pull of the supermassive black hole. There are a number of different types of active galaxies that have been observed as discussed in Section \ref{activeGalaxies}. The unified model attributes these different types to the viewing angle to the galaxy that the observer has. For instance if an observer is viewing an active galaxy from close to edge-on, then they will see either a radio galaxy or a Seyfert 2 AGN. If however they are observing from a higher angle, then the observer will see a quasar or a Seyfert 1 depending on whether the object is radio loud or not. The terms radio loud and radio quiet can be initially confusing however as these objects are all extremely bright radio sources. The radio loudness of an AGN refers to the brightness of its radio emission with respect to other AGN. Finally, observing from an angle equivalent to directly above will result in the observer viewing a blazar.
 
 \begin{figure}[H]
 	\centering
 	\begin{minipage}{0.6\linewidth}
 		\centering
 		\includegraphics[width=0.8\linewidth]{CygX1}
-		\caption{An artist's impression of the binary system to which Cygnus X-1 belongs.}
+		\caption{Artists depiction of an accreting black hole \citep{cygx1}}
 		\label{fig:CygX1}
 	\end{minipage}
 \end{figure}
 
 \section{\sc Black Holes} \label{blackHole}
 
-Black holes are stellar objects that emit no light themselves but have immense gravitational pulls. This often leads to the forming of accretion discs(Figure \ref{fig:CygX1})\footnote{ESA/Hubble \& NASA - https://www.spacetelescope.org/images/cygx1\_illust\_orig/} formed from the material of nearby objects. To understand black holes, one must first understand escape velocity and how it relates to astronomical objects. For any given object, the escape velocity is the velocity required by any object or particle in order for that object or particle to escape the gravitational well created by the initial object. For example, in order for a probe to leave our Earth and visit the other planets of our solar system, that probe must first reach the escape velocity for the Earth. Using Newtonian physics, the escape velocity is defined as:
+Black holes are objects that emit no light themselves but have immense gravitational pulls. This often leads to the forming of accretion discs, as can be seen in Figure \ref{fig:CygX1}, an artist's impression of the binary system to which Cygnus X-1 belongs, formed from the material of nearby objects. To understand black holes, one must first understand escape velocity and how it relates to astronomical objects. For any given object, the escape velocity is the velocity required by any object or particle in order for that object or particle to escape the gravitational well created by the initial object. For example, in order for a probe to leave our Earth and visit the other planets of our solar system, that probe must first reach the escape velocity for the Earth. Using Newtonian physics, the escape velocity is defined as:
 \begin{equation} \label{eqn1.1}
 v_{e} = \sqrt{\frac{2GM}{r}}
 \end{equation}
 where $v_{e}$ is the escape velocity, $G$ is the universal gravitational constant, $M$ is the mass of the object to escape from, and $r$ is the radius of the object. For an object of a given mass $M$, $v_{e}$ clearly increases as $r$ decreases. When $v_{e} \geq c$ at a given $r$, where $c \approx 3\cdot10^{8} \textup{m}/\textup{s}$ is the speed of light, then nothing can escape the gravitational well created by the object in question.
 
-Such an object is referred to as a black hole. The radius at which the escape velocity reaches the speed of light, $v_{e} = c$, is called the event horizon. There exists a relativistic model for the black hole that will be discussed in chapter \ref{generalRelativity} that arises from general relativity. Black holes are commonly classified according to their mass due to the relationship between their mass and the radius of their event horizon, given by:
+Such an object is referred to as a black hole. The radius at which the escape velocity reaches the speed of light, $v_{e} = c$, is called the event horizon. There exist relativistic models for black holes that will be discussed in Chapter \ref{generalRelativity} that arise from Einstein's theory of general relativity. Black holes are commonly classified according to their mass due to the relationship between their mass and the radius of their event horizon, given by:
 \begin{equation} \label{eqn1.2}
 r_{s} = \frac{2GM}{c^{2}}
 \end{equation}
-where $r_{s}$ is known as the Schwarzchild radius and arises from setting the escape velocity $v_{e}$ equal to the speed of light in equation \ref{eqn1.1}.
+where $r_{s}$ is known as the Schwarzschild radius which arises from setting the escape velocity $v_{e}$ equal to the speed of light in equation \ref{eqn1.1}.
 
 \subsection{\sc Stellar Mass Black Holes} \label{stellarBH}
 
-Stellar mass black holes are those black holes that have masses ranging from about $3\textup{M}_{\odot}$ to $10^{2}\textup{M}_{\odot}$ where $\textup{M}_{\odot}$ is the mass of our Sun. They are generally formed when the most massive stars die, ejecting their outer layers and collapsing in on themselves forming a black hole. Cygnus X-1 is an x-ray source from within the Milky Way that has widely been accepted to be a black hole, with a mass between 14 and 16 solar masses.
+Stellar mass black holes are those black holes that have masses ranging from about $3\textup{M}_{\odot}$ to $10^{2}\textup{M}_{\odot}$ where $\textup{M}_{\odot}$ is the mass of our Sun. They are generally formed when the most massive stars run out of nuclear energy, ejecting their outer layers and collapsing in on themselves forming a black hole. Cygnus X-1 is an X-ray source within the Milky Way that has widely been accepted to be a black hole, with a mass between 14 and 16 solar masses.
 
 \subsection{\sc Intermediate-Mass Black Holes} \label{intermediateBH}
 
@@ -275,90 +273,80 @@ Intermediate-mass black holes(IMBH) are theorized to be those black holes with s
 
 \subsection{\sc Supermassive Black Holes}
 
-With masses ranging from $10^{5}\textup{M}_{\odot}$ and up, supermassive black holes are believed to be at the centers of most galaxies. There is observational evidence that our own Milky Way is host to one such supermassive black hole. It has been named Sagittarius A* and its latest estimated mass is $4.31\pm 0.38\cdot 10^{6}\textup{M}_{\odot}$ \cite{gillessen2009}. When one of these supermassive black holes is actively accreting from its surrounding galaxy, we describe it as the nucleus of an active galaxy as discussed in section \ref{activeGalaxies}. It is comforting to note that Sagittarius A*, the supermassive black hole at the center of The Milky Way, is quiescent, and thus not actively accreting, as the process of accretion generates immense amounts of x-ray and gamma ray emission.
+With masses ranging from $10^{5}\textup{M}_{\odot}$ and up, supermassive black holes are believed to be at the centers of most galaxies. There is observational evidence that our own Milky Way is host to one such supermassive black hole. It is named Sagittarius A* and its most recent mass estimate is $4.31\pm 0.38\cdot 10^{6}\textup{M}_{\odot}$ \citep{gillessen2009}. When one of these supermassive black holes is actively accreting from its surrounding galaxy, we describe it as the nucleus of an active galaxy as discussed in Section \ref{activeGalaxies}. It is comforting to note that Sagittarius A*, the supermassive black hole at the center of the Milky Way, is quiescent, and thus not actively accreting, as the process of accretion generates immense amounts of X-ray and gamma ray emission.
 
 \section{\sc How AGN are Observed} \label{howObserved}
 
-AGN are so distant, and their central engines are so massive, that light cannot escape them. So how then can we observe them? The answer to that question is that we cannot and still have not \textit{directly} observed one yet. We can however indirectly observe them, by their gravitational effect on their surroundings, and in the case of AGN by observing the emission they produce through their accretion process.
+AGN are so distant, and their central engines are so massive that light cannot escape from them. So how then can we observe them? The answer to that question is that we cannot and still have not \textit{directly} observed one yet. We can however indirectly observe them, by their gravitational effect on their surroundings, and in the case of AGN by observing the emission they produce through their accretion process.
 
-As discussed earlier in section \ref{activeGalaxies}, the supermassive black holes at their centers are undergoing active accretion. This process causes matter to in-spiral towards the black hole at increasing speeds. The matter around the black hole rotates at an increasing rate as it approaches because it must conserve angular momentum. The gas and dust in the area around the nucleus of an AGN forms a torus, which then thins into a disc as it approaches the event horizon of the black hole. As matter from the torus gets closer to the event horizon and its velocity increases, it heats up to temperatures so that it eventually becomes ionized at the innermost stable circular orbit(ISCO).
+As discussed earlier in Section \ref{activeGalaxies}, the supermassive black holes of AGN are undergoing active accretion. This process causes matter to in-spiral towards the black hole at increasing speeds. The matter around the black hole rotates at an increasing rate as it approaches because it must conserve angular momentum. The gas and dust in the area around the nucleus of an AGN forms a torus, which then thins into a disc as it approaches the event horizon of the black hole. As matter from the torus gets closer to the event horizon and its velocity increases, it heats up to temperatures so that it eventually becomes ionized at the innermost stable circular orbit (ISCO).
 
-The accretion disc matter becomes hot enough to emit light in the Ultra-Violet(UV) range, and electrons are striped and deposited into clouds above and below the disc. In these electron clouds, UV light rays collide with electrons and remove energy from them in a process known as Inverse Compton Scattering, commonly referred to as Inverse Comptonisation. The UV rays that undergo this Comptonising process are re-emitted at high energies, often in the X-ray band but also up to and including the gamma ray band.
+The accretion disc matter becomes hot enough to emit light in the Ultra-Violet(UV) range, and electrons are striped and deposited into clouds above and below the disc. In these electron clouds, UV photons collide with electrons and remove energy from them in a process known as Inverse Compton Scattering, commonly referred to as Comptonisation. The UV rays that undergo this Comptonising process are re-emitted at high energies, often in the X-ray band but also up to and including the gamma ray band.
 
 \begin{figure}[H]
 	\centering
-	\begin{minipage}{0.8\linewidth}
+	\begin{minipage}{0.9\linewidth}
 		\centering
-		\includegraphics[width=0.8\linewidth]{AGN-spectra}
-		\caption{Schematic representation of the broadband continuum spectral energy distribution seen in the different types of AGNs.}
+		\includegraphics[width=\linewidth]{AGN-spectra}
+		\caption{An AGN spectral energy distribution \citep{koratkar}}
 		\label{fig:agn-continuum}
 	\end{minipage}
 \end{figure}
 
 \subsection{\sc Light-Curves} \label{lightcurves}
-Thanks to the processes in and around the accretion disc, AGN emit light almost evenly, with slight variations and perturbations, across the entire electromagnetic spectrum (Figure \ref{fig:agn-continuum})\footnote{https://ned.ipac.caltech.edu/level5/Sept04/Koratkar/Koratkar1.html} \cite{koratkar}. This allows us to collect the light they emit in our direction using telescopes and generate what are known as light-curves using computers. Light-curves are a comparison of flux to the wavelength, frequency, or energy level of light particles. When observing AGN it is common to refer to wavelengths of light by their corresponding energy levels in keV.
+Thanks to the processes in and around the accretion disc, AGN emit light almost equally, with slight variations and perturbations, across the entire EM spectrum \citep{koratkar}. Figure \ref{fig:agn-continuum} shows this emission in a schematic of the broadband continuum. This allows us to collect the light they emit in an energy band and generate what are known as light-curves using computers. Light-curves are a comparison of flux changes as a function of time. When observing AGN it is common to refer to wavelengths of light by their corresponding energy levels in keV.
 
-Some expected properties of the spectra obtained from AGN are, the presence of an iron line around the 6.5 keV mark, a falloff in photon counts as photon energy increases, and obscuring of the lower energy X-ray and higher energy UV range due to absorption in the torus and surrounding gas and dust around the central engine.
+Some of the expected properties of the spectra obtained from AGN are, the presence of an iron line around 6.5 keV, a fall off in photon counts as photon energy increases, and obscuring of the lower energy X-ray and higher energy UV range due to absorption in the torus and surrounding gas and dust around the central engine.
 
 \subsection{\sc Orbital X-ray telescopes} \label{xrayTelesopes}
 
-As discussed in the previous section \ref{lightcurves}, AGN produce light almost evenly across the electromagnetic spectrum. The section that astronomers studying AGN find the most interesting is the UV to X-ray region. Most EM radiation in the UV to gamma-ray region is completely absorbed in out atmosphere, therefore orbital satellite telescopes must be used to collect emissions from AGN. For this project the Neil Gehrels \textit{Swift} Observatory was used. The \textit{Swift} orbital telescope is equipped with a UV/Optical telescope, capable of obtaining spectra in the UV and optical ranges. \textit{Swift} is also equipped with an X-ray telescope for obtaining spectra in the X-ray band of the EM spectrum. 
+As discussed in the Section \ref{lightcurves}, AGN produce light almost evenly across the EM spectrum. The part of the spectrum that astronomers studying AGN find the most interesting is the UV to X-ray region. Most EM radiation in the UV to gamma-ray region is completely absorbed in our atmosphere, therefore orbital satellite telescopes must be used to collect emissions from AGN. For this project the Neil Gehrels \textit{Swift} Observatory was used. The \textit{Swift} orbital telescope is equipped with an UV/Optical telescope, capable of obtaining spectra in the UV and optical ranges. \textit{Swift} is also equipped with an X-ray telescope for obtaining spectra in the X-ray band of the EM spectrum. 
 
 \begin{figure}[H]
 	\centering
 	\begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{xrayTelescopeMultimirror}
-		\caption{X-ray telescope cutaway diagram.}
+		\caption{Cross section of an X-ray telescope \citep{telescope}}
 		\label{fig:xrayMultiMirror}
 	\end{minipage}
 	\begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{grazingIncidence}
-		\caption{Grazing incidence diagram.}
+		\caption{Diagram of intermediate and grazing incidence \citep{telescope}}
 		\label{fig:grazingIncidence}
 	\end{minipage}
 \end{figure}
 
-The X-ray telescope uses many mirrors at slightly increasing angles positioned throughout to focus the incoming X-rays as shown in (Figure \ref{fig:xrayMultiMirror}\footnote{https://imagine.gsfc.nasa.gov/observatories/technology/xray\_telescopes1.html \label{xrayTelescopeRef}}). The mirrors must be placed at slightly increasing angles because otherwise, the high energy X-rays would pass right through the mirrors (Figure \ref{fig:grazingIncidence}\textsuperscript{\ref{xrayTelescopeRef}}).
+The X-ray telescope uses many mirrors at slightly increasing angles positioned throughout to focus the incoming X-rays as shown in Figure \ref{fig:xrayMultiMirror}. The mirrors must be placed at slightly increasing angles because otherwise, the high energy X-rays would pass right through the mirrors as seen in Figure \ref{fig:grazingIncidence}.
 
 \section{\sc Project Goals} \label{expectedAchievements}
 
-This project focused on analyzing the light-curves of several AGN using a Structure Function. The Structure Function, as will be discussed in section \ref{structureFunction}, is similar to a Fourier Analysis but without the aliasing and windowing issues that arise from unevenly sampled data. We cannot obtain evenly sampled data from many astronomical sources due to the methods of observation and the timescales on which astronomical events happen. This project aims to provide a method for observing and analyzing astronomical events and objects such as AGN through the use of a Structure Function to help identify time-scales on which significant events might be occurring.
+This project focused on analyzing the light-curves of several AGN using a structure function. The structure function, as will be discussed in Section \ref{structureFunction}, is similar to a Fourier analysis but without the aliasing and windowing issues that arise from unevenly sampled data. We cannot obtain evenly sampled data from many astronomical sources due to the methods of observation and the timescales on which astronomical events happen. This project aims to provide a method for observing and analyzing astronomical events and objects such as AGN through the use of structure function to help identify time-scales on which significant events might be occurring.
 
 \chapter{\sc Relativistic Description of Black Holes} \label{generalRelativity}
 
-Towards the end of the 17th century Newtonian gravity was still the accepted theory, however there still unexplained flaws in the theory that astronomers of the time struggled to explain. One of these such flaws was the behavior that Mercury exhibited in its orbit around the Sun. Mercury is a relatively small planet and as such it has lower mass than many of the other planets in the solar system. The combined mass of the planets further from the Sun than Mercury exhibit a gravitational pull on Mercury slowly altering its orbit (Figure \ref{fig:mercuryorbit})\footnote{https://www.ck12.org/physics/Orbital-Motion/rwa/Mercurys-Orbit/}. This precession could not be explained by the accepted model derived from Newtonian gravity. When Albert Einstein published his theory of General Relativity in 1915, it explained the precession of Mercury's orbit to the arcsecond.
+Until the start of the 20th century Newtonian gravity was still the accepted theory, however there were unexplained flaws in the theory that astronomers of the time struggled to explain. One of these flaws was the behavior that Mercury exhibited in its orbit around the Sun. Mercury is a relatively small planet and as such it has lower mass than many of the other planets in the solar system. The combined mass of the planets further from the Sun than Mercury exhibit a gravitational pull on Mercury slowly altering its orbit as seen in Figure \ref{fig:mercuryorbit}. This precession could not be completely explained by the accepted model derived from Newtonian gravity. When Albert Einstein published his theory of general relativity in 1915, it explained the precession of Mercury's orbit precisely. General relativity suggests that space and time must be considered together as space-time, and that the presence of matter curves the space-time around it. Objects move along paths determined by the curvature of space-time around them.
 
-General relativity, when observed from a stationary frame of reference, recovers Newtonian gravity. This is an extreme advantage because it means that in simple systems, Newtonian gravity can be used to perform predictions and calculations. When the gravitational force becomes great enough or the speed approaches the speed of light, Newtonian gravity starts to break down. It is in these instances that general relativity is required. The vicinity immediately surrounding black holes exerts gravitational forces so great that light is bent as a result, a phenomenon that cannot be explained within the constraints of Newtonian gravity.
+In weak gravitational fields general relativity reduces to Newtonian gravity. This is advantageous because it means that in weak fields, Newtonian gravity can be used to make predictions and perform calculations. When the gravitational field becomes strong, Newtonian gravity does not produce accurate results. It is in these instances that general relativity is required. The vicinity immediately surrounding black holes exerts gravitational forces so great that light paths are curved, a phenomenon that cannot be explained within the constraints of Newtonian gravity.
 
-Due to the masses of AGN and the requirement of General relativity to explain some of the processes inherent to them, this chapter will serve as a very brief overview of the mathematics of general relativity. AS it is a brief overview this chapter assumes that the reader has a sound mathematical background and is comfortable with concepts such as matrices, vectors, and partial differential equations.
+AGN have large masses and strong gravitational fields so general relativity is required to explain some of their properties. This chapter will serve as a very brief overview of the mathematics of general relativity.
 
 \begin{figure}
 	\centering
 	\begin{minipage}{0.8\linewidth}
 		\centering
 		\includegraphics[width=0.8\linewidth]{mercury-orbit}
-		\caption{Diagram depicting the precession of Mercury's orbit over time.}
+		\caption{The precessing orbit of Mercury \citep{mercury}}
 		\label{fig:mercuryorbit}
 	\end{minipage}
 \end{figure}
 
 \section{\sc An introduction to Tensors} \label{tensorIntro}
 
-A fundamental and core building block of general relativity is the tensor. Tensors are mathematical objects that resemble matrices but obey a strict set of transformation laws. Tensors exist to help illustrate $m$-dimensional space. The rank, $n$, of a tensor is determined by the number of indices it has. For example the 3 dimensional vector $\xshlonghvecr{A}=0\hat{i} + 0 \hat{j} + 0 \hat{k}$ would be represented by a rank 1 tensor as $\contensor{A}{\alpha}$ where $\alpha = 1, 2, 3$. It is standard to reserve the $0^{th}$ dimension for the time dimension, and as such spacetime is represented by 4 dimensional tensors. A simple vector in spacetime would then be represented by $\contensor{A}{\alpha}$ where $\alpha=0,1,2,3$ and $\contensor{A}{0}$ would represent time. An important type of tensor is the one-form, which is equivalent to a scalar and has rank 0. 
+General relativity is a tensor based theory. Tensors are mathematical objects that obey a strict set of transformation laws. The rank, $n$, of a tensor is determined by the number of indices it has and each index ranges over the number of dimensions. For example the 3 dimensional vector $\xshlonghvecr{A}=A^{1}+A^{2}+A^{3}$ would be represented by a rank 1 tensor as $\contensor{A}{\alpha}$ where $\alpha = 1, 2, 3$. It is standard to reserve the $0^{th}$ dimension for the time dimension, and as such space-time is represented by tensors whose indices range over 4 values. A vector in space-time would then be represented by $\contensor{A}{\alpha}$ where $\alpha=0,1,2,3$ and $\contensor{A}{0}$ would represent time. A scalar is a tensor of rank 0. 
 
-As mentioned before, tensors can resemble matrices and as such matrices can be easily represented by a tensor. For example the matrix
-\begin{equation}
-\nonumber
-A=
-\begin{bmatrix}
-1 & 2 & 3 \\
-4 & 5 & 6 \\
-7 & 8 & 9 \\
-\end{bmatrix}
-\end{equation}
-would be represented by the tensor
+The components of a rank 2 tensor, $A^{ij}$ can be represented by a matrix. For example
 \begin{equation}
 \nonumber
 \contensor{A}{ij}=
@@ -368,9 +356,8 @@ would be represented by the tensor
 7 & 8 & 9 \\
 \end{pmatrix}
 \end{equation}
-while at first glance there doesn't seem to be any difference between the two, the tensor form has the advantage of being represented simply by $\contensor{A}{ij}$ where $i,j=1,2,3$.
 
-In addition to tensors with upper indices, which are known as contravariant tensors, there are also tensors with lower indices defining covariant tensors. Mixed tensors are those tensors with both upper and lower indices. Any index that appears only once in a tensor equation is known is known as a free index whereas any index that is repeated can only be repeated once, and only as an upper and lower pair. This ties the repeated indices together as what is known as a dummy index and results in a sum over the paired dummy index. For example, given the two tensors $\contensor{a}{i}=\left(1, 2, 3\right)$ and $\covtensor{b}{i}=\left(4, 5, 6\right)$, their product $\contensor{a}{i}\covtensor{b}{i}$ is
+The positions of the indices of tensors is also important. Tensors with upper indices are known as contravariant tensors whereas tensors with lower indices are known as covariant tensors. For example $A^{i}$ is a rank 1 contravariant tensor, whereas $B_{jk}$ is a rank 2 covariant tensor. Mixed tensors are those tensors with both upper and lower indices. Any index that appears only once in a tensor equation is known is known as a free index. The Einstein summation convention dictates that any index that is repeated can only be repeated once, and only as an upper and lower pair. This ties the repeated indices together as what is known as a dummy index and results in a sum over the paired dummy index. For example, given the two tensors $\contensor{a}{i}=\left(1, 2, 3\right)$ and $\covtensor{b}{j}=\left(4, 5, 6\right)$, then $a^{i}b_{i}$ is interpreted as
 \begin{eqnarray}
 \nonumber
 \contensor{a}{i}\covtensor{b}{i} &  = & \contensor{a}{1}\covtensor{b}{1} + \contensor{a}{2}\covtensor{b}{2} + \contensor{a}{3}\covtensor{b}{3}\\\nonumber
@@ -379,15 +366,15 @@ In addition to tensors with upper indices, which are known as contravariant tens
 & = & 32
 \end{eqnarray}
 
-The final property of tensors that will be discussed is the general tensor transformation law. When transforming a tensor from one coordinate system, $\mixtensor{A}{ij}{kl}$, to another, $\mixtensor{A}{i'j'}{k'l'}$, tensors follow the general tensor transformation law
+The final property of tensors that will be discussed is the general tensor transformation law. When transforming a tensor from one (unprimed) coordinate system, to another (primed) system, tensors follow the general tensor transformation law
 \begin{equation}
-\mixtensor{A}{i'j'}{k'l'}=\frac{\partial x^{i'}}{\partial x^{i}}\frac{\partial x^{j'}}{\partial x^{j}}\cdot\cdot\cdot\frac{\partial x^{k}}{\partial x^{k'}}\frac{\partial x^{l}}{\partial x^{l'}}\cdot\cdot\cdot\mixtensor{A}{ij}{kl}
+\mixtensor{A}{i'j'\cdots}{k'l'\cdots}=\frac{\partial x^{i'}}{\partial x^{i}}\frac{\partial x^{j'}}{\partial x^{j}}\cdots\frac{\partial x^{k}}{\partial x^{k'}}\frac{\partial x^{l}}{\partial x^{l'}}\cdots\mixtensor{A}{ij\cdots}{kl\cdots}
 \end{equation} \label{eqn:tentran}
-where the partial derivatives are the usual partial derivatives.
+where the $\frac{\partial x^{i'}}{\partial x^{i}}$ are the usual partial derivatives.
 
 \section{\sc The Metric Tensor} \label{metricTensor}
 
-There are some tensors in general relativity that are so important that they deserve naming. Of these named tensors, the metric Tensor is arguably the most important. The metric tensor, $\covtensor{g}{ij}$ or $\contensor{g}{ij}$, is used to express the unique distance between points in spacetime. The curvature of the spacetime has an effect on the metric tensor, for example in 3 dimensional flat spacetime is
+The metric tensor plays a central role in general relativity. The metric tensor, $\covtensor{g}{ij}$ or $\contensor{g}{ij}$, is used to express the unique distance between points in space-time. The curvature of the space-time has an effect on the metric tensor, for example in 3 dimensional flat space the metric tensor is
 \begin{equation}
 \covtensor{g}{ij}=
 \begin{pmatrix}
@@ -396,7 +383,7 @@ There are some tensors in general relativity that are so important that they des
 0 & 0 & 1 \\
 \end{pmatrix}
 \end{equation}\label{genten}
-and when working with singularities such as black holes, the 4 dimensional metric tensor takes the form
+For 4 dimensional flat space-time the metric tensor takes the form
 \begin{equation}
 \covtensor{g}{ij}=
 \begin{pmatrix}
@@ -406,39 +393,72 @@ and when working with singularities such as black holes, the 4 dimensional metri
 0 & 0 & 0 & 1 \\
 \end{pmatrix}
 \end{equation}\label{minkten}
-and is named the Minkowski metric tensor after the mathematician Herman Minkowski \cite{spruin}. This particular form of the metric tensor takes its form as a result of the spacetime interval in 4 dimensional curved spacetime.
+and is named the Minkowski metric tensor after the mathematician Herman Minkowski. For curved space-time the matrix representing $\covtensor{g}{ij}$ need no longer be diagonal, and the elements may be functions of the four coordinates. The solutions in Section \ref{schwarzschildSolution} and Section \ref{kerrSolution} give examples of such metrics.
 
-\section{\sc The Spacetime Interval} \label{spacetimeInterval}
+\section{\sc The Space-time Interval} \label{spacetimeInterval}
 
-In general relativity, we are often concerned with the infinitesimal distance between two points. This distance is conventionally denoted as $ds$ and it is trivial to see that in standard 3 dimensional space
+In general relativity, we are often concerned with the infinitesimal distance between two points. This distance is conventionally denoted as $ds$ and it is easy to see that in standard 3 dimensional space
 \begin{equation}
 \nonumber
 ds^{2}=dx^{2}+dy^{2}+dz^{2}
 \end{equation}
-just as in two dimensional space $ds^{2}$ would be equivalent to Pythagorean. In 4 dimensional spacetime, the time dimension is subtracted, due to time only passing in one direction. This results in the spacetime interval
+In 4 dimensional flat space-time, the space-time interval becomes
 \begin{equation}
 ds^{2}=-dt^{2}+dx^{2}+dy^{2}+dz^{2}
 \end{equation}
-and from here we can see why the Minkowski metric tensor(eqn \ref{minkten}) has a -1 at $\covtensor{g}{00}$ where the remaining diagonal terms are positive.
+Written in tensor form it becomes $ds^{2}=\covtensor{g}{\alpha\beta}dx^{\alpha}dx^{\beta}$ where the $\covtensor{g}{\alpha\beta}$ is the Minkowski metric for flat space-time.
 
 \section{\sc Black Hole Solutions} \label{blackHoleSolutions}
 
-In astronomy black holes are frequently modeled using solutions to Einstein's field equations for general relativity.
+In astronomy black holes are frequently modeled using solutions to Einstein's field equations for general relativity. Because of the extremely powerful gravitational effects of black holes, solutions to the field equations help astronomers to predict the paths that light and matter will take in the regions surrounding a black hole.
 
-\subsection{\sc The Schwarzchild Solution} \label{schwarzchildSolution}
+\subsection{\sc The Schwarzschild Solution} \label{schwarzschildSolution}
 
-The mathematics of the Schwarzchild solution.
+The Schwarzschild solution was published mere months after Einstein had published his field equations in 1916. The Schwarzschild solution describes a static, spherically symmetric black hole. The Schwarzschild solution can be expressed as
+\begin{equation}\label{eqn:schwarzschildMetric}
+ds^{2}=-\left(1-\frac{2m}{r}\right)dt^{2}+\frac{dr^{2}}{\left(1-\frac{2m}{r}\right)}+r^{2}d\theta^{2}+r^{2}sin^{2}\theta d\phi^{2}
+\end{equation}
+from Equation \ref{eqn:schwarzschildMetric} we can see that the Schwarzschild solution has two problem points which both define important characteristics of the black hole. The first of these is at $r=0$ and represents the singularity itself. The second problem point is at $r=2m$. This second problem point corresponds to the event horizon, and is the distance from the singularity at which the escape velocity is equal to the speed of light.
 
 \subsection{\sc The Kerr Solution} \label{kerrSolution}
 
-The mathematics of the Kerr solution.
+In 1963, Roy Kerr found a new solution to Einstein's field equations that represents a rotating black hole. It is convention to write the Kerr solution using the Boyer-Lindquist coordinate system $(t, r, \theta, \phi)$. In these coordinates the Kerr solution is
+\begin{equation}\label{eqn:kerrMetric}
+\resizebox{0.9\textwidth}{!}{$
+ds^{2}=-\frac{\left(\Delta-a^{2}sin^{2}\theta\right)}{\rho^{2}}dt^{2}-2a\left(\frac{2mrsin^{2}\theta}{\rho^{2}}\right)dtd\phi+\frac{\left(r^{2}+a^{2}\right)^{2}-a^{2}\Delta sin^{2}\theta}{\rho^{2}}sin^{2}d\phi^{2}+\frac{\rho^{2}}{\Delta}dr^{2}+\rho^{2}d\theta^{2}
+$}
+\end{equation}
+where
+\begin{equation}\label{eqn:kerrDelta}
+\Delta=r^{2}-2mr+a^{2}
+\end{equation}
+\begin{equation}\label{eqn:kerrRho}
+\rho^{2}=r^{2}+a^{2}cos^{2}\theta
+\end{equation}
+\begin{equation}\label{eqn:kerrSpin}
+a=\frac{L}{m}
+\end{equation}
+\begin{equation}\label{eqn:geomMass}
+m=\frac{GM}{c^{2}}
+\end{equation}
+where $L$ is the angular momentum of the black hole and $m$ is the geometric mass. Equation \ref{eqn:kerrSpin} shows that $a$ has the units of angular velocity which is commonly referred to as the spin of the black hole.
 
-\subsection{\sc Properties of the Kerr Solution} \label{kerrSolutionProperties}
+The Kerr solution, much like the Schwarzschild solution, has points where the metric tensor becomes undefined. It is fairly simple to see that these points occur when $\rho^{2}=0$ and when $\Delta=0$. From Equation \ref{eqn:kerrRho} we can see that for $\rho^{2}=0$ we require $r=0$ and $a^{2}cos^{2}\theta=0$. Assuming $a>0$ we must have $cos\theta=0$, $\theta=\frac{\pi}{2}$. This describes a ring singularity dependent on $a$, and as expected, when $a=0$ we recover a point singularity as in the Schwarzschild solution.
 
-Properties of the Kerr solution.
+The points at which $\Delta=0$ describe the event horizons. Solving Equation \ref{eqn:kerrDelta} for $r$ shows that $\Delta=0$ when
+\begin{equation}\label{eqn:kerrEvenH}
+r=m\pm\sqrt{m^{2}-a^{2}}
+\end{equation}
+giving us two separate event horizons, which we label $r+$ and $r-$ respectively. From Equation \ref{eqn:kerrEvenH} we can see that when $a=0$, we get $r+=2m$ and $r-=0$, effectively recovering the Schwarzschild solution. 
 
-%\chapter{\sc Statistical Analysis} \label{statisticalAnalysis}
 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{KerrHorizons}
+	\caption{Diagram showing the ring singularity and two event horizons of the Kerr solution \citep{dinverno}}
+	\label{fig:kerrHorizons}
+\end{figure}
 
 \chapter{\sc The Structure Function} \label{structureFunction}
 
@@ -472,7 +492,7 @@ where the sum is over all pairs $\left(f\left(t_{i}\right),f\left(t_{j}\right)\r
 	\begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[width=0.8\linewidth]{structureFunctionShape}
-		\caption{An example of a structure function with normal scaled axes.(To be replaced)}
+		\caption{An example of a structure function with normal scaled axes \citep{galloblue}}
 		\label{fig:structureFunctionShape}
 	\end{minipage}
 	\begin{minipage}{0.1\textwidth}
@@ -480,12 +500,12 @@ where the sum is over all pairs $\left(f\left(t_{i}\right),f\left(t_{j}\right)\r
 	\begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[width=0.8\linewidth]{structureFunctionLogShape}
-		\caption{An example of a structure function with log scaled axes. (To be replaced)}
+		\caption{An example of a structure function with log scaled axes \citep{galloblue}}
 		\label{fig:structureFunctionLogShape}
 	\end{minipage}
 \end{figure}
 
-Structure functions have a very distinct shape, resembling a sigmoid but dominated by twice the signal variance, $2\sigma^{2}$, on short timescales and twice the noise variance, $2\sigma_{noise}^{2}$, on long timescales. This results in two noise dominated plateaus connected by a power-law section as shown in figure \ref{fig:structureFunctionLogShape}\footnote{\cite{galloblue}} where the plateaus are shown with a red line and the power-law section is shown with a green line overlaid on top of real data for a structure function. As is evident in figure \ref{fig:structureFunctionLogShape}, the upper plateau, corresponding to longer timescales, is completely noise dominated. It is important to note that the axes are log scaled when looking at structure functions as otherwise the resemble Figure \ref{fig:structureFunctionShape}\footnote{\cite{galloblue}}. This brings out the power law section and allows us to fit the structure functions to determine characteristic timescales.
+Structure functions have a very distinct shape, resembling a sigmoid, but dominated by twice the signal variance, $2\sigma^{2}$, on short timescales and twice the noise variance, $2\sigma_{noise}^{2}$, on long timescales. This results in two noise dominated plateaus connected by a power-law section as shown in Figure \ref{fig:structureFunctionLogShape} where the plateaus are shown with a red line and the power-law section is shown with a green line overlaid on top of real data for a structure function. As is evident in Figure \ref{fig:structureFunctionLogShape}, the upper plateau, corresponding to longer timescales, is completely noise dominated. It is important to note that the axes are log scaled when looking at structure functions as otherwise they resemble Figure \ref{fig:structureFunctionShape}. This brings out the power-law section and allows us to fit the structure functions to determine characteristic timescales.
 
 The power-law region of the structure function exists where $\tau_{min}\lesssim\tau\lesssim\tau_{max}$. When $\tau_{max}\ll T$, where $T$ is the total duration of the time-series, we can approximate $\tau_{max}$ to a characteristic timescale, $\tau_{char}$, determined by fundamental source characteristics such as mass, size, matter propagation and others depending on the source of the time-series.
 
@@ -494,11 +514,11 @@ The power-law region of the structure function exists where $\tau_{min}\lesssim\
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\linewidth]{3C279structurefunction}
-	\caption{Structure function for 3C 279 obtained from \cite{rxtepaper}}
+	\caption{Structure function for 3C 279 computed from data obtained from \cite{rxtepaper}.}
 	\label{fig:3c279sf}
 \end{figure}
 
-The structure functions is an extremely valuable tool for analyzing data that has odd or uneven sampling rates, but it is not without fault. Some things to be aware of when using a structure function on data are as follows. Linear trends that span the entire time-series will artificially steepen the structure function. This can be avoided by removing a best-fit linear model applied to the entire time-series. Some object may have more than one characteristic timescale and this may manifest itself as a third plateau breaking the power-law region in two, as can be seen in Figure \ref{fig:3c279sf}.
+The structure functions is an extremely valuable tool for analyzing data that has odd or uneven sampling rates, but it is not without fault. Some things to be aware of when using a structure function on data are as follows. Linear, polynomial trends of order $N\geq M$ that span the entire time-series will artificially steepen the structure function, as can be seen in Figure \ref{fig:3c279sf}. This can be avoided by removing a best-fit polynomial model applied to the entire time-series. Some object may have more than one characteristic timescale and this may manifest itself as a third plateau breaking the power-law region in two.
 
 \section{\sc SFA usage and description} \label{usageDescription}
 
@@ -538,7 +558,7 @@ This option is used to tell SFA to provide maximal textual output when running. 
 
 \subsection{\sc Installation and Uninstallation}
 
-There are two methods of installation for SFA, \verb|System-Wide| or \verb|User-Specific|. For installation as a binary available to all users on a system it is recommended to use the \verb|System-Wide| installation method, though this method requires the installing user to have administrative privileges, ie \verb|sudo| on Unix-based systems. If the user does not have administrative rights on a system but still needs the SFA program, the \verb|User-Specific| method can be used. In this case the installation will create the \verb|~/.SFA| directory and will place the \verb|sfa| binary file inside. Both installation methods are detailed on the SFA GitHub repository main page and in the \verb|Readme.md| file included with the project. Included in the projects \verb|makefile| are uninstallation methods for each of the install methods, also detailed in the \verb|Readme.md| file and on the GitHub repository main page.
+There are two methods of installation for SFA, \verb|System-Wide| or \verb|User-Specific|. For installation as a binary available to all users on a system it is recommended to use the \verb|System-Wide| installation method, though this method requires the installing user to have administrative privileges, i.e. \verb|sudo| on Unix-based systems. If the user does not have administrative rights on a system but still needs the SFA program, the \verb|User-Specific| method can be used. In this case the installation will create the \verb|~/.SFA| directory and will place the \verb|sfa| binary file inside. Both installation methods are detailed on the SFA GitHub repository main page and in the \verb|Readme.md| file included with the project. Included in the projects \verb|makefile| are uninstallation methods for each of the install methods, also detailed in the \verb|Readme.md| file and on the GitHub repository main page.
 
 \subsection{\sc Expected Output} \label{expectedOutput}
 
@@ -558,18 +578,21 @@ Calculating the cost and complexity of SFA is dependent upon a couple of input p
 
 \chapter{\sc Results and Conclusions} \label{resultsConclusions}
 
-\section{\sc The Data} \label{theData}
+There are two sets of results that will be discussed in this chapter. The first data set that will be discussed is from the Narrow Line Seyfert 1, (NLSy1), Markarian 335 (Mkn 335), collected by the \textit{Swift} orbital observatory. This data set was analyzed in \cite{galloblue} with both a structure function and a discrete correlation function, though only the structure function results will be discussed here. The second analysis is work in progress and consists of 6 different sources observed with the Rossi X-ray Timing Explorer (RXTE).
 
-Data used for this project was obtained from the \textit{RXTE AGN Timing \& Spectral Database}, \cite{rxtepaper}. The sources were chosen based on the number of data points in the overall light curve as well as the variability in the light curve as determine "by-eye". The sources chosen were 3C 273, 3C 279, Fairall 9, Mkn 79, Mkn 110, and NGC 4051. Observation properties such as the number of data points, start and end dates, etc, can be seen in Table \ref{tab:sourcelist}. 
+The structure functions for the 6 RXTE sources remain unfit as some of the sources have linear trends and result in their structure functions suffering from artificial steepening. For the RXTE sources that do not suffer from artificial steepening or noise domination, "by-eye" approximations for the characteristic timescales are given.
 
-\begin{minipage}{\linewidth}
+The computed structure functions were fit using a broken power-law model, which consists of two power-laws connecting at a single point known as the break point. In these fits, the slope of the second power-law was fix to zero, representative of a constant flat line.
+
+\begin{table}
 	\centering
-	\captionof{table}{Source List}\label{tab:sourcelist}
-	\resizebox{\textwidth}{!}{
+	\captionof{table}{Source List Data Log}\label{tab:sourcelist}
+	\resizebox{\linewidth}{!}{
 		\begin{tabular}{@{}ccccccccc@{}}
 			\toprule
-			Source & Type & R.A. & Decl. & Redshift & Start (MDJ) & End (MJD) & Good ObsIDs \\
+			Source & AGN & R.A. & Decl. & Redshift & Start (MDJ) & End (MJD) & Good ObsIDs \\
 			\midrule\midrule
+			Mkn 335 & NLSy1 & 00 06 19.52 & +20 12 10.5 & 0.0258 & 54237.128 & 58112.128 & - \\
 			3C 273 & FSRQ & 12 29 06.70 & +02 03 08.6 & 0.1583 & 50115.06 & 55926.56 & 1960 \\
 			3C 279 & FSRQ & 12 56 11.1 & -05 47 22 & 0.5326 & 50104.63 & 55925.99 & 1987 \\
 			Fairall 9 & Sy1 & 01 23 45.78 & -58 48 20.8 & 0.0470 & 50390.61 & 52699.51 & 707 \\
@@ -580,54 +603,77 @@ Data used for this project was obtained from the \textit{RXTE AGN Timing \& Spec
 		\end{tabular}
 	}\par
 	\bigskip
-	Data taken from \textit{RXTE AGN Timing \& Spectral Database}
-\end{minipage}
+	Source parameters and data obtained from \textit{RXTE AGN Timing \& Spectral Database}. Data for Mkn 335 obtained from \textit{Swift} orbital observatory.
+\end{table}
+
+\section{\sc Mkn 335}\label{mkn335}
+
+The data collected on Mkn 335 spanned 11 years of observations using the \textit{Swift} orbital observatory. \textit{Swift} is equipped with instruments capable of collecting data in the optical, UV, and X-ray bands of the EM spectrum. The light curve data for Mkn 335 is presented in Figure \ref{fig:mkn335lc}, with source parameters listed in Table \ref{tab:sourcelist} Row 1. The data collected on Mkn 335 is described in \cite{galloblue} and in \cite{grupe2012}. From the light curve data it is clear that the observation is broken into smaller observations, each spanning approximately 250 days. This is due to Mkn 335 being sun constraint for a period of ~3 months each year.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{3C273lightcurve}
-	\caption{Light curve for 3C 273}
-	\label{fig:3c273lc}
+	\includegraphics[width=\linewidth]{mkn335Lightcurves}
+	\caption{\textit{Swift} light curves for Mkn 335, XRT $(0.3-10keV)$ is in counts $s^{-1}$ whereas the remaining light curves are in units of $10^{-14}\textup{erg}\cdot \textup{s}^{-1}\textup{cm}^{-2}\textup{\AA{}}^{-1}$.}
+	\label{fig:mkn335lc}
 \end{figure}
+
+Structure function results for Mkn 335 can be seen in greater detail in \cite{galloblue}, with correlations between the different wavebands investigated using a discrete correlation function. The structure functions for Mkn 335 presented here were fit using the X-ray Spectral Fitting Package (Xspec) developed by NASA's HEASARC team. To load the structure function data into Xspec, conversion of the data format was required. The fits for Mkn 335 are detailed further in \cite{galloblue}, with a summary of the fits available in Table \ref{tab:mknsfresults}. Plots of the structure functions for Mkn 335 were normalized by their light curve variance in order to allow for comparisons to be drawn between them. This ensures that all structure functions asymptote to the same value for their upper plateau on long timescales. Characteristic timescales fit to the Mkn 335 data are potentially consistent with thermal or dynamical timescales on the accretion disc.
+
+\begin{table}[H]
+	\centering
+	\captionof{table}{Structure Function Results for Mkn 335}\label{tab:mknsfresults}
+	\renewcommand{\arraystretch}{0.8}
+	\resizebox{0.8\linewidth}{!}{
+		\begin{tabular}{cccccccc}
+			\toprule
+			(1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+			Waveband & $T$ & $\delta$ & $\tau_{min}$ & $\tau_{min}$ & $\beta$ & $\tau_{char}$ & $\alpha$ \\
+			& (days) & (days) & (days) & (days) &  &  & (PSD) \\
+			\midrule\midrule
+			X-ray & 3524.232 & 5.3 & 10 & 100 & $0.14\pm0.05$ & - - & 1.14 \\
+			UVW2$^{a}$ & 3524.232 & 5.3 & 10 & 50 & $0.86^{+0.14}_{-0.13}$ & $34^{+11}_{-5}$ & 1.86 \\
+			UVW2$^{b}$ & 3524.232 & 5.3 & 50 & 160 & $1.25^{+0.20}_{-0.18}$ & $112^{+9}_{-7}$ & 2.25 \\
+			UVM2 & 3157.063 & 7.0 & 10 & 130 & $0.80^{+0.29}_{-0.50}$ & $63^{+32}_{-21}$ & 1.80 \\
+			UVW1 & 3157.063 & 6.9 & 10 & 130 & $0.86^{+0.27}_{-0.21}$ & $66^{+21}_{-14}$ & 1.87 \\
+			U & 3157.063 & 6.9 & 10 & 130 & $0.71^{+0.28}_{-0.21}$ & $71^{+27}_{-18}$ & 1.71 \\
+			B & 3157.063 & 6.9 & 10 & 130 & $0.71^{+0.30}_{-0.51}$ & $59^{+33}_{-19}$ & 1.71 \\
+			V$^{*}$ & 3157.063 & 6.9 & 10 & 130 & $0.71$ & $59$ & 1.71 \\
+			\bottomrule
+	\end{tabular}}\par
+	\bigskip
+	Waveband given in column (1), followed by total observation length in (2), structure function resolution in (3), minimum time difference in (4), maximum time difference in (5), power-law fit in (6), characteristic timescale in (7), and PSD power-law following $\alpha=\beta+1$ in (8). (a) and (b) correspond to the two separate fitting regions on the UVW2 structure function. $^{*}$A fit to the V-band data could not be constrained \citep{galloblue}.
+\end{table}
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{3C279lightcurve}
-\caption{Light curve for 3C 279}
-\label{fig:3c279lc}
+	\centering
+	\includegraphics[width=\linewidth]{Mkn335sf}
+	\caption{Mkn 335 structure functions for the XRT and UVOT light curves from \cite{galloblue}.}
+	\label{fig:mkn335sf}
 \end{figure}
+
+The structure function interpretation for Mkn 335 has already been discussed in detail in \cite{galloblue}. Using the fits for the structure functions computed for the various wavebands and comparing them to accretion timescales computed for Mkn 335, it was found in \cite{galloblue} that the structure functions were able to identify timescales that agreed with either dynamical timescales or thermal timescales in different regions of the disc, shown in Figure \ref{fig:accretiontimescales}.
+
+Given the error on the fit characteristic timescales it is not possible to distinguish whether the characteristic timescales agree with dynamical timescales on the accretion disc at 300 gravitational radii or with thermal timescales at 100. The exception to this is the double fit UVW2 structure function which had two distinct power-laws and characteristic timescales. The first has a lower timescale that better agrees with dynamical timescales whereas the longer agrees with thermal timescales. This brings to light the possibility that both are equally dominant in the light curves but the other light curves lacked sampling and resolution sufficient enough to warrant distinction between the two, resulting in a combined characteristic timescale contributed by both. From this we can conclude that in inner regions of the accretion disc thermal processes are the driving force behind the emission variability where as in the outer region dynamical timescales are the driving force. This is interesting as it is well known that matter in the accretion disc increases in temperature as it reaches the inner regions and as such the thermal processes could be reverberating dynamical processes happening on the outer regions of the disc.
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{Fairall9lightcurve}
-\caption{Light curve for Fairall 9}
-\label{fig:fairall9lc}
+	\centering
+	\includegraphics[width=0.8\linewidth]{mkn335timescales}
+	\caption{Computed accretion disc timescales for Mkn 335 with fit structure function characteristic timescales plotted, \cite{galloblue}.}
+	\label{fig:accretiontimescales}
 \end{figure}
+
+\section{\sc RXTE Sources} \label{rxte}
+
+X-ray data for the sources currently being analyzed was obtained from the \textit{RXTE AGN Timing \& Spectral Database} \citep{rxtepaper}. The sources were chosen based on the number of data points in the overall light curve as well as the variability in the light curve as determined ``by-eye". The sources chosen were 3C 273, 3C 279, Fairall 9, Mkn 79, Mkn 110, and NGC 4051. Observation properties such as the number of data points, start and end dates, etc, can be seen in Table \ref{tab:sourcelist}, with the light curves shown in Figure \ref{fig:rxtelc}.
 
 \begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{Mkn79lightcurve}
-\caption{Light curve for Mkn 79}
-\label{fig:mkn79lc}
+	\centering
+	\includegraphics[width=\linewidth]{combinedlightcurves}
+	\caption{Light curves for 3C 273, 3C 279, Fairall 9, Mkn 79, Mkn 110, and NGC 4051.}
+	\label{fig:rxtelc}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{Mkn110lightcurve}
-\caption{Light curve for Mkn 110}
-\label{fig:mkn110lc}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{NGC4051lightcurve}
-\caption{Light curve for NGC 4051}
-\label{fig:ngc4051lc}
-\end{figure}
-
-\section{\sc Results} \label{results}
-
-A review of the results of running SFA on observational data
+Structure functions for the sources from the RXTE database have not yet been normalized by variance as some of the light curves have linear polynomial trends. For this reason standard comparison between the structure functions cannot be conducted with the exception of the characteristic timescales as it is not affected by the light curve variance. Initial estimates for the characteristic timescales are in the region of ~100 days, agreeing with the measured characteristic timescales in Mkn 335.
 
 \begin{figure}[H]
 	\centering
@@ -636,21 +682,26 @@ A review of the results of running SFA on observational data
 	\label{fig:combosf}
 \end{figure}
 
-\section{\sc Conclusions} \label{conclusions}
+The lack of computed accretion timescales for the sources from the RXTE database makes theoretical conclusions based on their structure function characteristic timescales difficult, and the presence of artificial steepening makes it impossible in others. It is interesting however that the two quasars 3C 273 and 3C 279 have structure functions that are so well defined in the X-ray. In Mkn 335 it was found that the X-ray structure function was incredibly noise dominated and quite shallow with no discernible characteristic timescale in the structure function fit due to inability to constrain the fit.
 
-Theoretical conclusions based on the findings of SFA
+Preliminary analysis of the raw structure functions for the RXTE sources warrants continued investigation as it would appear that the sampling is high enough for constrained fits to be obtained once linear trends are removed. Pairing the X-ray structure functions with radio structure functions for these sources is considered in Chapter \ref{futureWork}.
 
-\chapter{\sc Future Work} \label{futureWork}
+\chapter{\sc Summary and Future Work} \label{futureWork}
 
-Potential future work and applications of SFA
+In this work we used the SF to study AGN variability. We find that the structure function can be used to analyze AGN X-ray and UV data to better understand the accretion processes. Potential future work and applications include improvements to the SFA program. In its current state, SFA is not capable of removing linear trends from time-series data and also does not normalize the structure functions by variance. These will prove useful features as with them SFA will be capable of analyzing any time-series type data.
 
+The RXTE sources that were discussed in Chapter \ref{resultsConclusions} are a current work in progress and as such will have continued future work as well. Plans for the RXTE sources are to remove linear trends from the current X-ray data and to also compute the structure functions for corresponding radio data on these sources from the Owens Valley Radio Observatory.
+
+Improvements to the SFA program are required to broaden its range of applicable analysis. In its current state, the SFA program requires a complete re-compiling with hard-coded values for linear trend removal. Integration of the removal of linear trends is a planned feature as that will help to remove any artificial steepening in the computed structure functions. More flexibility for the input data is another planned feature as the currently accepted format for data input is not widely used.
+
+As the SFA program obtains new features and is improved, a full survey of the available AGN sources in all available wavebands is a potential goal. This would require data from a variety of telescopes but would also need to be constrained to data for which the observation periods contain overlap, this way direct comparisons can be made. As mentioned in Section \ref{mkn335}, the discrete correlation function(DCF) was useful in analyzing relationships between the wavebands for Mkn 335, and as such similar analysis would be considered for a full survey. 
 
 \appendix
 
-\chapter{Structure Function} \label{appendixSFA}
-\label{app:sfa}
-If you wanted an appendix, it would go in like this.  It would be 
-referenced using Appendix~\ref{app:sfa}.
+%\chapter{Structure Function} \label{appendixSFA}
+%\label{app:sfa}
+%If you wanted an appendix, it would go in like this.  It would be 
+%referenced using Appendix~\ref{app:sfa}.
 
 
 \begin{singlespace}
