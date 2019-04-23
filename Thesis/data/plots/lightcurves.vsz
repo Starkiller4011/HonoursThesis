@@ -1,7 +1,7 @@
 # Veusz saved document (version 3.0.1.1)
-# Saved at 2019-04-03T16:40:09.434587
+# Saved at 2019-04-21T21:15:40.388977
 
-AddImportPath(u'G:\\Projects\\HonoursThesis\\data\\plots')
+AddImportPath(u'G:\\Projects\\HonoursThesis\\Thesis\\data\\plots')
 ImportFileCSV(u'LC/3C273_LC.csv', linked=True, dsprefix=u'3c273-')
 ImportFileCSV(u'LC/3C279_LC.csv', linked=True, dsprefix=u'3c279-')
 ImportFileCSV(u'LC/FAIRALL9_LC.csv', linked=True, dsprefix=u'F9-')
@@ -201,7 +201,7 @@ To('..')
 To('..')
 Add('label', name=u'label1', autoadd=False)
 To(u'label1')
-Set('label', u'Flux (10^{-11} erg cm^{-2}s^{-1})')
+Set('label', u'2-10 keV Flux (10^{-11} erg cm^{-2}s^{-1})')
 Set('xPos', [0.015])
 Set('yPos', [0.403])
 Set('angle', -90.0)
